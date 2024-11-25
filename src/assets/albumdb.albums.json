@@ -1,0 +1,230 @@
+[{
+  "_id": {
+    "$oid": "67239eb79d91282008920a5e"
+  },
+  "artist": "The Beatles",
+  "album_title": "Abbey Road",
+  "year_of_release": 1969,
+  "genre": "Rock",
+  "reviews": [
+    {
+      "username": "john_doe",
+      "review_text": "A timeless classic, with songs that defined a generation.",
+      "rating": 5,
+      "review_id": "7d895947-6fd8-4127-98da-b00b18d00fb5"
+    },
+    {
+      "username": "jane_smith",
+      "review_text": "Overrated in my opinion, but it has its moments.",
+      "rating": 3,
+      "review_id": "60873b4b-0a7f-4fe5-a033-1f6365ac92ae"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67239eb79d91282008920a5f"
+  },
+  "artist": "Pink Floyd",
+  "album_title": "The Dark Side of the Moon",
+  "year_of_release": 1973,
+  "genre": "Progressive Rock",
+  "reviews": [
+    {
+      "username": "alice_jones",
+      "review_text": "An amazing auditory journey. One of the greatest albums ever.",
+      "rating": 5,
+      "review_id": "c791aa58-c8bb-437e-92c9-2a8766f42aed"
+    },
+    {
+      "username": "bob_brown",
+      "review_text": "The production quality is top-notch, but it's not for everyone.",
+      "rating": 4,
+      "review_id": "f4ed7471-d7a3-4715-a627-88f6ce435e51"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67239eb79d91282008920a60"
+  },
+  "artist": "Nirvana",
+  "album_title": "Nevermind",
+  "year_of_release": 1991,
+  "genre": "Grunge",
+  "reviews": [
+    {
+      "username": "sarah_connor",
+      "review_text": "Grunge at its finest. Kurt Cobainâ€™s voice is raw and powerful.",
+      "rating": 5,
+      "review_id": "61c91b7b-257f-4795-96a4-9c1e3c1ce772"
+    },
+    {
+      "username": "michael_scott",
+      "review_text": "A good album, but not as revolutionary as people say.",
+      "rating": 4,
+      "review_id": "9f07132d-89ef-4e69-8c09-2b292ccad19c"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67239eb79d91282008920a61"
+  },
+  "artist": "Radiohead",
+  "album_title": "OK Computer",
+  "year_of_release": 1997,
+  "genre": "Alternative Rock",
+  "reviews": [
+    {
+      "username": "dwight_schrute",
+      "review_text": "This album changed my perspective on music forever. Stunning!",
+      "rating": 5,
+      "review_id": "79c24789-fe25-416c-9378-378892116c62"
+    },
+    {
+      "username": "angela_martin",
+      "review_text": "Complicated and a bit over my head, but undeniably brilliant.",
+      "rating": 4,
+      "review_id": "09681b7b-d8f6-4a4c-ab7f-4430975cdadd"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67239eb79d91282008920a62"
+  },
+  "artist": "Fleetwood Mac",
+  "album_title": "Rumours",
+  "year_of_release": 1977,
+  "genre": "Rock",
+  "reviews": [
+    {
+      "username": "jim_halpert",
+      "review_text": "Timeless music that still feels relevant today.",
+      "rating": 5,
+      "review_id": "ec73de90-06b5-4143-b428-3c3da8d754f9"
+    },
+    {
+      "username": "pam_beesly",
+      "review_text": "I can understand why it's iconic, but it's not for me.",
+      "rating": 3,
+      "review_id": "4fbd893f-270f-4ebe-b580-2d5b3c3fcf13"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67239eb79d91282008920a63"
+  },
+  "artist": "Led Zeppelin",
+  "album_title": "Led Zeppelin IV",
+  "year_of_release": 1971,
+  "genre": "Hard Rock",
+  "reviews": [
+    {
+      "username": "john_doe",
+      "review_text": "An absolute masterpiece. Every track is a classic.",
+      "rating": 5,
+      "review_id": "130dd7fe-5884-4b4a-8bea-287b549eef31"
+    },
+    {
+      "username": "jane_smith",
+      "review_text": "Great, but I never really got into Led Zeppelin.",
+      "rating": 4,
+      "review_id": "50f0da43-3dc0-442c-9d8b-c793fe85158f"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67239eb79d91282008920a64"
+  },
+  "artist": "Michael Jackson",
+  "album_title": "Thriller",
+  "year_of_release": 1982,
+  "genre": "Pop",
+  "reviews": [
+    {
+      "username": "alice_jones",
+      "review_text": "The best-selling album of all time, and it deserves every bit of that success.",
+      "rating": 5,
+      "review_id": "7e757513-3dcb-4750-8001-b28c76ce5f34"
+    },
+    {
+      "username": "bob_brown",
+      "review_text": "Great production, but not my favorite Jackson album.",
+      "rating": 4,
+      "review_id": "f549a5cc-9621-4e27-be13-3b9fed4640d7"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67239eb79d91282008920a65"
+  },
+  "artist": "Prince",
+  "album_title": "Purple Rain",
+  "year_of_release": 1984,
+  "genre": "Pop",
+  "reviews": [
+    {
+      "username": "sarah_connor",
+      "review_text": "Incredible music and an even more incredible persona.",
+      "rating": 5,
+      "review_id": "e37330ce-bd76-4687-9e0b-9c31242335ae"
+    },
+    {
+      "username": "michael_scott",
+      "review_text": "I love some tracks, but a few feel dated.",
+      "rating": 4,
+      "review_id": "b842c6b4-e4ad-4d96-9e5c-01a5664b301e"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67239eb79d91282008920a66"
+  },
+  "artist": "Bob Dylan",
+  "album_title": "Blood on the Tracks",
+  "year_of_release": 1975,
+  "genre": "Folk Rock",
+  "reviews": [
+    {
+      "username": "dwight_schrute",
+      "review_text": "Dylan at his most personal and introspective.",
+      "rating": 5,
+      "review_id": "9770af25-c2b6-4818-aa63-8a402d5a1c4b"
+    },
+    {
+      "username": "angela_martin",
+      "review_text": "Beautiful storytelling, but not my favorite Dylan album.",
+      "rating": 3,
+      "review_id": "c5578756-b09f-4917-87e0-550c17e034e9"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "67239eb79d91282008920a67"
+  },
+  "artist": "Kanye West",
+  "album_title": "My Beautiful Dark Twisted Fantasy",
+  "year_of_release": 2010,
+  "genre": "Hip Hop",
+  "reviews": [
+    {
+      "username": "jim_halpert",
+      "review_text": "A groundbreaking hip hop album. Kanye at his peak.",
+      "rating": 5,
+      "review_id": "6605256b-7a3f-45d5-8fe0-72e90b95f4d7"
+    },
+    {
+      "username": "pam_beesly",
+      "review_text": "A bit overhyped, but still a great album.",
+      "rating": 4,
+      "review_id": "e563f009-46fc-4c69-8d25-0223b3146b30"
+    }
+  ]
+}]

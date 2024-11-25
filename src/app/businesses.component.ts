@@ -1,30 +1,41 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
+import { Data, RouterOutlet } from '@angular/router';
+import { DataService } from './data.service';
 @Component({
   selector: 'businesses',
   imports: [RouterOutlet],
+  providers: [DataService],
   templateUrl: './businesses.component.html',
   styleUrl: './businesses.component.css'
 })
 
 export class BusinessesComponent {
 
-  business_list = [
-    {
-      "name" : "Pizza Mountain",
-      "town" : "Coleraine",
-      "rating" :  5
-    },
-    {
-      "name" : "Wine Lake",
-      "town" : "Coleraine",
-      "rating" :  3
-    },
-    {
-      "name" : "Sweet Dessert",
-      "town" : "Coleraine",
-      "rating" :  4
+  business_list: any;
+  page: number = 1;
+
+  constructor(public dataService: DataService){}
+
+  ngOnInit(){
+    if(sessionStorage['page']){
+      this.page = Number(sessionStorage['page']);
     }
-  ]
+    this.business_list = this.dataService.getBusinesses(this.page);
+  }
+
+  previousPage(){
+    if(this.page > 1){
+      this.page = this.page - 1;
+      sessionStorage['page'] = this.page;
+      this.business_list = this.dataService.getBusinesses(this.page)
+    }
+  }
+
+  nextPage(){
+    if(this.page < this.dataService.getLastPageNumber()){
+      this.page = this.page + 1;
+      sessionStorage['page'] = this.page;
+      this.business_list = this.dataService.getBusinesses(this.page)
+    }
+  }
 }
