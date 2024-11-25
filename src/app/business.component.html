@@ -1,0 +1,22 @@
+<h1>
+    Album
+</h1>
+<div class="container" style="margin-top: 70px;">
+    <div class="row">
+        <div class="col-sm-12">
+            @for (business of business_list; track business.name){
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">
+                        {{business.artist}}
+                    </div>
+                    <div class="card-body">
+                        {{business.album_title}}
+                    </div>
+                    <div class="card-footer">
+                        {{business.year_of_release}}
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
