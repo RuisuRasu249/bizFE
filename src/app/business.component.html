@@ -1,7 +1,3 @@
-<h1>
-    Album
-</h1>
-
 <div class="container" style="margin-top: 70px;">
     <div class="row">
         <div class="col-sm-12">
@@ -16,20 +12,92 @@
                         <p><strong>Year:</strong> {{ business.year_of_release }}</p>
                         <p><strong>Genre:</strong> {{ business.genre }}</p>
                     </div>
-                    <div>
-                        <p>
-                            <strong>Average Rating:</strong>
-                            <span *ngFor="let star of getAverageRating(business.reviews)">
-                                <img src="images/star.png" alt="Star" style="width: 30px; height: 30px; margin-left: 10px; margin-bottom: 10px;">
-                            </span>
-                        </p>
-                    </div>
-                    <div class="col-sm-12">
+                    <div class="col-sm-12 mb-3">
                         <h5>Description</h5>
                         {{loremIpsum}}
+                    </div>
+                </div>
+                <div>
+                    <p>
+                        <strong>Average Rating:</strong>
+                        <span *ngFor="let index of getAverageRating(business.reviews)">
+                            <img
+                              src="images/love_rating.png"
+                              alt="rating"
+                              style="width: 30px; height: 30px; margin-left: 10px; margin-bottom: 10px;"
+                            />
+                          </span>
+                      </p> 
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        @for(review of business.reviews; track review){
+                            <div class="card bg-success text-light mb-3">
+                                <div class="card-header">
+                                    <img src="images/user_icon.png" style="width: 30; height: 30px;">
+                                    {{review.username}}
+                                </div>
+                                <div class="card-body">
+                                    {{review.review_text}}
+                                </div>
+                                <div class="card-footer">
+                                    <p>
+                                        <strong>
+                                            Rating:
+                                            {{review.rating}}
+                                        </strong>
+                                        /5
+                                    </p>                            
+                                </div>
+                            </div>
+                        }
                     </div>
                 </div>
             }
         </div>
     </div>
+</div>
+
+<div class="container" style="margin-top: 70px;">
+    <div class="row">
+        <h2>Leave a Review</h2>
+    </div>
+    <form [formGroup]="reviewForm"
+            (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username"
+                        class="form-control" formControlName="username"
+                        [ngClass]="{'border border-danger': isInvalid('username')}">
+        </div>
+        <div class="form-group">
+            <label for="review_text">Please leave a review below:</label>
+            <textarea name="review_text" id="review_text"
+                class="form-control" formControlName="review_text"
+                [ngClass]="{'border border-danger': isInvalid('review_text')}">
+            </textarea>
+        </div>
+        <div class="form-group">
+            <label for="rating">
+                Rate the album (5 Hearts = best)
+            </label>
+            <select name="rating" id="rating"
+                class="form-control" formControlName="rating">
+                <option value="1">1 Hearts</option>
+                <option value="2">2 Hearts</option>
+                <option value="3">3 Hearts</option>
+                <option value="4">4 Hearts</option>
+                <option value="5">5 Hearts</option>
+            </select>
+        </div>
+        <span class="text-danger" *ngIf="isIncomplete()">
+            Please complete all fields
+        </span>
+        <button *ngIf="!isIncomplete()"
+                class="btn btn-primary"
+                type="submit" style="margin-top: 20px;">
+            Submit
+        </button>
+    </form>
 </div>
