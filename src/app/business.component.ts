@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ChangeDetectorRef } from '@angular/core';
-
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'business',
@@ -26,6 +26,7 @@ export class BusinessComponent {
               private route: ActivatedRoute,
               private formBuilder: FormBuilder,
               private cdr: ChangeDetectorRef,
+              public authService: AuthService
             ){}
 
   ngOnInit(){
