@@ -19,17 +19,17 @@
                 </div>
                 <div>
                     <p>
-                        <strong>Average Rating:</strong>
-                        <span *ngFor="let index of getAverageRating(business.reviews)">
-                            <img
-                              src="images/love_rating.png"
-                              alt="rating"
-                              style="width: 30px; height: 30px; margin-left: 10px; margin-bottom: 10px;"
-                            />
-                          </span>
-                      </p> 
+                      <strong>Average Rating:</strong>
+                      <span *ngFor="let index of [].constructor(averageRating)">
+                        <img
+                          src="images/love_rating.png"
+                          alt="rating"
+                          style="width: 30px; height: 30px; margin-left: 10px; margin-bottom: 10px;"
+                        />
+                      </span>
+                      {{ averageRating }}/5
+                    </p>
                 </div>
-
                 <div class="row">
                     <div class="col-sm-12">
                         @for(review of business.reviews; track review){

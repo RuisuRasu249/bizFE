@@ -59,16 +59,16 @@ export class DataService{
         );
     }
 
-    postReview(id: any, review: any){
-        let newReview = {
-            'username': review.username,
-            'review_text': review.review_text,
-            'rating': review.rating,
-            'review_id': review.review_id
-        };
-        jsonData.forEach(function(business){
-            if(business['_id']['$oid'] == id)
-                business['reviews'].push(newReview);
+    postReview(id: string, review: any): Observable<any> {
+        return new Observable((observer) => {
+          jsonData.forEach((business) => {
+            if (business['_id']['$oid'] === id) {
+              business['reviews'].push(review);
+              console.log('New review added to jsonData:', review); // Log here
+              observer.next({ success: true });
+              observer.complete();
+            }
+          });
         });
-    }
+      }
 }

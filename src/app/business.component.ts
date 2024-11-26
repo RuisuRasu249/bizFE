@@ -32,7 +32,7 @@ export class BusinessComponent {
     this.reviewForm = this.formBuilder.group({
       username: ["", Validators.required],
       review_text: ["", Validators.required],
-      rating: 5,
+      rating: 0,
     });
 
     this.business_list = this.dataService.getBusiness(
@@ -45,27 +45,48 @@ export class BusinessComponent {
     });
   }
 
-  getAverageRating(reviews: any[]): number[] {
-    if (!reviews || reviews.length === 0) {
-      return []; // No reviews, no hearts
+  onSubmit() {
+    if (this.reviewForm.valid) {
+      const newReview = this.reviewForm.value;
+
+    const businessId = this.route.snapshot.paramMap.get('id');
+    const business = this.business_list.find((b: { _id: { $oid: string } }) => b._id.$oid === businessId);
+
+    if (business) {
+      // Update the reviews array
+      business.reviews = [...business.reviews, newReview];
+      console.log('Updated reviews:', business.reviews);
+
+      // Recalculate the average
+      this.getAverageRating(business.reviews);
+
+      // Reset the form
+      this.reviewForm.reset();
+      this.reviewForm.patchValue({ rating: 0 }); // Default rating
     }
-  
-    // Calculate the average rating for the current business
-    const totalRating = reviews.reduce((sum, review) => sum + review.rating, 0);
-    const averageRating = Math.floor(totalRating / reviews.length); // Round down to a whole number
-  
-    return Array(averageRating).fill(0); // Return an array with 'averageRating' elements
+    }
   }
-  
-  
   
 
-  onSubmit(){
-    this.dataService.postReview(
-      this.route.snapshot.paramMap.get('id'),
-      this.reviewForm.value);
-      this.reviewForm.reset();
+  averageRating: any;
+
+  getAverageRating(reviews: any[]) {
+    console.log('Calculating average rating. Reviews:', reviews);
+
+  if (!reviews || reviews.length === 0) {
+    this.averageRating = 0;
+    return;
   }
+
+  // Convert rating to a number before summing
+  const totalRating = reviews.reduce((sum, review) => sum + Number(review.rating), 0);
+
+  console.log('Total rating:', totalRating);
+
+  this.averageRating = Math.floor(totalRating / reviews.length); // Round down to nearest whole number
+  console.log('Updated average rating:', this.averageRating);
+}
+
 
   isInvalid(control: any){
     return this.reviewForm.controls[control].invalid &&
