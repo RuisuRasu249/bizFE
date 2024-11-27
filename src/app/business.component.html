@@ -27,29 +27,31 @@
                     {{ averageRating }}/5
                 </p>
             </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    @for(review of business.reviews; track review){
+
+
+            <div id="reviews" class="col-sm-12">
+                <div *ngIf="reviews_list && reviews_list.length > 0; else noReviews">
+                    @for(review of reviews_list; track review){
                     <div class="card bg-success text-light mb-3">
                         <div class="card-header">
                             <img src="images/user_icon.png" style="width: 30; height: 30px;">
-                            {{review.username}}
+                            {{ review.username }}
                         </div>
                         <div class="card-body">
-                            {{review.review_text}}
+                            {{ review.review_text }}
                         </div>
                         <div class="card-footer">
                             <p>
-                                <strong>
-                                    Rating:
-                                    {{review.rating}}
-                                </strong>
-                                /5
+                                <strong>Rating: {{ review.rating }}</strong>/5
                             </p>
                         </div>
                     </div>
                     }
                 </div>
+                <!-- Fallback if no reviews are available -->
+                <ng-template #noReviews>
+                    <p>No reviews yet. Be the first to review!</p>
+                </ng-template>
             </div>
             }
         </div>

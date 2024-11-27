@@ -1,6 +1,6 @@
 [{
   "_id": {
-    "$oid": "67239eb79d91282008920a5e"
+    "$oid": "6724aa946f456ff0e38445a1"
   },
   "artist": "The Beatles",
   "album_title": "Abbey Road",
@@ -11,19 +11,19 @@
       "username": "john_doe",
       "review_text": "A timeless classic, with songs that defined a generation.",
       "rating": 5,
-      "review_id": "7d895947-6fd8-4127-98da-b00b18d00fb5"
+      "review_id": "3dfcc6be-a33d-4c89-97d0-8b670c3374b2"
     },
     {
       "username": "jane_smith",
       "review_text": "Overrated in my opinion, but it has its moments.",
       "rating": 3,
-      "review_id": "60873b4b-0a7f-4fe5-a033-1f6365ac92ae"
+      "review_id": "22327b03-d156-4d46-aa8c-f7413881a377"
     }
   ]
 },
 {
   "_id": {
-    "$oid": "67239eb79d91282008920a5f"
+    "$oid": "6724aa946f456ff0e38445a2"
   },
   "artist": "Pink Floyd",
   "album_title": "The Dark Side of the Moon",
@@ -34,19 +34,19 @@
       "username": "alice_jones",
       "review_text": "An amazing auditory journey. One of the greatest albums ever.",
       "rating": 5,
-      "review_id": "c791aa58-c8bb-437e-92c9-2a8766f42aed"
+      "review_id": "e579ebb8-41b8-42ec-9304-6e6d9b64963f"
     },
     {
       "username": "bob_brown",
       "review_text": "The production quality is top-notch, but it's not for everyone.",
       "rating": 4,
-      "review_id": "f4ed7471-d7a3-4715-a627-88f6ce435e51"
+      "review_id": "adc8a62f-0eb4-42d7-9e6e-f22975b1861e"
     }
   ]
 },
 {
   "_id": {
-    "$oid": "67239eb79d91282008920a60"
+    "$oid": "6724aa946f456ff0e38445a3"
   },
   "artist": "Nirvana",
   "album_title": "Nevermind",
@@ -57,19 +57,19 @@
       "username": "sarah_connor",
       "review_text": "Grunge at its finest. Kurt Cobainâ€™s voice is raw and powerful.",
       "rating": 5,
-      "review_id": "61c91b7b-257f-4795-96a4-9c1e3c1ce772"
+      "review_id": "7f60b157-64bf-4f95-bd5b-714eb710d864"
     },
     {
       "username": "michael_scott",
       "review_text": "A good album, but not as revolutionary as people say.",
       "rating": 4,
-      "review_id": "9f07132d-89ef-4e69-8c09-2b292ccad19c"
+      "review_id": "0ba62835-6b01-4fa7-a834-a4205b77ab90"
     }
   ]
 },
 {
   "_id": {
-    "$oid": "67239eb79d91282008920a61"
+    "$oid": "6724aa946f456ff0e38445a4"
   },
   "artist": "Radiohead",
   "album_title": "OK Computer",
@@ -80,19 +80,19 @@
       "username": "dwight_schrute",
       "review_text": "This album changed my perspective on music forever. Stunning!",
       "rating": 5,
-      "review_id": "79c24789-fe25-416c-9378-378892116c62"
+      "review_id": "bf68823e-cae8-4be2-8639-ba59a5af8f2e"
     },
     {
       "username": "angela_martin",
       "review_text": "Complicated and a bit over my head, but undeniably brilliant.",
       "rating": 4,
-      "review_id": "09681b7b-d8f6-4a4c-ab7f-4430975cdadd"
+      "review_id": "703a3f9b-9642-433b-abc8-62b897e50a07"
     }
   ]
 },
 {
   "_id": {
-    "$oid": "67239eb79d91282008920a62"
+    "$oid": "6724aa946f456ff0e38445a5"
   },
   "artist": "Fleetwood Mac",
   "album_title": "Rumours",
@@ -103,19 +103,19 @@
       "username": "jim_halpert",
       "review_text": "Timeless music that still feels relevant today.",
       "rating": 5,
-      "review_id": "ec73de90-06b5-4143-b428-3c3da8d754f9"
+      "review_id": "8102bf36-e444-49be-acdc-6d622872e82f"
     },
     {
       "username": "pam_beesly",
       "review_text": "I can understand why it's iconic, but it's not for me.",
       "rating": 3,
-      "review_id": "4fbd893f-270f-4ebe-b580-2d5b3c3fcf13"
+      "review_id": "86f23c2e-4f31-4791-9f8f-8456b9ab45d3"
     }
   ]
 },
 {
   "_id": {
-    "$oid": "67239eb79d91282008920a63"
+    "$oid": "6724aa946f456ff0e38445a6"
   },
   "artist": "Led Zeppelin",
   "album_title": "Led Zeppelin IV",
@@ -126,19 +126,19 @@
       "username": "john_doe",
       "review_text": "An absolute masterpiece. Every track is a classic.",
       "rating": 5,
-      "review_id": "130dd7fe-5884-4b4a-8bea-287b549eef31"
+      "review_id": "609f2f08-5330-4d74-9632-837a44168718"
     },
     {
       "username": "jane_smith",
       "review_text": "Great, but I never really got into Led Zeppelin.",
       "rating": 4,
-      "review_id": "50f0da43-3dc0-442c-9d8b-c793fe85158f"
+      "review_id": "a21b4d30-3c96-4ea7-aa77-08f588e613ae"
     }
   ]
 },
 {
   "_id": {
-    "$oid": "67239eb79d91282008920a64"
+    "$oid": "6724aa946f456ff0e38445a7"
   },
   "artist": "Michael Jackson",
   "album_title": "Thriller",
@@ -149,19 +149,19 @@
       "username": "alice_jones",
       "review_text": "The best-selling album of all time, and it deserves every bit of that success.",
       "rating": 5,
-      "review_id": "7e757513-3dcb-4750-8001-b28c76ce5f34"
+      "review_id": "a4eb4c8e-f41e-47cb-9df1-2f03f076e325"
     },
     {
       "username": "bob_brown",
       "review_text": "Great production, but not my favorite Jackson album.",
       "rating": 4,
-      "review_id": "f549a5cc-9621-4e27-be13-3b9fed4640d7"
+      "review_id": "74bce94b-3ac2-4907-890b-42e1ae0024ea"
     }
   ]
 },
 {
   "_id": {
-    "$oid": "67239eb79d91282008920a65"
+    "$oid": "6724aa946f456ff0e38445a8"
   },
   "artist": "Prince",
   "album_title": "Purple Rain",
@@ -172,19 +172,19 @@
       "username": "sarah_connor",
       "review_text": "Incredible music and an even more incredible persona.",
       "rating": 5,
-      "review_id": "e37330ce-bd76-4687-9e0b-9c31242335ae"
+      "review_id": "1d766a20-5623-4320-a644-ae15093774cd"
     },
     {
       "username": "michael_scott",
       "review_text": "I love some tracks, but a few feel dated.",
       "rating": 4,
-      "review_id": "b842c6b4-e4ad-4d96-9e5c-01a5664b301e"
+      "review_id": "4739a777-619f-43dc-b72d-318fd1d6ea9d"
     }
   ]
 },
 {
   "_id": {
-    "$oid": "67239eb79d91282008920a66"
+    "$oid": "6724aa946f456ff0e38445a9"
   },
   "artist": "Bob Dylan",
   "album_title": "Blood on the Tracks",
@@ -195,19 +195,19 @@
       "username": "dwight_schrute",
       "review_text": "Dylan at his most personal and introspective.",
       "rating": 5,
-      "review_id": "9770af25-c2b6-4818-aa63-8a402d5a1c4b"
+      "review_id": "6d7a176b-893b-465c-a8d7-ef5bbdf803e9"
     },
     {
       "username": "angela_martin",
       "review_text": "Beautiful storytelling, but not my favorite Dylan album.",
       "rating": 3,
-      "review_id": "c5578756-b09f-4917-87e0-550c17e034e9"
+      "review_id": "21589435-59bf-42c7-b399-f6989d22f77c"
     }
   ]
 },
 {
   "_id": {
-    "$oid": "67239eb79d91282008920a67"
+    "$oid": "6724aa946f456ff0e38445aa"
   },
   "artist": "Kanye West",
   "album_title": "My Beautiful Dark Twisted Fantasy",
@@ -218,13 +218,2584 @@
       "username": "jim_halpert",
       "review_text": "A groundbreaking hip hop album. Kanye at his peak.",
       "rating": 5,
-      "review_id": "6605256b-7a3f-45d5-8fe0-72e90b95f4d7"
+      "review_id": "0ba03194-c458-4560-b4ec-c1a1438d5d5e"
     },
     {
       "username": "pam_beesly",
       "review_text": "A bit overhyped, but still a great album.",
       "rating": 4,
-      "review_id": "e563f009-46fc-4c69-8d25-0223b3146b30"
+      "review_id": "e472db01-c456-4aec-a553-2c7f1536036a"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445ab"
+  },
+  "artist": "The Rolling Stones",
+  "album_title": "Exile on Main St.",
+  "year_of_release": 1972,
+  "genre": "Rock",
+  "reviews": [
+    {
+      "username": "michael_scott",
+      "review_text": "A wild and raw album, capturing the Stones at their peak.",
+      "rating": 5,
+      "review_id": "1e64c54f-b3b1-4abc-a48b-39a53ff8c3cb"
+    },
+    {
+      "username": "jim_halpert",
+      "review_text": "It's a bit too long, but there are some real gems here.",
+      "rating": 4,
+      "review_id": "10758c8a-961b-4f63-8f17-a1b32d706a4d"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445ac"
+  },
+  "artist": "Bruce Springsteen",
+  "album_title": "Born to Run",
+  "year_of_release": 1975,
+  "genre": "Rock",
+  "reviews": [
+    {
+      "username": "pam_beesly",
+      "review_text": "The ultimate anthem of freedom and the American dream.",
+      "rating": 5,
+      "review_id": "3db02d0a-08c6-4f0c-ac48-f020cf032474"
+    },
+    {
+      "username": "dwight_schrute",
+      "review_text": "Springsteen's storytelling is unmatched, but it's not for everyone.",
+      "rating": 4,
+      "review_id": "3ddeeea8-4b10-4ee2-94d4-a0a7bff715a9"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445ad"
+  },
+  "artist": "The Clash",
+  "album_title": "London Calling",
+  "year_of_release": 1979,
+  "genre": "Punk Rock",
+  "reviews": [
+    {
+      "username": "angela_martin",
+      "review_text": "A politically charged album that still resonates today.",
+      "rating": 5,
+      "review_id": "c16f0700-3fc6-4b2a-9bfa-d5656fda0566"
+    },
+    {
+      "username": "bob_brown",
+      "review_text": "Energetic and raw, but punk isn't really my style.",
+      "rating": 3,
+      "review_id": "0971ec62-6540-4d51-8062-1f43dd27596f"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445ae"
+  },
+  "artist": "David Bowie",
+  "album_title": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
+  "year_of_release": 1972,
+  "genre": "Glam Rock",
+  "reviews": [
+    {
+      "username": "sarah_connor",
+      "review_text": "Bowie's most iconic work. It's pure genius from start to finish.",
+      "rating": 5,
+      "review_id": "d35dbf9b-7621-434c-bf39-cb37277cacdf"
+    },
+    {
+      "username": "john_doe",
+      "review_text": "A fascinating concept album, but not my favorite Bowie record.",
+      "rating": 4,
+      "review_id": "427bc24a-e1a3-42a1-b14e-33f48c7e9140"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445af"
+  },
+  "artist": "Queen",
+  "album_title": "A Night at the Opera",
+  "year_of_release": 1975,
+  "genre": "Rock",
+  "reviews": [
+    {
+      "username": "jane_smith",
+      "review_text": "Bohemian Rhapsody alone makes this a masterpiece.",
+      "rating": 5,
+      "review_id": "e593b656-1918-4a3c-9326-5ef781a48830"
+    },
+    {
+      "username": "alice_jones",
+      "review_text": "It's theatrical and over-the-top, but I love it.",
+      "rating": 4,
+      "review_id": "72e2c077-de27-479f-9a25-7a2c8add666d"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445b0"
+  },
+  "artist": "The Beach Boys",
+  "album_title": "Pet Sounds",
+  "year_of_release": 1966,
+  "genre": "Pop",
+  "reviews": [
+    {
+      "username": "jim_halpert",
+      "review_text": "A beautifully crafted album. Brian Wilson's magnum opus.",
+      "rating": 5,
+      "review_id": "e7227e7e-0a82-43bd-9d0d-fef05c9ac478"
+    },
+    {
+      "username": "michael_scott",
+      "review_text": "I appreciate the artistry, but it's not my cup of tea.",
+      "rating": 3,
+      "review_id": "401c013f-f7ca-4f19-a8b1-41e341db1672"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445b1"
+  },
+  "artist": "The Velvet Underground",
+  "album_title": "The Velvet Underground & Nico",
+  "year_of_release": 1967,
+  "genre": "Art Rock",
+  "reviews": [
+    {
+      "username": "pam_beesly",
+      "review_text": "Ahead of its time and incredibly influential. A must-listen.",
+      "rating": 5,
+      "review_id": "e3134607-84de-4eb3-819b-95bf71cbe9f5"
+    },
+    {
+      "username": "bob_brown",
+      "review_text": "I respect its legacy, but it's not an easy listen.",
+      "rating": 3,
+      "review_id": "3abcde8a-208e-4153-a6a0-3047d4073592"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445b2"
+  },
+  "artist": "Bob Marley and the Wailers",
+  "album_title": "Legend",
+  "year_of_release": 1984,
+  "genre": "Reggae",
+  "reviews": [
+    {
+      "username": "angela_martin",
+      "review_text": "An essential collection of Marley's best work.",
+      "rating": 5,
+      "review_id": "22dff163-bca5-449e-8e07-94c5fd764e9b"
+    },
+    {
+      "username": "dwight_schrute",
+      "review_text": "I'm not a huge reggae fan, but Marley is undeniable.",
+      "rating": 4,
+      "review_id": "101d7459-4667-4a75-90ea-8edc8db65769"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445b3"
+  },
+  "artist": "U2",
+  "album_title": "The Joshua Tree",
+  "year_of_release": 1987,
+  "genre": "Rock",
+  "reviews": [
+    {
+      "username": "sarah_connor",
+      "review_text": "An album that defined the 80s. U2 at their best.",
+      "rating": 5,
+      "review_id": "03f6d220-9702-47e1-b55b-219aa5c113de"
+    },
+    {
+      "username": "john_doe",
+      "review_text": "Some amazing songs, but also some filler.",
+      "rating": 4,
+      "review_id": "e9835c4c-bc56-4f9f-b468-16a64875069a"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445b4"
+  },
+  "artist": "The Police",
+  "album_title": "Synchronicity",
+  "year_of_release": 1983,
+  "genre": "New Wave",
+  "reviews": [
+    {
+      "username": "jane_smith",
+      "review_text": "A perfect blend of rock and pop. Sting's best work with the band.",
+      "rating": 5,
+      "review_id": "96a8bd0e-634f-4b98-a9bf-81423ef27cd8"
+    },
+    {
+      "username": "michael_scott",
+      "review_text": "Catchy and well-produced, but a bit too polished for my taste.",
+      "rating": 4,
+      "review_id": "18a263d8-49e1-49e4-812b-6ae1fdfeb823"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445b5"
+  },
+  "artist": "Beastie Boys",
+  "album_title": "Licensed to Ill",
+  "year_of_release": 1986,
+  "genre": "Hip Hop",
+  "reviews": [
+    {
+      "username": "jim_halpert",
+      "review_text": "Fun, loud, and rebellious. A classic hip-hop debut.",
+      "rating": 5,
+      "review_id": "677b8e4f-12ee-419a-a2f3-11287f075f5d"
+    },
+    {
+      "username": "pam_beesly",
+      "review_text": "It's a party album for sure, but not much depth.",
+      "rating": 3,
+      "review_id": "6279c619-3ee0-42cf-9432-91adc2f315b0"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445b6"
+  },
+  "artist": "The Smiths",
+  "album_title": "The Queen Is Dead",
+  "year_of_release": 1986,
+  "genre": "Alternative Rock",
+  "reviews": [
+    {
+      "username": "dwight_schrute",
+      "review_text": "Morrissey's lyrics are as sharp as ever. A masterpiece.",
+      "rating": 5,
+      "review_id": "9933f476-fb9c-4268-bd27-30fc82e39824"
+    },
+    {
+      "username": "alice_jones",
+      "review_text": "I appreciate the lyrics, but the music feels dated.",
+      "rating": 3,
+      "review_id": "b73404ac-7a38-4208-87fa-37f1fb5c77e7"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445b7"
+  },
+  "artist": "R.E.M.",
+  "album_title": "Automatic for the People",
+  "year_of_release": 1992,
+  "genre": "Alternative Rock",
+  "reviews": [
+    {
+      "username": "sarah_connor",
+      "review_text": "Emotional and beautifully produced. One of R.E.M.'s best.",
+      "rating": 5,
+      "review_id": "4eea40e1-91cc-4eb2-a610-4b0d7b22e537"
+    },
+    {
+      "username": "bob_brown",
+      "review_text": "Solid album, but I don't revisit it often.",
+      "rating": 3,
+      "review_id": "9d65dc69-5a50-41ec-adac-df26f2ee918b"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445b8"
+  },
+  "artist": "Jimi Hendrix",
+  "album_title": "Are You Experienced",
+  "year_of_release": 1967,
+  "genre": "Rock",
+  "reviews": [
+    {
+      "username": "john_doe",
+      "review_text": "Mind-blowing guitar work. Hendrix was ahead of his time.",
+      "rating": 5,
+      "review_id": "5f2d4e88-41d2-4d33-8284-20c2cc5b01b2"
+    },
+    {
+      "username": "jane_smith",
+      "review_text": "Some of the songs are amazing, but others feel repetitive.",
+      "rating": 4,
+      "review_id": "5a586c37-43f7-4c32-b7ac-4930813c6822"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445b9"
+  },
+  "artist": "OutKast",
+  "album_title": "Stankonia",
+  "year_of_release": 2000,
+  "genre": "Hip Hop",
+  "reviews": [
+    {
+      "username": "michael_scott",
+      "review_text": "Creative and genre-defying. OutKast's best work.",
+      "rating": 5,
+      "review_id": "33e2bb33-b3c6-4423-a710-ae296257ca2c"
+    },
+    {
+      "username": "angela_martin",
+      "review_text": "Unique and catchy, but some tracks are just too weird for me.",
+      "rating": 3,
+      "review_id": "aac5a583-9a05-42fd-888c-76200eba56b7"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445ba"
+  },
+  "artist": "The Who",
+  "album_title": "Who's Next",
+  "year_of_release": 1971,
+  "genre": "Rock",
+  "reviews": [
+    {
+      "username": "sarah_connor",
+      "review_text": "An iconic album with some of rock's greatest anthems.",
+      "rating": 5,
+      "review_id": "069be194-3109-4930-8fcc-4c508e0eca65"
+    },
+    {
+      "username": "john_doe",
+      "review_text": "Powerful and raw, but a few tracks feel dated.",
+      "rating": 4,
+      "review_id": "b30d114f-af0f-4648-a657-bf0b76c9d601"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445bb"
+  },
+  "artist": "Lauryn Hill",
+  "album_title": "The Miseducation of Lauryn Hill",
+  "year_of_release": 1998,
+  "genre": "R&B",
+  "reviews": [
+    {
+      "username": "jane_smith",
+      "review_text": "An empowering and soulful masterpiece.",
+      "rating": 5,
+      "review_id": "37b71fcf-b84b-46f1-b3ad-5a1ebe6bfc14"
+    },
+    {
+      "username": "jim_halpert",
+      "review_text": "Timeless and important, but not every song hits the mark for me.",
+      "rating": 4,
+      "review_id": "839a72d8-6e48-4ac5-8a05-1dd2ecc09707"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445bc"
+  },
+  "artist": "Dr. Dre",
+  "album_title": "The Chronic",
+  "year_of_release": 1992,
+  "genre": "Hip Hop",
+  "reviews": [
+    {
+      "username": "pam_beesly",
+      "review_text": "A hip-hop classic that changed the game.",
+      "rating": 5,
+      "review_id": "dce999cf-29b5-4acc-9d2f-575cf95ab0af"
+    },
+    {
+      "username": "michael_scott",
+      "review_text": "Influential and catchy, but some lyrics haven't aged well.",
+      "rating": 4,
+      "review_id": "405dbf95-fee0-4073-a2ad-e611d28a10e0"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445bd"
+  },
+  "artist": "Oasis",
+  "album_title": "(What's the Story) Morning Glory?",
+  "year_of_release": 1995,
+  "genre": "Britpop",
+  "reviews": [
+    {
+      "username": "angela_martin",
+      "review_text": "Full of iconic songs that defined the 90s.",
+      "rating": 5,
+      "review_id": "80b98ba2-836b-46d3-8b88-70d9fc666332"
+    },
+    {
+      "username": "dwight_schrute",
+      "review_text": "Catchy and fun, but a bit too overhyped for my taste.",
+      "rating": 3,
+      "review_id": "5aac46fa-92d7-41a0-9a0b-7d44f1c25896"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445be"
+  },
+  "artist": "Amy Winehouse",
+  "album_title": "Back to Black",
+  "year_of_release": 2006,
+  "genre": "Soul",
+  "reviews": [
+    {
+      "username": "bob_brown",
+      "review_text": "Soulful and heart-wrenching. A true classic.",
+      "rating": 5,
+      "review_id": "b4675e2f-ebd4-49c8-8f55-445bce5f20a4"
+    },
+    {
+      "username": "alice_jones",
+      "review_text": "Amazing vocals, but the album is a bit short.",
+      "rating": 4,
+      "review_id": "724eb67c-ecce-4a05-8d93-6223e37ffa70"
+    },
+    {
+      "user_id": "dwight_schrute",
+      "review_text": "Amy Winehouse is THE BEST!!!",
+      "rating": 5,
+      "review_id": "8af1a578-57be-49ed-9846-319f36b08c40"
+    },
+    {
+      "user_id": "dwight_schrute",
+      "review_text": "Amy Winehouse is THE BEST!!!",
+      "rating": 5,
+      "review_id": "3c176ca2-2478-40d4-a416-1e8bd8b84623"
+    },
+    {
+      "user_id": "dwight_schrute",
+      "review_text": "Amy Winehouse is THE BEST!!!",
+      "rating": 5,
+      "review_id": "fef47ac0-dd42-4062-b5bd-2b436dcb52c4"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445bf"
+  },
+  "artist": "Green Day",
+  "album_title": "American Idiot",
+  "year_of_release": 2004,
+  "genre": "Punk Rock",
+  "reviews": [
+    {
+      "username": "john_doe",
+      "review_text": "A bold political statement and a great punk rock album.",
+      "rating": 5,
+      "review_id": "c0824072-035f-4da0-b018-2bf608d3861c"
+    },
+    {
+      "username": "sarah_connor",
+      "review_text": "Powerful and energetic, but not my favorite Green Day album.",
+      "rating": 4,
+      "review_id": "63bdde59-eb37-4e52-94bb-b855e13d9bc2"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445c0"
+  },
+  "artist": "Rihanna",
+  "album_title": "Anti",
+  "year_of_release": 2016,
+  "genre": "R&B",
+  "reviews": [
+    {
+      "username": "jane_smith",
+      "review_text": "A bold and mature album. Rihanna's best work yet.",
+      "rating": 5,
+      "review_id": "25fc59ed-2bf0-43c5-a165-671fddbcb094"
+    },
+    {
+      "username": "michael_scott",
+      "review_text": "A bit too experimental for my taste, but I respect it.",
+      "rating": 4,
+      "review_id": "03cb4f9d-284d-4114-b646-37640cacb08c"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445c1"
+  },
+  "artist": "Frank Ocean",
+  "album_title": "Blonde",
+  "year_of_release": 2016,
+  "genre": "R&B",
+  "reviews": [
+    {
+      "username": "jim_halpert",
+      "review_text": "A beautiful, introspective journey. Frank Ocean is a genius.",
+      "rating": 5,
+      "review_id": "732c4fe6-ef89-4986-8a48-2f37fd66524c"
+    },
+    {
+      "username": "angela_martin",
+      "review_text": "Some songs are great, but it's not an easy listen.",
+      "rating": 4,
+      "review_id": "d8a57070-d6e7-4d48-91ce-44b7ba36b5e3"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445c2"
+  },
+  "artist": "Jay-Z",
+  "album_title": "The Blueprint",
+  "year_of_release": 2001,
+  "genre": "Hip Hop",
+  "reviews": [
+    {
+      "username": "pam_beesly",
+      "review_text": "One of the greatest hip-hop albums ever made.",
+      "rating": 5,
+      "review_id": "2fa1e2c2-37ce-4893-b3a1-c9af9fe75fcb"
+    },
+    {
+      "username": "dwight_schrute",
+      "review_text": "Solid album, but I've heard better from Jay-Z.",
+      "rating": 4,
+      "review_id": "6780bf97-fd12-4616-b559-9bbc9cd6f53e"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445c3"
+  },
+  "artist": "Eminem",
+  "album_title": "The Marshall Mathers LP",
+  "year_of_release": 2000,
+  "genre": "Hip Hop",
+  "reviews": [
+    {
+      "username": "bob_brown",
+      "review_text": "Eminem's rawest and most intense album. A classic.",
+      "rating": 5,
+      "review_id": "5562db9c-0757-4e1f-9fda-ceb756638ced"
+    },
+    {
+      "username": "alice_jones",
+      "review_text": "Some of the lyrics haven't aged well, but it's still powerful.",
+      "rating": 4,
+      "review_id": "b7b4e92b-feb3-4651-ba84-247bbdac7d36"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445c4"
+  },
+  "artist": "Taylor Swift",
+  "album_title": "1989",
+  "year_of_release": 2014,
+  "genre": "Pop",
+  "reviews": [
+    {
+      "username": "sarah_connor",
+      "review_text": "Pop perfection. Every song is a hit.",
+      "rating": 5,
+      "review_id": "b980d009-1bb7-4435-a63c-b00f8ef74b72"
+    },
+    {
+      "username": "john_doe",
+      "review_text": "Catchy, but not my favorite era of Taylor's music.",
+      "rating": 4,
+      "review_id": "1894ff8d-f3c0-4f7a-aee9-58811a9a39d4"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445c5"
+  },
+  "artist": "Red Hot Chili Peppers",
+  "album_title": "Californication",
+  "year_of_release": 1999,
+  "genre": "Rock",
+  "reviews": [
+    {
+      "username": "jane_smith",
+      "review_text": "A fantastic album with some of their best work.",
+      "rating": 5,
+      "review_id": "705efc21-ee11-4a0e-b2f1-6a65dfad6aa0"
+    },
+    {
+      "username": "michael_scott",
+      "review_text": "Great songs, but a bit too mellow for my taste.",
+      "rating": 4,
+      "review_id": "72bf81c7-a3f2-4df3-8b26-0311cdec8304"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445c6"
+  },
+  "artist": "Coldplay",
+  "album_title": "A Rush of Blood to the Head",
+  "year_of_release": 2002,
+  "genre": "Alternative Rock",
+  "reviews": [
+    {
+      "username": "jim_halpert",
+      "review_text": "Melodic and emotional. Coldplay at their best.",
+      "rating": 5,
+      "review_id": "51b15810-2199-4808-ac87-b5fa7fe0aee8"
+    },
+    {
+      "username": "angela_martin",
+      "review_text": "It's beautiful, but a bit too slow for me.",
+      "rating": 4,
+      "review_id": "60db5df8-2e82-4b12-820c-efa41e3048ca"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445c7"
+  },
+  "artist": "Linkin Park",
+  "album_title": "Hybrid Theory",
+  "year_of_release": 2000,
+  "genre": "Nu Metal",
+  "reviews": [
+    {
+      "username": "pam_beesly",
+      "review_text": "A groundbreaking album for its time. Loved every track.",
+      "rating": 5,
+      "review_id": "18b36309-afae-4577-88ca-63e3da8896d1"
+    },
+    {
+      "username": "dwight_schrute",
+      "review_text": "I like some songs, but the angst feels over the top.",
+      "rating": 3,
+      "review_id": "e289f0ed-cdce-4fd6-9c4c-c979d8c5b5eb"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445c8"
+  },
+  "artist": "The Rolling Stones",
+  "album_title": "Sticky Fingers",
+  "year_of_release": 1971,
+  "genre": "Rock",
+  "reviews": [
+    {
+      "username": "alice_jones",
+      "review_text": "Classic Stones. Raw, edgy, and full of great riffs.",
+      "rating": 5,
+      "review_id": "71632d2d-10eb-4fa1-bbc2-e278890b6463"
+    },
+    {
+      "username": "bob_brown",
+      "review_text": "Good, but I prefer their earlier work.",
+      "rating": 4,
+      "review_id": "889693a6-1b40-4127-9bec-67f39a5045bf"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445c9"
+  },
+  "artist": "Bruce Springsteen",
+  "album_title": "Born to Run",
+  "year_of_release": 1975,
+  "genre": "Rock",
+  "reviews": [
+    {
+      "username": "john_doe",
+      "review_text": "An anthem of hope and freedom. The Boss at his best.",
+      "rating": 5,
+      "review_id": "e9a0b70e-4f7c-4563-98e6-d0d71037c72e"
+    },
+    {
+      "username": "sarah_connor",
+      "review_text": "Inspiring and powerful, but not all tracks are hits for me.",
+      "rating": 4,
+      "review_id": "2bc3fc4d-17e8-4162-9e86-cedd1dc61e46"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445ca"
+  },
+  "artist": "The Clash",
+  "album_title": "London Calling",
+  "year_of_release": 1979,
+  "genre": "Punk Rock",
+  "reviews": [
+    {
+      "username": "jane_smith",
+      "review_text": "A groundbreaking album that expanded punk's boundaries.",
+      "rating": 5,
+      "review_id": "5b53c9ed-19d9-42e1-8a1b-bcaa19cfab92"
+    },
+    {
+      "username": "michael_scott",
+      "review_text": "Raw and energetic, but not my favorite sound.",
+      "rating": 3,
+      "review_id": "14a1997d-0b96-48f2-87dc-6b18bfc72870"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445cb"
+  },
+  "artist": "BeyoncÃ©",
+  "album_title": "Lemonade",
+  "year_of_release": 2016,
+  "genre": "R&B",
+  "reviews": [
+    {
+      "username": "jim_halpert",
+      "review_text": "A deeply personal and artistic statement. BeyoncÃ© at her peak.",
+      "rating": 5,
+      "review_id": "319fbaa7-0827-45c2-a22c-8ebbd5d67684"
+    },
+    {
+      "username": "angela_martin",
+      "review_text": "Great production and vocals, but a few tracks didn't resonate with me.",
+      "rating": 4,
+      "review_id": "25c15f74-7b9d-4426-993c-27aadc3d6c93"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445cc"
+  },
+  "artist": "Metallica",
+  "album_title": "Master of Puppets",
+  "year_of_release": 1986,
+  "genre": "Metal",
+  "reviews": [
+    {
+      "username": "pam_beesly",
+      "review_text": "Heavy, fast, and timeless. A metal masterpiece.",
+      "rating": 5,
+      "review_id": "2a4e330a-2e34-4413-b37d-8a42eb72f862"
+    },
+    {
+      "username": "dwight_schrute",
+      "review_text": "Intense and well-crafted, but not my everyday listen.",
+      "rating": 4,
+      "review_id": "959d1c09-9f19-46e4-9dcd-40a41881415d"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445cd"
+  },
+  "artist": "OutKast",
+  "album_title": "Stankonia",
+  "year_of_release": 2000,
+  "genre": "Hip Hop",
+  "reviews": [
+    {
+      "username": "alice_jones",
+      "review_text": "Innovative and funky. OutKast never disappoints.",
+      "rating": 5,
+      "review_id": "b6fdb52d-1305-48c3-a12e-f40d98adccc9"
+    },
+    {
+      "username": "bob_brown",
+      "review_text": "A bit too experimental at times, but still solid.",
+      "rating": 4,
+      "review_id": "1845941f-1548-43a5-be3d-8e12b26b6c19"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445ce"
+  },
+  "artist": "The Velvet Underground",
+  "album_title": "The Velvet Underground & Nico",
+  "year_of_release": 1967,
+  "genre": "Art Rock",
+  "reviews": [
+    {
+      "username": "john_doe",
+      "review_text": "Way ahead of its time. A truly influential record.",
+      "rating": 5,
+      "review_id": "7f6e64f0-d335-4764-b4ef-51057224946c"
+    },
+    {
+      "username": "sarah_connor",
+      "review_text": "Interesting but not something Iâ€™d listen to often.",
+      "rating": 3,
+      "review_id": "a806b3b7-403b-4cf5-bd89-33a16cc69536"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445cf"
+  },
+  "artist": "Daft Punk",
+  "album_title": "Random Access Memories",
+  "year_of_release": 2013,
+  "genre": "Electronic",
+  "reviews": [
+    {
+      "username": "jane_smith",
+      "review_text": "A beautiful blend of electronic and live instrumentation.",
+      "rating": 5,
+      "review_id": "e2c8d621-e387-4393-885d-9e6ccd4df76f"
+    },
+    {
+      "username": "michael_scott",
+      "review_text": "Some great hits, but not a cohesive listen for me.",
+      "rating": 3,
+      "review_id": "6fd5682b-261e-437e-baa3-af50cfc77d8d"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445d0"
+  },
+  "artist": "The Beach Boys",
+  "album_title": "Pet Sounds",
+  "year_of_release": 1966,
+  "genre": "Pop Rock",
+  "reviews": [
+    {
+      "username": "jim_halpert",
+      "review_text": "A masterpiece of harmonies and songwriting.",
+      "rating": 5,
+      "review_id": "45e28cff-d7ed-44b3-a612-1c47b3afa661"
+    },
+    {
+      "username": "angela_martin",
+      "review_text": "Very pretty, but a bit too mellow for my taste.",
+      "rating": 4,
+      "review_id": "125b2a2b-7144-416b-87d7-2723334e6041"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445d1"
+  },
+  "artist": "Adele",
+  "album_title": "21",
+  "year_of_release": 2011,
+  "genre": "Pop",
+  "reviews": [
+    {
+      "username": "pam_beesly",
+      "review_text": "Emotional and powerful. Adeleâ€™s voice is incredible.",
+      "rating": 5,
+      "review_id": "eaf7221b-b863-46c8-b109-7f4fb60d09e8"
+    },
+    {
+      "username": "dwight_schrute",
+      "review_text": "Heartfelt and honest, but a bit too much balladry for me.",
+      "rating": 4,
+      "review_id": "ff4b9112-9740-4715-9d58-198f640af6cf"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445d2"
+  },
+  "artist": "The Rolling Stones",
+  "album_title": "Sticky Fingers",
+  "year_of_release": 1971,
+  "genre": "Rock",
+  "reviews": [
+    {
+      "username": "alice_jones",
+      "review_text": "Classic Stones. Raw, edgy, and full of great riffs.",
+      "rating": 5,
+      "review_id": "bca04c25-326c-4573-9136-57ad5435129b"
+    },
+    {
+      "username": "bob_brown",
+      "review_text": "Good, but I prefer their earlier work.",
+      "rating": 4,
+      "review_id": "7cba7db3-30f5-4088-91d6-e02704d1235a"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445d3"
+  },
+  "artist": "Bruce Springsteen",
+  "album_title": "Born to Run",
+  "year_of_release": 1975,
+  "genre": "Rock",
+  "reviews": [
+    {
+      "username": "john_doe",
+      "review_text": "An anthem of hope and freedom. The Boss at his best.",
+      "rating": 5,
+      "review_id": "d514b353-d9d4-4075-a317-110b7c2324e7"
+    },
+    {
+      "username": "sarah_connor",
+      "review_text": "Inspiring and powerful, but not all tracks are hits for me.",
+      "rating": 4,
+      "review_id": "7e8abb6c-4747-4331-b528-7ee568557e51"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445d4"
+  },
+  "artist": "The Clash",
+  "album_title": "London Calling",
+  "year_of_release": 1979,
+  "genre": "Punk Rock",
+  "reviews": [
+    {
+      "username": "jane_smith",
+      "review_text": "A groundbreaking album that expanded punk's boundaries.",
+      "rating": 5,
+      "review_id": "33d7947c-6593-4f42-a76e-20f0e7678faf"
+    },
+    {
+      "username": "michael_scott",
+      "review_text": "Raw and energetic, but not my favorite sound.",
+      "rating": 3,
+      "review_id": "593a686b-5ea7-4491-b771-ff92d4b27c9e"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445d5"
+  },
+  "artist": "BeyoncÃ©",
+  "album_title": "Lemonade",
+  "year_of_release": 2016,
+  "genre": "R&B",
+  "reviews": [
+    {
+      "username": "jim_halpert",
+      "review_text": "A deeply personal and artistic statement. BeyoncÃ© at her peak.",
+      "rating": 5,
+      "review_id": "9cc864ec-2d35-4ced-9fd5-0f1af5b1f690"
+    },
+    {
+      "username": "angela_martin",
+      "review_text": "Great production and vocals, but a few tracks didn't resonate with me.",
+      "rating": 4,
+      "review_id": "eaa60d3d-ffba-4412-9992-922a8b174f3a"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445d6"
+  },
+  "artist": "Metallica",
+  "album_title": "Master of Puppets",
+  "year_of_release": 1986,
+  "genre": "Metal",
+  "reviews": [
+    {
+      "username": "pam_beesly",
+      "review_text": "Heavy, fast, and timeless. A metal masterpiece.",
+      "rating": 5,
+      "review_id": "929dbcd6-6929-416c-8baf-99b1c22db164"
+    },
+    {
+      "username": "dwight_schrute",
+      "review_text": "Intense and well-crafted, but not my everyday listen.",
+      "rating": 4,
+      "review_id": "b1fe0444-44bf-4b12-9011-bf486a04cfb9"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445d7"
+  },
+  "artist": "OutKast",
+  "album_title": "Stankonia",
+  "year_of_release": 2000,
+  "genre": "Hip Hop",
+  "reviews": [
+    {
+      "username": "alice_jones",
+      "review_text": "Innovative and funky. OutKast never disappoints.",
+      "rating": 5,
+      "review_id": "0a5e7b45-3845-4502-a62b-2158c7081ca2"
+    },
+    {
+      "username": "bob_brown",
+      "review_text": "A bit too experimental at times, but still solid.",
+      "rating": 4,
+      "review_id": "982e1643-d631-4e14-ad4c-267aa44ca96e"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445d8"
+  },
+  "artist": "The Velvet Underground",
+  "album_title": "The Velvet Underground & Nico",
+  "year_of_release": 1967,
+  "genre": "Art Rock",
+  "reviews": [
+    {
+      "username": "john_doe",
+      "review_text": "Way ahead of its time. A truly influential record.",
+      "rating": 5,
+      "review_id": "27490a84-df1a-4611-a864-3024985c9ca2"
+    },
+    {
+      "username": "sarah_connor",
+      "review_text": "Interesting but not something Iâ€™d listen to often.",
+      "rating": 3,
+      "review_id": "8c54dff9-e3ea-4488-915e-6bf556e9ce0d"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445d9"
+  },
+  "artist": "Daft Punk",
+  "album_title": "Random Access Memories",
+  "year_of_release": 2013,
+  "genre": "Electronic",
+  "reviews": [
+    {
+      "username": "jane_smith",
+      "review_text": "A beautiful blend of electronic and live instrumentation.",
+      "rating": 5,
+      "review_id": "059d1524-b54f-4e61-98b2-20113a526933"
+    },
+    {
+      "username": "michael_scott",
+      "review_text": "Some great hits, but not a cohesive listen for me.",
+      "rating": 3,
+      "review_id": "1b70b991-4f3d-4f28-bccd-4eb355750e78"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445da"
+  },
+  "artist": "The Beach Boys",
+  "album_title": "Pet Sounds",
+  "year_of_release": 1966,
+  "genre": "Pop Rock",
+  "reviews": [
+    {
+      "username": "jim_halpert",
+      "review_text": "A masterpiece of harmonies and songwriting.",
+      "rating": 5,
+      "review_id": "c4203f47-c4fb-4bf3-94b2-950b06338989"
+    },
+    {
+      "username": "angela_martin",
+      "review_text": "Very pretty, but a bit too mellow for my taste.",
+      "rating": 4,
+      "review_id": "14cb1eee-c7f0-4395-9765-a039b1d47c55"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445db"
+  },
+  "artist": "Adele",
+  "album_title": "21",
+  "year_of_release": 2011,
+  "genre": "Pop",
+  "reviews": [
+    {
+      "username": "pam_beesly",
+      "review_text": "Emotional and powerful. Adeleâ€™s voice is incredible.",
+      "rating": 5,
+      "review_id": "f3277ec4-3640-4198-bd2c-49f623c3cbda"
+    },
+    {
+      "username": "dwight_schrute",
+      "review_text": "Heartfelt and honest, but a bit too much balladry for me.",
+      "rating": 4,
+      "review_id": "f662d106-4957-4466-b07e-28051c76e0b8"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445dc"
+  },
+  "artist": "David Bowie",
+  "album_title": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
+  "year_of_release": 1972,
+  "genre": "Glam Rock",
+  "reviews": [
+    {
+      "username": "alice_jones",
+      "review_text": "A visionary album that paved the way for so many.",
+      "rating": 5,
+      "review_id": "531ebe50-d03a-4a08-9e29-bc4e323901d7"
+    },
+    {
+      "username": "bob_brown",
+      "review_text": "Iconic and flamboyant, but a few tracks didn't click with me.",
+      "rating": 4,
+      "review_id": "40a4787d-952c-4fa3-a5f2-241590608b60"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445dd"
+  },
+  "artist": "Miles Davis",
+  "album_title": "Kind of Blue",
+  "year_of_release": 1959,
+  "genre": "Jazz",
+  "reviews": [
+    {
+      "username": "john_doe",
+      "review_text": "The gold standard of jazz. Every note is perfection.",
+      "rating": 5,
+      "review_id": "6df52777-1c92-4b83-bf6e-2350bc0c29f9"
+    },
+    {
+      "username": "sarah_connor",
+      "review_text": "Smooth and relaxing, but jazz isn't really my thing.",
+      "rating": 3,
+      "review_id": "337c4659-c518-4e02-a907-f73eba78a39d"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445de"
+  },
+  "artist": "Jimi Hendrix",
+  "album_title": "Are You Experienced",
+  "year_of_release": 1967,
+  "genre": "Rock",
+  "reviews": [
+    {
+      "username": "jane_smith",
+      "review_text": "Mind-blowing guitar work. Jimi was a genius.",
+      "rating": 5,
+      "review_id": "7f90c769-44d2-4fe4-ba6b-f8cd89bf71b4"
+    },
+    {
+      "username": "michael_scott",
+      "review_text": "Some parts are too wild for me, but undeniable talent.",
+      "rating": 4,
+      "review_id": "b58ae4d3-fd9f-4a19-8b87-9bc9fb626427"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445df"
+  },
+  "artist": "Bob Marley and the Wailers",
+  "album_title": "Legend",
+  "year_of_release": 1984,
+  "genre": "Reggae",
+  "reviews": [
+    {
+      "username": "jim_halpert",
+      "review_text": "Feel-good music with a message. Love it.",
+      "rating": 5,
+      "review_id": "2c4fec0b-932c-4aaa-81e2-e2593e983f95"
+    },
+    {
+      "username": "angela_martin",
+      "review_text": "Catchy and uplifting, but a bit repetitive.",
+      "rating": 4,
+      "review_id": "68d370c0-eb59-4b34-9804-2bcbe1188d2e"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445e0"
+  },
+  "artist": "Taylor Swift",
+  "album_title": "1989",
+  "year_of_release": 2014,
+  "genre": "Pop",
+  "reviews": [
+    {
+      "username": "pam_beesly",
+      "review_text": "Fun and catchy pop songs. A great reinvention for Taylor.",
+      "rating": 5,
+      "review_id": "236459dd-4867-41a4-8c56-17172e2f6cd8"
+    },
+    {
+      "username": "dwight_schrute",
+      "review_text": "Not bad for pop music, but not really my style.",
+      "rating": 3,
+      "review_id": "ab2df96f-9a33-4474-8299-e614bb0d0955"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445e1"
+  },
+  "artist": "Kendrick Lamar",
+  "album_title": "To Pimp a Butterfly",
+  "year_of_release": 2015,
+  "genre": "Hip Hop",
+  "reviews": [
+    {
+      "username": "alice_jones",
+      "review_text": "A masterpiece of storytelling and social commentary.",
+      "rating": 5,
+      "review_id": "72a9f2a6-281f-4f96-9067-a4892f19885f"
+    },
+    {
+      "username": "bob_brown",
+      "review_text": "Deep and thought-provoking, but I had to listen a few times to get it.",
+      "rating": 4,
+      "review_id": "1cdc84ee-7fa5-48c3-ae35-d40f986b2156"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445e2"
+  },
+  "artist": "The Who",
+  "album_title": "Who's Next",
+  "year_of_release": 1971,
+  "genre": "Rock",
+  "reviews": [
+    {
+      "username": "john_doe",
+      "review_text": "Powerful and iconic. Love every track.",
+      "rating": 5,
+      "review_id": "14f2313d-6361-40ac-baf5-5a77b0158912"
+    },
+    {
+      "username": "sarah_connor",
+      "review_text": "Energetic and classic rock, but not something I play often.",
+      "rating": 4,
+      "review_id": "36d1d7cf-2bbc-4c51-a13c-89c66ed8ae9d"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445e3"
+  },
+  "artist": "Queen",
+  "album_title": "A Night at the Opera",
+  "year_of_release": 1975,
+  "genre": "Rock",
+  "reviews": [
+    {
+      "username": "jane_smith",
+      "review_text": "Operatic and theatrical. Freddie Mercury is a legend.",
+      "rating": 5,
+      "review_id": "e4e6326c-0cbe-45f0-a52f-0539d8e77096"
+    },
+    {
+      "username": "michael_scott",
+      "review_text": "A bit too dramatic for my taste, but still impressive.",
+      "rating": 4,
+      "review_id": "8b3c6d2e-7b55-4951-b07d-35257b5c2814"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445e4"
+  },
+  "artist": "Amy Winehouse",
+  "album_title": "Back to Black",
+  "year_of_release": 2006,
+  "genre": "Soul",
+  "reviews": [
+    {
+      "username": "jim_halpert",
+      "review_text": "Raw and soulful. A modern classic.",
+      "rating": 5,
+      "review_id": "a13dfcf6-2bf8-4329-bd46-a2aab64aecba"
+    },
+    {
+      "username": "angela_martin",
+      "review_text": "Hauntingly beautiful, but some songs are too heavy for me.",
+      "rating": 4,
+      "review_id": "807aeaa0-936d-455f-a09e-fabf17ca6b84"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445e5"
+  },
+  "artist": "David Bowie",
+  "album_title": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
+  "year_of_release": 1972,
+  "genre": "Rock",
+  "reviews": [
+    {
+      "username": "john_doe",
+      "review_text": "An iconic album that changed rock music forever.",
+      "rating": 5,
+      "review_id": "83465bfb-0a10-4efb-b6cc-b3eaba396a60"
+    },
+    {
+      "username": "jane_smith",
+      "review_text": "Some tracks are a bit too theatrical, but overall great.",
+      "rating": 4,
+      "review_id": "88196fc5-54ac-4856-a947-9d87bc2c2536"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445e6"
+  },
+  "artist": "OutKast",
+  "album_title": "Stankonia",
+  "year_of_release": 2000,
+  "genre": "Hip Hop",
+  "reviews": [
+    {
+      "username": "alice_jones",
+      "review_text": "Groundbreaking and innovative. OutKast at their finest.",
+      "rating": 5,
+      "review_id": "0541369e-f56e-43c2-bdd4-fad803b72a5f"
+    },
+    {
+      "username": "bob_brown",
+      "review_text": "A fun and eclectic album, though not every track hits.",
+      "rating": 4,
+      "review_id": "b087d6d6-3776-4242-b3cf-5d4b367aa1d3"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445e7"
+  },
+  "artist": "Metallica",
+  "album_title": "Master of Puppets",
+  "year_of_release": 1986,
+  "genre": "Metal",
+  "reviews": [
+    {
+      "username": "sarah_connor",
+      "review_text": "A heavy metal classic that still holds up today.",
+      "rating": 5,
+      "review_id": "c867b737-04d7-4488-a85c-e16cb19eb9d5"
+    },
+    {
+      "username": "michael_scott",
+      "review_text": "Not a huge metal fan, but this album is undeniably powerful.",
+      "rating": 4,
+      "review_id": "b7966c7d-8b30-434a-afb0-3bbcef4b8d40"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445e8"
+  },
+  "artist": "Amy Winehouse",
+  "album_title": "Back to Black",
+  "year_of_release": 2006,
+  "genre": "Soul",
+  "reviews": [
+    {
+      "username": "dwight_schrute",
+      "review_text": "Amy's voice is haunting and beautiful. A tragic yet stunning album.",
+      "rating": 5,
+      "review_id": "69cbf3be-ed5c-4435-84bc-d4989ed31318"
+    },
+    {
+      "username": "angela_martin",
+      "review_text": "Great vocals, but some songs aren't my style.",
+      "rating": 3,
+      "review_id": "0f0b6abb-5ad7-4473-8ce2-5c01b5e024cf"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445e9"
+  },
+  "artist": "The Clash",
+  "album_title": "London Calling",
+  "year_of_release": 1979,
+  "genre": "Punk Rock",
+  "reviews": [
+    {
+      "username": "jim_halpert",
+      "review_text": "A revolutionary album that blends punk with other genres.",
+      "rating": 5,
+      "review_id": "76ec3dcd-f742-47ce-9000-28548be7f4ec"
+    },
+    {
+      "username": "pam_beesly",
+      "review_text": "Energetic and timeless, but punk isn't my favorite genre.",
+      "rating": 3,
+      "review_id": "5770ffb8-d844-4c04-b7bd-56595db45142"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445ea"
+  },
+  "artist": "Taylor Swift",
+  "album_title": "1989",
+  "year_of_release": 2014,
+  "genre": "Pop",
+  "reviews": [
+    {
+      "username": "john_doe",
+      "review_text": "A catchy and well-produced pop album. Taylor reinvented herself here.",
+      "rating": 5,
+      "review_id": "1316a8c3-c759-49e9-8866-6918e772ebe7"
+    },
+    {
+      "username": "jane_smith",
+      "review_text": "Fun and upbeat, but some songs feel overplayed.",
+      "rating": 4,
+      "review_id": "ca634973-00f1-4d15-886e-26e5597c06c0"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445eb"
+  },
+  "artist": "Bruce Springsteen",
+  "album_title": "Born to Run",
+  "year_of_release": 1975,
+  "genre": "Rock",
+  "reviews": [
+    {
+      "username": "alice_jones",
+      "review_text": "The ultimate anthem for the working class. A rock masterpiece.",
+      "rating": 5,
+      "review_id": "1bda8668-9581-4f5b-8089-83819d438455"
+    },
+    {
+      "username": "bob_brown",
+      "review_text": "Powerful and moving, but a bit too nostalgic for me.",
+      "rating": 3,
+      "review_id": "7366ffdb-b015-4b67-a498-880ca12ebe84"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445ec"
+  },
+  "artist": "Dr. Dre",
+  "album_title": "The Chronic",
+  "year_of_release": 1992,
+  "genre": "Hip Hop",
+  "reviews": [
+    {
+      "username": "sarah_connor",
+      "review_text": "A groundbreaking album that changed hip hop forever.",
+      "rating": 5,
+      "review_id": "5d63fee9-d108-46ce-a098-8b4fc38cc886"
+    },
+    {
+      "username": "michael_scott",
+      "review_text": "Classic beats and rhymes, though some lyrics haven't aged well.",
+      "rating": 4,
+      "review_id": "5d629e09-ab5a-4ad6-a671-bc592e1728b3"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445ed"
+  },
+  "artist": "Lana Del Rey",
+  "album_title": "Born to Die",
+  "year_of_release": 2012,
+  "genre": "Pop",
+  "reviews": [
+    {
+      "username": "dwight_schrute",
+      "review_text": "Moody and atmospheric. Lana's voice is mesmerizing.",
+      "rating": 5,
+      "review_id": "42c53201-e882-4105-9655-fd5338827317"
+    },
+    {
+      "username": "angela_martin",
+      "review_text": "A bit too melancholic for my taste, but undeniably unique.",
+      "rating": 3,
+      "review_id": "3d44a252-cfa6-4e8f-bc9c-ddf3ff438b0d"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445ee"
+  },
+  "artist": "Tame Impala",
+  "album_title": "Currents",
+  "year_of_release": 2015,
+  "genre": "Psychedelic Rock",
+  "reviews": [
+    {
+      "username": "jim_halpert",
+      "review_text": "A psychedelic masterpiece with catchy melodies and deep lyrics.",
+      "rating": 5,
+      "review_id": "683bf65e-1252-40a6-9324-06a0f9db9f9f"
+    },
+    {
+      "username": "pam_beesly",
+      "review_text": "Dreamy and hypnotic, but some songs feel repetitive.",
+      "rating": 4,
+      "review_id": "a3933324-0ea0-4661-b4f3-28b5b6e43cb8"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445ef"
+  },
+  "artist": "The Velvet Underground",
+  "album_title": "Loaded",
+  "year_of_release": 1970,
+  "genre": "Rock",
+  "reviews": [
+    {
+      "username": "john_doe",
+      "review_text": "An interesting mix of catchy tunes and experimental sounds.",
+      "rating": 4,
+      "review_id": "f03e962b-c18a-41bf-a097-26e9df01afcb"
+    },
+    {
+      "username": "jane_smith",
+      "review_text": "Loved the variety, though some tracks didn't resonate with me.",
+      "rating": 3,
+      "review_id": "71bf0128-8c56-4d75-a476-ccf7bbeea635"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445f0"
+  },
+  "artist": "Massive Attack",
+  "album_title": "Mezzanine",
+  "year_of_release": 1998,
+  "genre": "Trip Hop",
+  "reviews": [
+    {
+      "username": "alice_jones",
+      "review_text": "Dark and hypnotic, a brilliant trip-hop experience.",
+      "rating": 5,
+      "review_id": "6f7eac26-3079-45dd-a66b-1feb838d7dee"
+    },
+    {
+      "username": "bob_brown",
+      "review_text": "Unique, but not something Iâ€™d listen to every day.",
+      "rating": 4,
+      "review_id": "82d0fea2-1a53-4e57-aa87-80f9140a3aa6"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445f1"
+  },
+  "artist": "Tame Impala",
+  "album_title": "Currents",
+  "year_of_release": 2015,
+  "genre": "Psychedelic Pop",
+  "reviews": [
+    {
+      "username": "sarah_connor",
+      "review_text": "A vibrant and groovy album that keeps you coming back.",
+      "rating": 5,
+      "review_id": "6cfa27cc-c6b2-4236-92ca-4de2c1397e11"
+    },
+    {
+      "username": "michael_scott",
+      "review_text": "Good vibes, but a bit too dreamy for my taste.",
+      "rating": 3,
+      "review_id": "1fc91539-ccd5-450e-afb1-85dc85d4daf4"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445f2"
+  },
+  "artist": "Arctic Monkeys",
+  "album_title": "AM",
+  "year_of_release": 2013,
+  "genre": "Indie Rock",
+  "reviews": [
+    {
+      "username": "dwight_schrute",
+      "review_text": "A slick, confident album with catchy riffs.",
+      "rating": 5,
+      "review_id": "91943951-93c5-4696-b84f-17263f2d17b8"
+    },
+    {
+      "username": "angela_martin",
+      "review_text": "Enjoyable but slightly repetitive in places.",
+      "rating": 4,
+      "review_id": "a7d8268c-086c-4c12-a3f5-162d4b110fc4"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445f3"
+  },
+  "artist": "Bon Iver",
+  "album_title": "22, A Million",
+  "year_of_release": 2016,
+  "genre": "Indie Folk",
+  "reviews": [
+    {
+      "username": "jim_halpert",
+      "review_text": "Abstract and beautiful, an emotional journey.",
+      "rating": 5,
+      "review_id": "2c0bc9f7-f947-4038-8ca6-9160ef537b0b"
+    },
+    {
+      "username": "pam_beesly",
+      "review_text": "A bit too experimental for me, but I appreciate the artistry.",
+      "rating": 3,
+      "review_id": "6717bc91-20d8-4900-adf5-044fb7f77fba"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445f4"
+  },
+  "artist": "A Tribe Called Quest",
+  "album_title": "The Low End Theory",
+  "year_of_release": 1991,
+  "genre": "Hip Hop",
+  "reviews": [
+    {
+      "username": "john_doe",
+      "review_text": "Smooth beats and intelligent lyrics. A classic.",
+      "rating": 5,
+      "review_id": "d898ff31-5c22-4b1d-b274-417b7c7b04d2"
+    },
+    {
+      "username": "jane_smith",
+      "review_text": "Solid, but I didnâ€™t find it as groundbreaking as others do.",
+      "rating": 4,
+      "review_id": "300551ff-edca-4518-a2e2-e7bb86828593"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445f5"
+  },
+  "artist": "Sigur RÃ³s",
+  "album_title": "Takk...",
+  "year_of_release": 2005,
+  "genre": "Post-Rock",
+  "reviews": [
+    {
+      "username": "alice_jones",
+      "review_text": "Ethereal and hauntingly beautiful.",
+      "rating": 5,
+      "review_id": "5525f39c-519c-4642-b430-63c69ab3a622"
+    },
+    {
+      "username": "bob_brown",
+      "review_text": "Lovely soundscapes, but I found it a bit monotonous.",
+      "rating": 3,
+      "review_id": "a0fb7739-678b-4547-9cff-0b91bb3e4b89"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445f6"
+  },
+  "artist": "Sufjan Stevens",
+  "album_title": "Illinois",
+  "year_of_release": 2005,
+  "genre": "Indie Folk",
+  "reviews": [
+    {
+      "username": "sarah_connor",
+      "review_text": "Storytelling at its best, with lush, intricate arrangements.",
+      "rating": 5,
+      "review_id": "9aa9b908-43fd-47fa-a575-7d7e34ebff3a"
+    },
+    {
+      "username": "michael_scott",
+      "review_text": "Interesting, but a bit too long for my liking.",
+      "rating": 3,
+      "review_id": "6142ffff-607d-43c0-898a-ecda67832988"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445f7"
+  },
+  "artist": "The War on Drugs",
+  "album_title": "Lost in the Dream",
+  "year_of_release": 2014,
+  "genre": "Indie Rock",
+  "reviews": [
+    {
+      "username": "dwight_schrute",
+      "review_text": "A dreamy, atmospheric album that feels timeless.",
+      "rating": 5,
+      "review_id": "4bd276c8-5ce1-439c-ae00-0024c608fbb0"
+    },
+    {
+      "username": "angela_martin",
+      "review_text": "Relaxing but a bit repetitive towards the end.",
+      "rating": 4,
+      "review_id": "059383e8-f258-4510-8582-e7bc124fd912"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445f8"
+  },
+  "artist": "FKA twigs",
+  "album_title": "LP1",
+  "year_of_release": 2014,
+  "genre": "Alternative R&B",
+  "reviews": [
+    {
+      "username": "jim_halpert",
+      "review_text": "Innovative and mesmerizing, with a unique sound.",
+      "rating": 5,
+      "review_id": "f44a0016-dde8-4ac2-8087-fb8cbac52642"
+    },
+    {
+      "username": "pam_beesly",
+      "review_text": "Some tracks are too experimental for my taste.",
+      "rating": 3,
+      "review_id": "54c0ffb9-6108-4c5e-96a2-77c9e2f34283"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445f9"
+  },
+  "artist": "Vampire Weekend",
+  "album_title": "Father of the Bride",
+  "year_of_release": 2019,
+  "genre": "Indie Pop",
+  "reviews": [
+    {
+      "username": "john_doe",
+      "review_text": "Playful and sophisticated, a joy to listen to.",
+      "rating": 5,
+      "review_id": "deac5b8c-d213-45e6-acaa-2cf2eeafdeb1"
+    },
+    {
+      "username": "jane_smith",
+      "review_text": "Fun but felt too long at times.",
+      "rating": 4,
+      "review_id": "197cc9bc-1a62-45d2-ae81-42897f172a9b"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445fa"
+  },
+  "artist": "Janelle MonÃ¡e",
+  "album_title": "The ArchAndroid",
+  "year_of_release": 2010,
+  "genre": "R&B",
+  "reviews": [
+    {
+      "username": "alice_jones",
+      "review_text": "Visionary and eclectic, a musical journey.",
+      "rating": 5,
+      "review_id": "1542d94d-0cfc-48f4-ae2b-36c7d96d4eb1"
+    },
+    {
+      "username": "bob_brown",
+      "review_text": "Creative, but a bit all over the place for me.",
+      "rating": 4,
+      "review_id": "ca89e1c4-6a96-406c-830d-c81a9e10aa79"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445fb"
+  },
+  "artist": "Phoenix",
+  "album_title": "Wolfgang Amadeus Phoenix",
+  "year_of_release": 2009,
+  "genre": "Alternative Rock",
+  "reviews": [
+    {
+      "username": "sarah_connor",
+      "review_text": "Catchy, upbeat, and endlessly fun.",
+      "rating": 5,
+      "review_id": "3955d2d5-1d59-4c7d-8992-dfe15e61acc7"
+    },
+    {
+      "username": "michael_scott",
+      "review_text": "A solid listen, but not my favorite style.",
+      "rating": 3,
+      "review_id": "1540e66b-ce9a-4916-a243-dea339529580"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445fc"
+  },
+  "artist": "St. Vincent",
+  "album_title": "Strange Mercy",
+  "year_of_release": 2011,
+  "genre": "Indie Rock",
+  "reviews": [
+    {
+      "username": "dwight_schrute",
+      "review_text": "Bold and innovative, with fantastic guitar work.",
+      "rating": 5,
+      "review_id": "12fe1337-08c8-487b-be59-5cd5df6c7050"
+    },
+    {
+      "username": "angela_martin",
+      "review_text": "Interesting, but not my cup of tea.",
+      "rating": 3,
+      "review_id": "4487c7e4-a17e-49b2-b406-371e7d046434"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445fd"
+  },
+  "artist": "LCD Soundsystem",
+  "album_title": "Sound of Silver",
+  "year_of_release": 2007,
+  "genre": "Electronic",
+  "reviews": [
+    {
+      "username": "jim_halpert",
+      "review_text": "A danceable masterpiece with a hint of melancholy.",
+      "rating": 5,
+      "review_id": "ae8c52e5-c958-4e78-bfb1-e4dda2fad3ff"
+    },
+    {
+      "username": "pam_beesly",
+      "review_text": "Fun, but some songs feel too long.",
+      "rating": 4,
+      "review_id": "8c7e3213-4b7e-4d2c-80e1-918318a42a21"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445fe"
+  },
+  "artist": "Portishead",
+  "album_title": "Dummy",
+  "year_of_release": 1994,
+  "genre": "Trip Hop",
+  "reviews": [
+    {
+      "username": "john_doe",
+      "review_text": "A dark and moody masterpiece.",
+      "rating": 5,
+      "review_id": "af7a3377-3ef4-4ac7-b3b1-645ff3d61bc3"
+    },
+    {
+      "username": "jane_smith",
+      "review_text": "Atmospheric, but not something Iâ€™d play often.",
+      "rating": 4,
+      "review_id": "45d02da0-f5b2-4aee-ac4e-15c5ec62776a"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e38445ff"
+  },
+  "artist": "The White Stripes",
+  "album_title": "Elephant",
+  "year_of_release": 2003,
+  "genre": "Garage Rock",
+  "reviews": [
+    {
+      "username": "sarah_connor",
+      "review_text": "Raw, powerful, and full of attitude. Jack White is amazing.",
+      "rating": 5,
+      "review_id": "7e7d729f-30a5-4ddc-b7e7-e779089beae2"
+    },
+    {
+      "username": "michael_scott",
+      "review_text": "Enjoyed some of the songs, but overall a bit too rough for me.",
+      "rating": 3,
+      "review_id": "e62deedd-4408-4fcb-b776-5d9d89c61f50"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e3844600"
+  },
+  "artist": "David Bowie",
+  "album_title": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
+  "year_of_release": 1972,
+  "genre": "Glam Rock",
+  "reviews": [
+    {
+      "username": "dwight_schrute",
+      "review_text": "Iconic and ahead of its time. Bowie was a true visionary.",
+      "rating": 5,
+      "review_id": "e0ede2e1-f453-4211-bedc-198cb792f87e"
+    },
+    {
+      "username": "angela_martin",
+      "review_text": "Some songs are brilliant, others didnâ€™t quite click for me.",
+      "rating": 4,
+      "review_id": "b91f7bfd-db38-47f2-947f-acd87686ddee"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e3844601"
+  },
+  "artist": "My Bloody Valentine",
+  "album_title": "Loveless",
+  "year_of_release": 1991,
+  "genre": "Shoegaze",
+  "reviews": [
+    {
+      "username": "jim_halpert",
+      "review_text": "A wall of sound thatâ€™s both beautiful and overwhelming.",
+      "rating": 5,
+      "review_id": "79f47991-93a9-4e26-8856-0380e82cbd94"
+    },
+    {
+      "username": "pam_beesly",
+      "review_text": "Unique, but hard to get into unless you're in the right mood.",
+      "rating": 3,
+      "review_id": "2491bfa9-b566-4ef1-a9dd-0c0fdeca9aa5"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e3844602"
+  },
+  "artist": "OutKast",
+  "album_title": "Stankonia",
+  "year_of_release": 2000,
+  "genre": "Hip Hop",
+  "reviews": [
+    {
+      "username": "john_doe",
+      "review_text": "Explosive and fun, with some of the best rap duos ever.",
+      "rating": 5,
+      "review_id": "0d603980-0953-4b31-a375-6f0197f11824"
+    },
+    {
+      "username": "jane_smith",
+      "review_text": "Catchy and innovative, but not every track worked for me.",
+      "rating": 4,
+      "review_id": "c7c572dc-1f9b-47ed-b7cb-9d85b897ed98"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e3844603"
+  },
+  "artist": "The Strokes",
+  "album_title": "Is This It",
+  "year_of_release": 2001,
+  "genre": "Indie Rock",
+  "reviews": [
+    {
+      "username": "alice_jones",
+      "review_text": "A game-changer for indie rock. Still sounds fresh today.",
+      "rating": 5,
+      "review_id": "338cd5e4-9fda-4b07-9093-fc652dd262cb"
+    },
+    {
+      "username": "bob_brown",
+      "review_text": "Simple and catchy, but not as deep as I'd hoped.",
+      "rating": 4,
+      "review_id": "bf890bb6-d462-472c-ad9f-7c9c78d50687"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e3844604"
+  },
+  "artist": "Frank Ocean",
+  "album_title": "Channel Orange",
+  "year_of_release": 2012,
+  "genre": "R&B",
+  "reviews": [
+    {
+      "username": "sarah_connor",
+      "review_text": "Smooth and soulful, with lyrics that hit hard.",
+      "rating": 5,
+      "review_id": "d5abf0f3-bf0d-487f-99e2-fddfc4516c06"
+    },
+    {
+      "username": "michael_scott",
+      "review_text": "Good, but I prefer more upbeat R&B.",
+      "rating": 4,
+      "review_id": "08eed7f4-85e1-4238-859b-e53c5b77a0b3"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e3844605"
+  },
+  "artist": "The Smiths",
+  "album_title": "The Queen Is Dead",
+  "year_of_release": 1986,
+  "genre": "Alternative Rock",
+  "reviews": [
+    {
+      "username": "dwight_schrute",
+      "review_text": "Morrisseyâ€™s lyrics and Johnny Marrâ€™s guitar work are unmatched.",
+      "rating": 5,
+      "review_id": "5d2d3e44-efdd-4908-a51a-a51593e14b64"
+    },
+    {
+      "username": "angela_martin",
+      "review_text": "The music is good, but I donâ€™t connect with the lyrics.",
+      "rating": 3,
+      "review_id": "8f304fbf-4aa3-4071-810a-010f64bf64a8"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e3844606"
+  },
+  "artist": "The Beach Boys",
+  "album_title": "Pet Sounds",
+  "year_of_release": 1966,
+  "genre": "Pop",
+  "reviews": [
+    {
+      "username": "jim_halpert",
+      "review_text": "Beautiful harmonies and groundbreaking production.",
+      "rating": 5,
+      "review_id": "8ada39e3-9e07-474e-b409-ab1bb2babf35"
+    },
+    {
+      "username": "pam_beesly",
+      "review_text": "Sweet and nostalgic, but a bit too mellow for me.",
+      "rating": 3,
+      "review_id": "eb2e0654-c743-47fe-b15d-b87667b60b72"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e3844607"
+  },
+  "artist": "The Rolling Stones",
+  "album_title": "Exile on Main St.",
+  "year_of_release": 1972,
+  "genre": "Rock",
+  "reviews": [
+    {
+      "username": "john_doe",
+      "review_text": "A gritty, raw, and fantastic rock album.",
+      "rating": 5,
+      "review_id": "9a2875e8-aa07-4e0f-bb70-908429eb31ee"
+    },
+    {
+      "username": "jane_smith",
+      "review_text": "Good, but feels too long and unpolished in parts.",
+      "rating": 4,
+      "review_id": "5f3d5227-97d6-4272-ab39-794b35ae4af2"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e3844608"
+  },
+  "artist": "Blur",
+  "album_title": "Parklife",
+  "year_of_release": 1994,
+  "genre": "Britpop",
+  "reviews": [
+    {
+      "username": "alice_jones",
+      "review_text": "Catchy and full of personality. A Britpop classic.",
+      "rating": 5,
+      "review_id": "f9383b49-3e8d-4c6e-9701-74944f7b628a"
+    },
+    {
+      "username": "bob_brown",
+      "review_text": "Fun, but some songs feel a bit dated.",
+      "rating": 3,
+      "review_id": "619e7d5f-4454-4211-bce6-717f700a5b24"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e3844609"
+  },
+  "artist": "Jay-Z",
+  "album_title": "The Blueprint",
+  "year_of_release": 2001,
+  "genre": "Hip Hop",
+  "reviews": [
+    {
+      "username": "sarah_connor",
+      "review_text": "Jay-Z at his best, with fantastic production.",
+      "rating": 5,
+      "review_id": "15188df9-25f8-493a-b18a-47343b5fd1eb"
+    },
+    {
+      "username": "michael_scott",
+      "review_text": "Great tracks, but a few fillers lower the impact.",
+      "rating": 4,
+      "review_id": "b4738dec-54f0-4b22-811a-004f6ef3c854"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e384460a"
+  },
+  "artist": "Daft Punk",
+  "album_title": "Discovery",
+  "year_of_release": 2001,
+  "genre": "Electronic",
+  "reviews": [
+    {
+      "username": "dwight_schrute",
+      "review_text": "A futuristic and groovy masterpiece.",
+      "rating": 5,
+      "review_id": "36c6c9b6-8680-45df-8bf9-d04bca2da890"
+    },
+    {
+      "username": "angela_martin",
+      "review_text": "Very electronic, not my usual taste, but well made.",
+      "rating": 3,
+      "review_id": "473c4195-32b5-49f2-8b46-9a7d1e261c99"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e384460b"
+  },
+  "artist": "The Smiths",
+  "album_title": "The Queen Is Dead",
+  "year_of_release": 1986,
+  "genre": "Alternative Rock",
+  "reviews": [
+    {
+      "username": "dwight_schrute",
+      "review_text": "Witty, melancholic, and timeless. A classic.",
+      "rating": 5,
+      "review_id": "ac599337-ec1f-47ce-8d43-a67d7907261e"
+    },
+    {
+      "username": "angela_martin",
+      "review_text": "The lyrics are clever, but the sound isnâ€™t my style.",
+      "rating": 3,
+      "review_id": "d4f8b861-a30f-4557-bfec-c735d10e37f7"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e384460c"
+  },
+  "artist": "The xx",
+  "album_title": "xx",
+  "year_of_release": 2009,
+  "genre": "Indie Pop",
+  "reviews": [
+    {
+      "username": "jim_halpert",
+      "review_text": "Minimalist and emotional, a beautifully crafted album.",
+      "rating": 5,
+      "review_id": "1218dabe-8562-46d4-9914-d1d7dbce2d31"
+    },
+    {
+      "username": "pam_beesly",
+      "review_text": "Relaxing, but it put me to sleep a few times.",
+      "rating": 3,
+      "review_id": "952c887d-f22c-4bea-a8c5-df8ac783c77e"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e384460d"
+  },
+  "artist": "The White Stripes",
+  "album_title": "Elephant",
+  "year_of_release": 2003,
+  "genre": "Garage Rock",
+  "reviews": [
+    {
+      "username": "john_doe",
+      "review_text": "Raw, energetic, and full of memorable riffs.",
+      "rating": 5,
+      "review_id": "6850819e-621b-4320-a4d9-688dac778a62"
+    },
+    {
+      "username": "jane_smith",
+      "review_text": "Enjoyed it, but didnâ€™t connect with all the tracks.",
+      "rating": 4,
+      "review_id": "7d54573f-909a-4fc3-8207-7000daf8ccfc"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e384460e"
+  },
+  "artist": "PJ Harvey",
+  "album_title": "Stories from the City, Stories from the Sea",
+  "year_of_release": 2000,
+  "genre": "Alternative Rock",
+  "reviews": [
+    {
+      "username": "alice_jones",
+      "review_text": "Powerful and beautiful. PJ Harvey at her best.",
+      "rating": 5,
+      "review_id": "86fd22b6-d3e8-41db-96b9-7940ca8c455f"
+    },
+    {
+      "username": "bob_brown",
+      "review_text": "Good, but not an album Iâ€™d play repeatedly.",
+      "rating": 3,
+      "review_id": "2563a651-a860-4a9b-9c8d-2f7ef0a2fbf7"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e384460f"
+  },
+  "artist": "Blur",
+  "album_title": "Parklife",
+  "year_of_release": 1994,
+  "genre": "Britpop",
+  "reviews": [
+    {
+      "username": "sarah_connor",
+      "review_text": "Catchy and full of character. A Britpop essential.",
+      "rating": 5,
+      "review_id": "954817fa-6f76-40ee-bdeb-5fd5098cd5e1"
+    },
+    {
+      "username": "michael_scott",
+      "review_text": "Fun, but felt dated in some places.",
+      "rating": 3,
+      "review_id": "b52d1750-e863-4f1d-850f-1f54bf2a9e21"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e3844610"
+  },
+  "artist": "Rage Against the Machine",
+  "album_title": "Rage Against the Machine",
+  "year_of_release": 1992,
+  "genre": "Rap Rock",
+  "reviews": [
+    {
+      "username": "dwight_schrute",
+      "review_text": "An aggressive and politically charged powerhouse.",
+      "rating": 5,
+      "review_id": "23c5911e-89f4-4263-a825-def28123f64a"
+    },
+    {
+      "username": "angela_martin",
+      "review_text": "Too intense for me, but undeniably impactful.",
+      "rating": 3,
+      "review_id": "d4ec4f73-807d-4a3c-b406-04e4bd53a44a"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e3844611"
+  },
+  "artist": "The Cure",
+  "album_title": "Disintegration",
+  "year_of_release": 1989,
+  "genre": "Gothic Rock",
+  "reviews": [
+    {
+      "username": "jim_halpert",
+      "review_text": "Atmospheric and emotional, a beautiful masterpiece.",
+      "rating": 5,
+      "review_id": "b9f11d76-6076-4de2-a372-40016c3c40ef"
+    },
+    {
+      "username": "pam_beesly",
+      "review_text": "A bit too dark for me, but I respect the artistry.",
+      "rating": 3,
+      "review_id": "30fcebfc-aec0-4d28-a5db-ff00f59252c7"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e3844612"
+  },
+  "artist": "Tame Impala",
+  "album_title": "Currents",
+  "year_of_release": 2015,
+  "genre": "Psychedelic Pop",
+  "reviews": [
+    {
+      "username": "alice_jones",
+      "review_text": "A dreamy and vibrant album that evolves with every listen.",
+      "rating": 5,
+      "review_id": "196bff49-92db-4084-9a46-376f8e05ab06"
+    },
+    {
+      "username": "bob_brown",
+      "review_text": "Catchy and smooth, but felt repetitive at times.",
+      "rating": 4,
+      "review_id": "561344fd-1bee-44dd-aa3f-9652674b5983"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e3844613"
+  },
+  "artist": "Lana Del Rey",
+  "album_title": "Born to Die",
+  "year_of_release": 2012,
+  "genre": "Pop",
+  "reviews": [
+    {
+      "username": "sarah_connor",
+      "review_text": "Haunting and cinematic, her voice is captivating.",
+      "rating": 5,
+      "review_id": "19764f83-127f-4a0d-8cd5-61b6b6cb5fee"
+    },
+    {
+      "username": "michael_scott",
+      "review_text": "Beautiful melodies, but some lyrics didnâ€™t resonate with me.",
+      "rating": 3,
+      "review_id": "d1333db9-0a50-4128-8c6d-fb95cc71fcc6"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e3844614"
+  },
+  "artist": "Arcade Fire",
+  "album_title": "The Suburbs",
+  "year_of_release": 2010,
+  "genre": "Indie Rock",
+  "reviews": [
+    {
+      "username": "dwight_schrute",
+      "review_text": "An evocative journey through suburban life. Brilliant storytelling.",
+      "rating": 5,
+      "review_id": "fa343352-b1a4-4163-8810-cd2e5d8c6a14"
+    },
+    {
+      "username": "angela_martin",
+      "review_text": "Thought-provoking, but a bit too melancholic for my taste.",
+      "rating": 4,
+      "review_id": "c664d556-1a75-4aa0-9820-cfc3f1cde8fb"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e3844615"
+  },
+  "artist": "Janelle MonÃ¡e",
+  "album_title": "The ArchAndroid",
+  "year_of_release": 2010,
+  "genre": "R&B",
+  "reviews": [
+    {
+      "username": "jim_halpert",
+      "review_text": "Innovative and genre-blending, an ambitious and brilliant album.",
+      "rating": 5,
+      "review_id": "dbbe8034-4766-4ddc-9748-ddebb83dc6fd"
+    },
+    {
+      "username": "pam_beesly",
+      "review_text": "I appreciate the creativity, but it felt overwhelming at times.",
+      "rating": 3,
+      "review_id": "fd2c1f5e-7cab-47e8-99e6-f446ea82eacf"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e3844616"
+  },
+  "artist": "The National",
+  "album_title": "High Violet",
+  "year_of_release": 2010,
+  "genre": "Indie Rock",
+  "reviews": [
+    {
+      "username": "john_doe",
+      "review_text": "Brooding and atmospheric, a deeply emotional record.",
+      "rating": 5,
+      "review_id": "ae6e0e30-9469-45c5-ba1a-017862ef61bc"
+    },
+    {
+      "username": "jane_smith",
+      "review_text": "Well-crafted, but too moody for my liking.",
+      "rating": 3,
+      "review_id": "714dea05-e0a6-457f-be17-ec616480e90a"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e3844617"
+  },
+  "artist": "Vampire Weekend",
+  "album_title": "Modern Vampires of the City",
+  "year_of_release": 2013,
+  "genre": "Indie Pop",
+  "reviews": [
+    {
+      "username": "alice_jones",
+      "review_text": "Smart and catchy, a perfect blend of fun and depth.",
+      "rating": 5,
+      "review_id": "3fa7545d-7243-4802-8661-4e45b420803e"
+    },
+    {
+      "username": "bob_brown",
+      "review_text": "Interesting sound, but some songs didn't stand out.",
+      "rating": 4,
+      "review_id": "27b97351-271c-4294-ac57-c562f527195a"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e3844618"
+  },
+  "artist": "Solange",
+  "album_title": "A Seat at the Table",
+  "year_of_release": 2016,
+  "genre": "R&B",
+  "reviews": [
+    {
+      "username": "sarah_connor",
+      "review_text": "A powerful and beautiful album with meaningful messages.",
+      "rating": 5,
+      "review_id": "686431a4-e987-4c44-93f0-3cbf2b8f5114"
+    },
+    {
+      "username": "michael_scott",
+      "review_text": "Elegant and soulful, but some tracks felt too slow.",
+      "rating": 3,
+      "review_id": "8e46164f-a193-4975-989e-30154bc9cd07"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6724aa946f456ff0e3844619"
+  },
+  "artist": "Bon Iver",
+  "album_title": "For Emma, Forever Ago",
+  "year_of_release": 2007,
+  "genre": "Folk",
+  "reviews": [
+    {
+      "username": "dwight_schrute",
+      "review_text": "Hauntingly beautiful, an album full of raw emotion.",
+      "rating": 5,
+      "review_id": "91efcb23-8402-4f98-911a-033f1119faeb"
+    },
+    {
+      "username": "angela_martin",
+      "review_text": "Lovely, but too somber and quiet for me.",
+      "rating": 3,
+      "review_id": "864dffcc-fc8b-4dff-aabd-4ebdee1a24bd"
     }
   ]
 }]
