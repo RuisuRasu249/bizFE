@@ -1,0 +1,33 @@
+.hero-section {
+    position: relative;
+    text-align: center;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire area */
+    z-index: -1; /* Places the image behind the text */
+}
+
+.hero-card {
+    background: rgba(0, 0, 0, 0.7); /* Black with transparency */
+    padding: 20px 40px; /* Padding inside the card */
+    border-radius: 10px; /* Rounded corners */
+    z-index: 1; /* Ensures the card is above the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adds shadow for depth */
+}
+
+.hero-title {
+    font-size: 3rem; /* Adjust as needed */
+    color: white; /* Text color for contrast */
+    margin: 0; /* Remove default margin */
+}

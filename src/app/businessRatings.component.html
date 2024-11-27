@@ -1,0 +1,27 @@
+<div class="container text-center" style="margin-top: 70px;">
+    <!-- High-Rated Albums Section -->
+    <div class="row">
+        <h2 style="margin-top: 40px;">High-Rated Albums</h2>
+        <p style="margin-bottom: 40px;">Explore the current High-Rated Albums listed today</p>
+        <br>
+        <div class="col-md-4" *ngFor="let rating of ratings">
+            <div class="card text-center text-white bg-primary mb-3">
+                <div class="card-header">
+                    <h5>{{ rating.album_title }}</h5>
+                </div>
+                <div class="card-body">
+                    <p>Average Rating:</p>
+                    <p>
+                        <span *ngFor="let star of [].constructor(getRoundedRating(rating.average_rating))">
+                            <img src="images/love_rating.png" alt="rating" style="width: 30px; height: 30px;" />
+                        </span>
+                        {{ rating.average_rating | number:'1.1-1' }}/5
+                    </p> 
+                </div>
+                <div class="footer">
+                    <p class="fst-italic">by {{ rating.artist }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

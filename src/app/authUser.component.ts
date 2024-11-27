@@ -10,5 +10,5 @@ import { CommonModule } from "@angular/common";
 })
 
 export class AuthUserComponent {
-    constructor(public auth: AuthService) {}
+    constructor(public auth: AuthService) { }
 }
