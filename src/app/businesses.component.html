@@ -8,6 +8,43 @@
         </div>
     </div>
 
+    <div class="container" style="margin-bottom: 20px;">
+        <!-- Button to toggle the form -->
+        <button class="btn btn-primary mb-3" (click)="toggleAddAlbumForm()">
+            {{ showAddAlbumForm ? 'Close' : 'Add Album' }}
+        </button>
+
+        <!-- Collapsible form -->
+        <div *ngIf="showAddAlbumForm" class="card p-3">
+            <h2>Add a New Album</h2>
+            <form [formGroup]="addAlbumForm" (ngSubmit)="onAddAlbum()">
+                <div class="form-group">
+                    <label for="artist">Artist</label>
+                    <input type="text" id="artist" class="form-control" formControlName="artist"
+                        [ngClass]="{'border border-danger': isInvalid('artist')}" />
+                </div>
+                <div class="form-group">
+                    <label for="album_title">Album Title</label>
+                    <input type="text" id="album_title" class="form-control" formControlName="album_title"
+                        [ngClass]="{'border border-danger': isInvalid('album_title')}" />
+                </div>
+                <div class="form-group">
+                    <label for="year_of_release">Year of Release</label>
+                    <input type="number" id="year_of_release" class="form-control" formControlName="year_of_release"
+                        [ngClass]="{'border border-danger': isInvalid('year_of_release')}" />
+                </div>
+                <div class="form-group">
+                    <label for="genre">Genre</label>
+                    <input type="text" id="genre" class="form-control" formControlName="genre"
+                        [ngClass]="{'border border-danger': isInvalid('genre')}" />
+                </div>
+                <button type="submit" class="btn btn-success mt-3" [disabled]="isIncomplete()">
+                    Submit Album
+                </button>
+            </form>
+        </div>
+    </div>
+
     <div class="row">
         <div *ngFor="let business of business_list" class="col-md-4 mb-4">
             <div class="card text-center text-white bg-primary mb-3">
@@ -27,7 +64,7 @@
                             placeholder="Album Title">
                     </ng-container>
                     <ng-template #displayAlbumTitle>
-                        <img src="images/album.png" style="width: 20px; height: 20px;" >
+                        <img src="images/album.png" style="width: 20px; height: 20px;">
                         {{ business.album_title }}
                     </ng-template>
                 </div>
@@ -70,60 +107,4 @@
         </div>
     </div>
 </div>
-
 <hr>
-
-<div class="container" style="margin-top: 70px;">
-    <h2>Add New Album</h2>
-    <form [formGroup]="addAlbumForm" (ngSubmit)="onAddAlbum()">
-      <div class="form-group">
-        <label for="artist">Artist</label>
-        <input
-          type="text"
-          id="artist"
-          class="form-control"
-          formControlName="artist"
-          [ngClass]="{'border border-danger': isInvalid('artist')}"
-        />
-      </div>
-      <div class="form-group">
-        <label for="album_title">Album Title</label>
-        <input
-          type="text"
-          id="album_title"
-          class="form-control"
-          formControlName="album_title"
-          [ngClass]="{'border border-danger': isInvalid('album_title')}"
-        />
-      </div>
-      <div class="form-group">
-        <label for="year_of_release">Year of Release</label>
-        <input
-          type="number"
-          id="year_of_release"
-          class="form-control"
-          formControlName="year_of_release"
-          [ngClass]="{'border border-danger': isInvalid('year_of_release')}"
-        />
-      </div>
-      <div class="form-group">
-        <label for="genre">Genre</label>
-        <input
-          type="text"
-          id="genre"
-          class="form-control"
-          formControlName="genre"
-          [ngClass]="{'border border-danger': isInvalid('genre')}"
-        />
-      </div>
-      <button
-        type="submit"
-        class="btn btn-primary"
-        [disabled]="isIncomplete()"
-        style="margin-top: 20px;"
-      >
-        Submit
-      </button>
-    </form>
-  </div>
-  

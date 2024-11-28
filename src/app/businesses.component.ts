@@ -23,7 +23,7 @@ export class BusinessesComponent {
   searchResults: any;
   addAlbumForm: any;
   editingAlbumId: string | null = null; // To track the currently edited album
-
+  showAddAlbumForm: boolean = false; // To track form visibility
   
   constructor(public dataService: DataService,
     private webService: WebService,
@@ -69,6 +69,11 @@ export class BusinessesComponent {
       });
     }
   }
+
+  toggleAddAlbumForm() {
+    this.showAddAlbumForm = !this.showAddAlbumForm;
+  }
+
 
   isInvalid(control: string): boolean {
     return (
