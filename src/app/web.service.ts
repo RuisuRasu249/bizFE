@@ -21,10 +21,10 @@ export class WebService{
             params: { query }
         });
     } 
-
+    
     addAlbum(data: any) {
-        return this.http.post<any>('http://127.0.0.1:5000/albums', data);
-    }
+        return this.http.post<any>('http://127.0.0.1:5000/albums/', data);
+    }    
     
     updateAlbum(id: string, data: any) {
         return this.http.put<any>(`http://127.0.0.1:5000/albums/${id}`, data);
@@ -52,7 +52,6 @@ export class WebService{
         postData.append("review_text", review.review_text);
         postData.append("rating", review.rating.toString());
 
-    
         // Ensure the URL matches the backend route
         return this.http.post<any>('http://127.0.0.1:5000/albums/' + id + '/reviews', postData);
     }

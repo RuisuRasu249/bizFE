@@ -5,7 +5,7 @@ import { WebService } from './web.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms'; // For ngModel
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'businesses',
@@ -24,36 +24,42 @@ export class BusinessesComponent {
   addAlbumForm: any;
   editingAlbumId: string | null = null; // To track the currently edited album
 
+  
   constructor(public dataService: DataService,
     private webService: WebService,
     private formBuilder: FormBuilder,
-    private router: Router,) { }
+    private router: Router,) {
+      this.addAlbumForm = this.formBuilder.group({
+        artist: ['', Validators.required],
+        album_title: ['', Validators.required],
+        year_of_release: [
+          '',
+          [Validators.required, Validators.min(1900), Validators.max(new Date().getFullYear())],
+        ],
+        genre: ['', Validators.required],
+      });
+  }
 
   ngOnInit() {
     if (sessionStorage['page']) {
       this.page = Number(sessionStorage['page']);
     }
 
-    this.addAlbumForm = this.formBuilder.group({
-      artist: ['', Validators.required],
-      album_title: ['', Validators.required],
-      year_of_release: ['', [Validators.required, Validators.min(1900), Validators.max(new Date().getFullYear())]],
-      genre: ['', Validators.required],
-    });
-
-
     this.webService.getBusinesses(this.page)
       .subscribe((response) => {
         this.business_list = response
-      })
+      });
   }
 
-
-  addAlbum() {
+  onAddAlbum() {
     if (this.addAlbumForm.valid) {
-      this.webService.addAlbum(this.addAlbumForm.value).subscribe({
+      const newAlbum = this.addAlbumForm.value;
+      this.webService.addAlbum(newAlbum).subscribe({
         next: (response) => {
+          console.log('Album added successfully:', response);
           alert('Album added successfully!');
+          this.business_list.push(response.data); // Update the local list of albums
+          this.addAlbumForm.reset(); // Reset the form
           this.ngOnInit(); // Refresh album list
         },
         error: (error) => {
@@ -62,6 +68,22 @@ export class BusinessesComponent {
         },
       });
     }
+  }
+
+  isInvalid(control: string): boolean {
+    return (
+      this.addAlbumForm.controls[control].invalid &&
+      this.addAlbumForm.controls[control].touched
+    );
+  }
+
+  isIncomplete(): boolean {
+    return (
+      this.isInvalid('artist') ||
+      this.isInvalid('album_title') ||
+      this.isInvalid('year_of_release') ||
+      this.isInvalid('genre')
+    );
   }
 
   editAlbum(albumId: string) {
@@ -93,6 +115,7 @@ export class BusinessesComponent {
       this.webService.deleteAlbum(id).subscribe({
         next: (response) => {
           alert('Album deleted successfully!');
+          this.ngOnInit(); // Refresh album list
         },
         error: (error) => {
           console.error('Error deleting album:', error);
