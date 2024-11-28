@@ -20,39 +20,39 @@ export class BusinessesComponent {
   searchQuery: string = '';
   searchResults: any;
 
-  constructor(public dataService: DataService, private webService: WebService){}
+  constructor(public dataService: DataService, private webService: WebService) { }
 
-  ngOnInit(){
-    if(sessionStorage['page']){
+  ngOnInit() {
+    if (sessionStorage['page']) {
       this.page = Number(sessionStorage['page']);
     }
     //this.business_list = this.dataService.getBusinesses(this.page);
     this.webService.getBusinesses(this.page)
-        .subscribe((response) => {
+      .subscribe((response) => {
         this.business_list = response
-    })
+      })
   }
 
-  previousPage(){
-    if(this.page > 1){
+  previousPage() {
+    if (this.page > 1) {
       this.page = this.page - 1;
       sessionStorage['page'] = this.page;
 
       this.webService.getBusinesses(this.page)
         .subscribe((response) => {
-        this.business_list = response
-      })
+          this.business_list = response
+        })
     }
   }
 
-  nextPage(){
-    if(this.page < this.dataService.getLastPageNumber()){
+  nextPage() {
+    if (this.page < this.dataService.getLastPageNumber()) {
       this.page = this.page + 1;
       sessionStorage['page'] = this.page;
       this.webService.getBusinesses(this.page)
         .subscribe((response) => {
-        this.business_list = response
-      })
+          this.business_list = response
+        })
     }
   }
 

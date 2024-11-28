@@ -1,15 +1,23 @@
-<div class="container text-center" style="margin-top: 70px;">
-    <h1>Album Genres</h1>
-    <!-- Genre Summary Section -->
-    <div class="row">
-        <h2>Genre Summary</h2>
-        <div class="col-md-4" *ngFor="let genre of genreSummary">
-            <div class="card text-center text-white bg-secondary mb-3">
-                <div class="card-body">
-                    <h5>{{ genre.genre }}</h5>
-                    <p>Total Albums: {{ genre.count }}</p>
+<ng-container *ngIf="authService.isAuthenticated$ | async;
+                        else loggedOut">
+    <div class="container text-center" style="margin-top: 70px;">
+        <h1>Album Genres</h1>
+        <!-- Genre Summary Section -->
+        <div class="row">
+            <h2>Genre Summary</h2>
+            <div class="col-md-4" *ngFor="let genre of genreSummary">
+                <div class="card text-center text-white bg-secondary mb-3">
+                    <div class="card-body">
+                        <h5>{{ genre.genre }}</h5>
+                        <p>Total Albums: {{ genre.count }}</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</ng-container>
+<ng-template #loggedOut>
+    <h2>
+        Please login to View Genre Summary
+    </h2>
+</ng-template>

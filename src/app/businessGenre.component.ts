@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DataService } from './data.service';
 import { WebService } from './web.service';
-
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
     selector: 'genre',
@@ -19,7 +19,7 @@ import { WebService } from './web.service';
 export class BusinessGenreComponent {
     genreSummary: any;
 
-    constructor(public dataService: DataService, private webService: WebService) { }
+    constructor(public dataService: DataService, private webService: WebService, public authService: AuthService,) { }
 
     ngOnInit() {
         // Fetch genre summary

@@ -25,6 +25,11 @@ export class BusinessComponent {
   reviews_list: any;
   averageRating: any;
 
+  reviewPage: number = 1; // Current review page
+  reviewsPerPage: number = 4; // Number of reviews per page
+  totalReviewPages: number = 0; // Total number of pages for reviews
+  paginatedReviews: any[] = []; // Reviews to display on the current page
+
   constructor(public dataService: DataService,
     private route: ActivatedRoute,
     private formBuilder: FormBuilder,
@@ -52,6 +57,7 @@ export class BusinessComponent {
     this.webService.getReviews(this.route.snapshot.paramMap.get('id'))
       .subscribe((response) => {
         this.reviews_list = response;
+        this.paginateReviews();
       });
   }
 
@@ -68,6 +74,7 @@ export class BusinessComponent {
           console.log('Review saved successfully:', reviews);
           this.reviews_list = reviews; // Update the UI
           this.getAverageRating(this.reviews_list);
+          this.paginateReviews(); // Recalculate pagination
         },
         error: (error) => {
           console.error('Error adding review:', error);
@@ -96,6 +103,31 @@ export class BusinessComponent {
     console.log('Updated average rating:', this.averageRating);
   }
 
+  paginateReviews() {
+    if (this.reviews_list && this.reviews_list.length > 0) {
+      this.totalReviewPages = Math.ceil(this.reviews_list.length / this.reviewsPerPage);
+      const startIndex = (this.reviewPage - 1) * this.reviewsPerPage;
+      const endIndex = startIndex + this.reviewsPerPage;
+      this.paginatedReviews = this.reviews_list.slice(startIndex, endIndex);
+    } else {
+      this.paginatedReviews = [];
+      this.totalReviewPages = 0;
+    }
+  }
+
+  previousReviewPage() {
+    if (this.reviewPage > 1) {
+      this.reviewPage--;
+      this.paginateReviews();
+    }
+  }
+
+  nextReviewPage() {
+    if (this.reviewPage < this.totalReviewPages) {
+      this.reviewPage++;
+      this.paginateReviews();
+    }
+  }
 
   isInvalid(control: any) {
     return this.reviewForm.controls[control].invalid &&
