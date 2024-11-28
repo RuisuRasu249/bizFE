@@ -74,7 +74,11 @@ export class BusinessesComponent {
     this.showAddAlbumForm = !this.showAddAlbumForm;
   }
 
-
+  onCancelForm() {
+    this.addAlbumForm.reset(); // Clear all input fields
+    this.showAddAlbumForm = false; // Collapse the form
+  }
+  
   isInvalid(control: string): boolean {
     return (
       this.addAlbumForm.controls[control].invalid &&
