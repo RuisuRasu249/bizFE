@@ -8,7 +8,7 @@ import jsonData from '../assets/albumdb.albums.json'
 })
 export class DataService{
 
-    pageSize: number = 5;
+    pageSize: number = 11;
 
     constructor(private http: HttpClient){}
 

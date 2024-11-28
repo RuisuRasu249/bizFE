@@ -9,6 +9,7 @@
             </h1>
             <div class="mt-3">
                 <h5>Album - <em>{{ business.album_title }}</em></h5>
+                <hr>
                 <p><strong>Year:</strong> {{ business.year_of_release }}</p>
                 <p><strong>Genre:</strong> {{ business.genre }}</p>
             </div>
@@ -16,7 +17,6 @@
                 <h5>Description</h5>
                 {{loremIpsum}}
             </div>
-
             <p>
                 <strong>Average Rating:</strong>
                 <span *ngFor="let index of [].constructor(averageRating)">
@@ -25,13 +25,12 @@
                 </span>
                 {{ averageRating }}/5
             </p>
-
             <hr>
             <p>
                 <span class="review-counter">{{ reviews_list?.length || 0 }}</span>
                 <strong> Reviews:</strong>
             </p>
-        
+
             <div id="reviews" class="col-sm-12">
                 <div *ngIf="paginatedReviews && paginatedReviews.length > 0; else noReviews">
                     <div *ngFor="let review of paginatedReviews" class="card bg-success text-light mb-3">
@@ -45,12 +44,16 @@
                         <div class="card-footer">
                             <p><strong>Rating: {{ review.rating }}</strong>/5</p>
                         </div>
+                        <button class="btn btn-danger btn-sm float-end" (click)="deleteReview(review.review_id)">
+                            Delete
+                        </button>
                     </div>
-            
+
                     <!-- Pagination Controls -->
                     <div class="row">
                         <div class="col-sm-4 text-start">
-                            <button class="btn btn-primary" (click)="previousReviewPage()" [disabled]="reviewPage === 1">
+                            <button class="btn btn-primary" (click)="previousReviewPage()"
+                                [disabled]="reviewPage === 1">
                                 Previous
                             </button>
                         </div>
@@ -58,13 +61,14 @@
                             Page {{ reviewPage }} of {{ totalReviewPages }}
                         </div>
                         <div class="col-sm-4 text-end">
-                            <button class="btn btn-primary" (click)="nextReviewPage()" [disabled]="reviewPage === totalReviewPages">
+                            <button class="btn btn-primary" (click)="nextReviewPage()"
+                                [disabled]="reviewPage === totalReviewPages">
                                 Next
                             </button>
                         </div>
                     </div>
                 </div>
-            
+
                 <!-- Fallback if no reviews are available -->
                 <ng-template #noReviews>
                     <p>No reviews yet. Be the first to review!</p>

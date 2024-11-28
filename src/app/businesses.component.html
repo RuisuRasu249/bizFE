@@ -1,41 +1,57 @@
 <div class="container text-center" style="margin-top: 70px;">
-
     <h1>The Greatest Albums Of All Time</h1>
 
     <div class="row">
         <div class="col-md-12" style="margin: 40px;">
-            <input 
-            type="text" 
-            class="form-control" 
-            placeholder="🔍Search Album or Artist Name..." 
-            [(ngModel)]="searchQuery"
-            (input)="searchBusinesses()" 
-            />
+            <input type="text" class="form-control" placeholder="🔍Search Album or Artist Name..."
+                [(ngModel)]="searchQuery" (input)="searchBusinesses()" />
         </div>
     </div>
 
     <div class="row">
         <div *ngFor="let business of business_list" class="col-md-4 mb-4">
-            <div class="card text-center text-white bg-primary mb-3" style="cursor: pointer"
-                [routerLink]="['/businesses', business._id]">
+            <div class="card text-center text-white bg-primary mb-3">
                 <div class="card-header">
-                    {{business.artist}}
+                    <ng-container *ngIf="editingAlbumId === business._id; else displayMode">
+                        <input type="text" class="form-control" [(ngModel)]="business.artist" placeholder="Artist Name">
+                    </ng-container>
+                    <ng-template #displayMode>
+                        {{ business.artist }}
+                    </ng-template>
                 </div>
                 <div class="card-body">
                     Album
-                    <br>
-                    <img src="images/album.png" style=" width: 30px; height: 30px;">
-                    <br>
-                    {{business.album_title}}
+                    <ng-container *ngIf="editingAlbumId === business._id; else displayAlbumTitle">
+                        <input type="text" class="form-control" [(ngModel)]="business.album_title"
+                            placeholder="Album Title">
+                    </ng-container>
+                    <ng-template #displayAlbumTitle>
+                        {{ business.album_title }}
+                    </ng-template>
                 </div>
                 <div class="card-footer">
                     Year -
-                    {{business.year_of_release}}
+                    <ng-container *ngIf="editingAlbumId === business._id; else displayYear">
+                        <input type="number" class="form-control" [(ngModel)]="business.year_of_release"
+                            placeholder="Year of Release">
+                    </ng-container>
+                    <ng-template #displayYear>
+                        {{ business.year_of_release }}
+                    </ng-template>
+                </div>
+                <div class="card-actions">
+                    <button [routerLink]="['/businesses', business._id]" class="btn btn-light">View Details</button>
+                    <br>
+                    <button *ngIf="editingAlbumId === business._id" class="btn btn-success"
+                        (click)="updateAlbum(business)">Save</button>
+                    <button *ngIf="editingAlbumId !== business._id" class="btn btn-warning"
+                        (click)="editAlbum(business._id)">Edit</button>
+                    <button class="btn btn-danger" (click)="deleteAlbum(business._id)">Delete</button>
                 </div>
             </div>
         </div>
+        
     </div>
-
     <div class="row">
         <div class="col-sm-4 text-start">
             <button class="btn btn-primary" (click)="previousPage()">
@@ -52,4 +68,28 @@
             </button>
         </div>
     </div>
+</div>
+<hr>
+
+<div class="container mt-5">
+    <h2>Add New Album</h2>
+    <form [formGroup]="addAlbumForm" (ngSubmit)="addAlbum()">
+        <div class="form-group">
+            <label for="artist">Artist</label>
+            <input type="text" id="artist" formControlName="artist" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="album_title">Album Title</label>
+            <input type="text" id="album_title" formControlName="album_title" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="year_of_release">Year of Release</label>
+            <input type="number" id="year_of_release" formControlName="year_of_release" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="genre">Genre</label>
+            <input type="text" id="genre" formControlName="genre" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3" [disabled]="addAlbumForm.invalid">Add Album</button>
+    </form>
 </div>

@@ -86,6 +86,33 @@ export class BusinessComponent {
     }
   }
 
+  deleteReview(reviewId: string) {
+    const albumId = this.route.snapshot.paramMap.get('id'); // Get the current album ID
+
+    if (!albumId || !reviewId) {
+      alert('Invalid album or review ID');
+      return;
+    }
+
+    if (confirm('Are you sure you want to delete this review?')) {
+      this.webService.deleteReview(albumId, reviewId).subscribe({
+        next: (response) => {
+          alert('Review deleted successfully!');
+          this.reviews_list = this.reviews_list.filter(
+            (review: any) => review.review_id !== reviewId
+          ); // Remove the deleted review from the list
+          this.paginateReviews(); // Recalculate pagination
+          this.getAverageRating(this.reviews_list); // Update the average rating
+        },
+        error: (error) => {
+          console.error('Error deleting review:', error);
+          alert('Failed to delete review. Please try again.');
+        },
+      });
+    }
+  }
+
+
   getAverageRating(reviews: any[]) {
     console.log('Calculating average rating. Reviews:', reviews);
 
