@@ -8,8 +8,7 @@ import { DataService } from './data.service';
   selector: 'app-root',
   imports: [RouterOutlet, BusinessesComponent, NavComponent],
   providers: [DataService],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   title = 'My bizFE';

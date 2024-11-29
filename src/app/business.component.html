@@ -80,8 +80,7 @@
 </div>
 
 <div class="container" style="margin-top: 70px;">
-    <ng-container *ngIf="authService.isAuthenticated$ | async;
-                        else loggedOut">
+    <ng-container>
         <h2>Leave a Review</h2>
         <form [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
@@ -115,9 +114,5 @@
             </button>
         </form>
     </ng-container>
-    <ng-template #loggedOut>
-        <h2>
-            Please login to Review Album
-        </h2>
-    </ng-template>
+    
 </div>

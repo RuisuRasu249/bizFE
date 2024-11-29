@@ -4,6 +4,7 @@ import { BusinessesComponent } from './businesses.component';
 import { BusinessComponent } from './business.component';
 import { BusinessRatingsComponent } from './businessRatings.component';
 import { BusinessGenreComponent } from './businessGenre.component';
+import { LoginComponent } from './login.component';
 
 export const routes: Routes = [
     {
@@ -25,5 +26,9 @@ export const routes: Routes = [
     {
         path: 'genre',
         component: BusinessGenreComponent
-    }
+    },
+    {
+        path: 'login',
+        component: LoginComponent
+    },
 ];

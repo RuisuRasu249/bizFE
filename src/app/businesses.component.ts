@@ -11,8 +11,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   selector: 'businesses',
   imports: [RouterOutlet, RouterModule, CommonModule, FormsModule, ReactiveFormsModule],
   providers: [DataService, WebService],
-  templateUrl: './businesses.component.html',
-  styleUrl: './businesses.component.css'
+  templateUrl: './businesses.component.html'
 })
 
 export class BusinessesComponent {

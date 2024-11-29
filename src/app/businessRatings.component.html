@@ -1,5 +1,4 @@
-<ng-container *ngIf="authService.isAuthenticated$ | async;
-                        else loggedOut">
+<ng-container>
     <div class="container text-center" style="margin-top: 70px;">
         <!-- High-Rated Albums Section -->
         <div class="row">
@@ -28,8 +27,3 @@
         </div>
     </div>
 </ng-container>
-<ng-template #loggedOut>
-    <h2>
-        Please login to View Genre Summary
-    </h2>
-</ng-template>

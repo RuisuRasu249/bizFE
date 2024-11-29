@@ -13,8 +13,7 @@ import { WebService } from './web.service';
   selector: 'business',
   imports: [RouterOutlet, CommonModule, ReactiveFormsModule],
   providers: [DataService, WebService],
-  templateUrl: './business.component.html',
-  styleUrl: './business.component.css'
+  templateUrl: './business.component.html'
 })
 
 export class BusinessComponent {

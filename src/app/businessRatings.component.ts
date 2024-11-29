@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { AuthButtonComponent } from './authButton.component';
+import { LoginComponent } from './login.component';
 import { AuthUserComponent } from './authUser.component';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -10,10 +10,9 @@ import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
     selector: 'ratings',
-    imports: [RouterModule, AuthButtonComponent, AuthUserComponent, CommonModule, ReactiveFormsModule],
+    imports: [RouterModule, LoginComponent, AuthUserComponent, CommonModule, ReactiveFormsModule],
     providers: [DataService, WebService],
-    templateUrl: './businessRatings.component.html',
-    styleUrl: './businessRatings.component.css'
+    templateUrl: './businessRatings.component.html'
 })
 
 export class BusinessRatingsComponent {

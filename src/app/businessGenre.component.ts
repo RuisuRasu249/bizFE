@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { AuthButtonComponent } from './authButton.component';
+import { LoginComponent } from './login.component';
 import { AuthUserComponent } from './authUser.component';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -10,10 +10,9 @@ import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
     selector: 'genre',
-    imports: [RouterOutlet, AuthButtonComponent, AuthUserComponent, CommonModule, ReactiveFormsModule],
+    imports: [RouterOutlet, LoginComponent, AuthUserComponent, CommonModule, ReactiveFormsModule],
     providers: [DataService, WebService],
-    templateUrl: './businessGenre.component.html',
-    styleUrl: './businessGenre.component.css'
+    templateUrl: './businessGenre.component.html'
 })
 
 export class BusinessGenreComponent {
