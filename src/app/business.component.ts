@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ChangeDetectorRef } from '@angular/core';
-import { AuthService } from '@auth0/auth0-angular';
+import { AuthService } from './authService.component';
 import { WebService } from './web.service';
 
 
@@ -28,13 +28,14 @@ export class BusinessComponent {
   reviewsPerPage: number = 4; // Number of reviews per page
   totalReviewPages: number = 0; // Total number of pages for reviews
   paginatedReviews: any[] = []; // Reviews to display on the current page
+  isAdmin: boolean = false; // Default to false
 
   constructor(public dataService: DataService,
     private route: ActivatedRoute,
     private formBuilder: FormBuilder,
     private cdr: ChangeDetectorRef,
     public authService: AuthService,
-    private webService: WebService
+    private webService: WebService,
   ) { }
 
   ngOnInit() {
@@ -42,6 +43,10 @@ export class BusinessComponent {
       username: ["", Validators.required],
       review_text: ["", Validators.required],
       rating: 0,
+    });
+
+    this.authService.userRole$.subscribe((role) => {
+      this.isAdmin = role === 'admin'; // Set isAdmin to true if role is 'admin'
     });
 
     this.webService.getBusiness(this.route.snapshot.paramMap.get('id'))
@@ -63,23 +68,23 @@ export class BusinessComponent {
   onSubmit() {
     if (this.reviewForm.valid) {
       const newReview = this.reviewForm.value;
+      console.log('Submitting Review:', newReview);
 
-      const businessId = this.route.snapshot.paramMap.get('id');
-      const business = this.business_list.find((b: { _id: { $oid: string } }) => b._id.$oid === businessId);
-
-      this.webService.postReview(this.route.snapshot.paramMap.get('id'), newReview).subscribe({
-
+      const businessId = this.route.snapshot.paramMap.get('id')!;
+      this.webService.postReview(businessId, newReview).subscribe({
         next: (reviews) => {
           console.log('Review saved successfully:', reviews);
-          this.reviews_list = reviews; // Update the UI
-          this.getAverageRating(this.reviews_list);
+          this.reviews_list = reviews; // Update the reviews list
+          this.getAverageRating(this.reviews_list); // Update the average rating
           this.paginateReviews(); // Recalculate pagination
         },
         error: (error) => {
           console.error('Error adding review:', error);
           alert('There was an error submitting your review. Please try again.');
-        }
+        },
       });
+
+
       this.reviewForm.reset();
       this.reviewForm.patchValue({ rating: 5 }); // Default rating
     }

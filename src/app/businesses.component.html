@@ -10,7 +10,7 @@
 
     <div class="container" style="margin-bottom: 20px;">
         <!-- Button to toggle the form -->
-        <button class="btn btn-primary mb-3" (click)="toggleAddAlbumForm()">
+        <button *ngIf="isAdmin" class="btn btn-primary mb-3" (click)="toggleAddAlbumForm()">
             {{ showAddAlbumForm ? 'Close' : 'Add Album' }}
         </button>
 
@@ -85,11 +85,13 @@
                 <div class="card-actions">
                     <button [routerLink]="['/businesses', business._id]" class="btn btn-light">View Details</button>
                     <br>
-                    <button *ngIf="editingAlbumId === business._id" class="btn btn-success"
-                        (click)="updateAlbum(business)">Save</button>
-                    <button *ngIf="editingAlbumId !== business._id" class="btn btn-warning"
-                        (click)="editAlbum(business._id)">Edit</button>
-                    <button class="btn btn-danger" (click)="deleteAlbum(business._id)">Delete</button>
+                    <div *ngIf="isAdmin">
+                        <button *ngIf="editingAlbumId === business._id" class="btn btn-success"
+                            (click)="updateAlbum(business)">Save</button>
+                        <button *ngIf="editingAlbumId !== business._id" class="btn btn-warning"
+                            (click)="editAlbum(business._id)">Edit</button>
+                        <button class="btn btn-danger" (click)="deleteAlbum(business._id)">Delete</button>
+                    </div>
                 </div>
             </div>
         </div>

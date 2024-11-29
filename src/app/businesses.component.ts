@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms'; // For ngModel
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from './authService.component';
 
 @Component({
   selector: 'businesses',
@@ -23,20 +24,22 @@ export class BusinessesComponent {
   addAlbumForm: any;
   editingAlbumId: string | null = null; // To track the currently edited album
   showAddAlbumForm: boolean = false; // To track form visibility
-  
+  isAdmin: boolean = false; // Default to false
+
   constructor(public dataService: DataService,
     private webService: WebService,
     private formBuilder: FormBuilder,
+    private authService: AuthService,
     private router: Router,) {
-      this.addAlbumForm = this.formBuilder.group({
-        artist: ['', Validators.required],
-        album_title: ['', Validators.required],
-        year_of_release: [
-          '',
-          [Validators.required, Validators.min(1900), Validators.max(new Date().getFullYear())],
-        ],
-        genre: ['', Validators.required],
-      });
+    this.addAlbumForm = this.formBuilder.group({
+      artist: ['', Validators.required],
+      album_title: ['', Validators.required],
+      year_of_release: [
+        '',
+        [Validators.required, Validators.min(1900), Validators.max(new Date().getFullYear())],
+      ],
+      genre: ['', Validators.required],
+    });
   }
 
   ngOnInit() {
@@ -44,30 +47,36 @@ export class BusinessesComponent {
       this.page = Number(sessionStorage['page']);
     }
 
-    this.webService.getBusinesses(this.page)
-      .subscribe((response) => {
-        this.business_list = response
-      });
+    this.authService.userRole$.subscribe((role) => {
+      this.isAdmin = role === 'admin'; // Set isAdmin to true if role is 'admin'
+    });
+
+    this.webService.getBusinesses(1).subscribe((response) => {
+      this.business_list = response;
+    });
+
   }
 
   onAddAlbum() {
     if (this.addAlbumForm.valid) {
       const newAlbum = this.addAlbumForm.value;
+      console.log('Adding Album:', newAlbum); // Debug log
       this.webService.addAlbum(newAlbum).subscribe({
         next: (response) => {
           console.log('Album added successfully:', response);
           alert('Album added successfully!');
-          this.business_list.push(response.data); // Update the local list of albums
-          this.addAlbumForm.reset(); // Reset the form
+          this.business_list.push(response.data); // Update the local list
+          this.addAlbumForm.reset(); // Reset form
           this.ngOnInit(); // Refresh album list
         },
         error: (error) => {
-          console.error('Error adding album:', error);
+          console.error('Error adding album:', error); // Debug log
           alert('Failed to add album. Please try again.');
         },
       });
     }
   }
+
 
   toggleAddAlbumForm() {
     this.showAddAlbumForm = !this.showAddAlbumForm;
@@ -77,7 +86,7 @@ export class BusinessesComponent {
     this.addAlbumForm.reset(); // Clear all input fields
     this.showAddAlbumForm = false; // Collapse the form
   }
-  
+
   isInvalid(control: string): boolean {
     return (
       this.addAlbumForm.controls[control].invalid &&

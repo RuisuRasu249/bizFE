@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { BusinessesComponent } from './businesses.component';
 import { NavComponent } from './nav.component';
 import { DataService } from './data.service';
+import { AuthService } from './authService.component';
 
 @Component({
   selector: 'app-root',
@@ -13,9 +14,12 @@ import { DataService } from './data.service';
 export class AppComponent {
   title = 'My bizFE';
 
-  constructor(private dataService:DataService){}
+  constructor(private dataService:DataService, private authService: AuthService){}
 
   ngOnInit(){
     this.dataService.populateReviews();
+
+    this.authService.checkAuthentication(); // Initialize authentication status
+
   }
 }
