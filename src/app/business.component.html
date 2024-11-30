@@ -82,7 +82,10 @@
 <div class="container" >
     <ng-container>
         <h2>Leave a Review</h2>
-        <form [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
+        <p *ngIf="!isLoggedIn" class="text-danger">
+            Please log in to Review Album.
+          </p>
+        <form *ngIf="isLoggedIn" [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username" class="form-control" formControlName="username"

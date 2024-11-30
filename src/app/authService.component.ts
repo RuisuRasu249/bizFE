@@ -11,6 +11,9 @@ export class AuthService {
   isAuthenticated$ = new BehaviorSubject<boolean>(false);
   userRole$ = new BehaviorSubject<string>(''); // Tracks user role: admin or user
 
+  private isLoggedInSubject = new BehaviorSubject<boolean>(false);
+  isLoggedIn$: Observable<boolean> = this.isLoggedInSubject.asObservable();
+
   constructor(private http: HttpClient) {}
 
   login(username: string, password: string): Observable<any> {
@@ -18,6 +21,7 @@ export class AuthService {
       tap((response: any) => {
         localStorage.setItem('token', response.token); // Save token in localStorage
         localStorage.setItem('role', response.role);  // Save role in localStorage
+        this.isLoggedInSubject.next(true);
         this.isAuthenticated$.next(true);
         this.userRole$.next(response.role); // Emit the role
       })
@@ -27,6 +31,7 @@ export class AuthService {
   logout(): void {
     localStorage.removeItem('token');
     localStorage.removeItem('role');
+    this.isLoggedInSubject.next(false);
     this.isAuthenticated$.next(false);
     this.userRole$.next('');
   }

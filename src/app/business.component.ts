@@ -29,6 +29,8 @@ export class BusinessComponent {
   totalReviewPages: number = 0; // Total number of pages for reviews
   paginatedReviews: any[] = []; // Reviews to display on the current page
   isAdmin: boolean = false; // Default to false
+  isLoggedIn: boolean = false; // Track login status
+
 
   constructor(public dataService: DataService,
     private route: ActivatedRoute,
@@ -43,6 +45,10 @@ export class BusinessComponent {
       username: ["", Validators.required],
       review_text: ["", Validators.required],
       rating: 0,
+    });
+
+    this.authService.isLoggedIn$.subscribe((loggedIn) => {
+      this.isLoggedIn = loggedIn;
     });
 
     this.authService.userRole$.subscribe((role) => {
