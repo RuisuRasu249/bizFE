@@ -12,7 +12,7 @@ export class DataService{
 
     constructor(private http: HttpClient){}
 
-    getBusinesses(page: number){
+    getAlbums(page: number){
         let pageStart = (page - 1) * this.pageSize;
         let pageEnd = pageStart + this.pageSize;
         return jsonData.slice(pageStart, pageEnd);
@@ -22,11 +22,11 @@ export class DataService{
         return Math.ceil(jsonData.length / this.pageSize);
     }
 
-    getBusiness(id: any){
+    getAlbum(id: any){
         let dataToReturn: any[] = [];
-        jsonData.forEach(function(business){
-            if(business['_id']['$oid'] == id){
-                dataToReturn.push(business)
+        jsonData.forEach(function(album){
+            if(album['_id']['$oid'] == id){
+                dataToReturn.push(album)
             }
         })
         return dataToReturn;
@@ -39,7 +39,7 @@ export class DataService{
 
             loremIpsum = response.text;
 
-            jsonData.forEach(function(business){
+            jsonData.forEach(function(album){
                 let numReviews = Math.floor(Math.random() * 10);
                 for (var i=0; i < numReviews; i++){
                     let textSize = Math.floor(Math.random() * 290 + 10);
@@ -61,9 +61,9 @@ export class DataService{
 
     postReview(id: string, review: any): Observable<any> {
         return new Observable((observer) => {
-          jsonData.forEach((business) => {
-            if (business['_id']['$oid'] === id) {
-              business['reviews'].push(review);
+          jsonData.forEach((album) => {
+            if (album['_id']['$oid'] === id) {
+                album['reviews'].push(review);
               console.log('New review added to jsonData:', review); // Log here
               observer.next({ success: true });
               observer.complete();

@@ -8,17 +8,17 @@ export class WebService {
 
     constructor(private http: HttpClient) { }
 
-    getBusinesses(page: number, genre?: string) {
+    getAlbums(page: number, genre?: string) {
         const params: any = { page };
         if (genre) params.genre = genre;
         return this.http.get<any>('http://127.0.0.1:5000/albums', { params });
     }
 
-    getBusiness(id: any) {
+    getAlbum(id: any) {
         return this.http.get<any>('http://127.0.0.1:5000/albums/' + id);
     }
 
-    searchBusiness(query: string) {
+    searchAlbum(query: string) {
         return this.http.get<any[]>('http://127.0.0.1:5000/albums/search', {
             params: { query }
         });

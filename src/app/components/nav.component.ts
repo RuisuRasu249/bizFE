@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet, RouterModule, Router } from '@angular/router';
 import { LoginComponent } from './login.component';
-import { AuthUserComponent } from './authUser.component';
-import { AuthService } from './authService.component';
+import { AuthUserComponent } from '../auth/authUser.component';
+import { AuthService } from '../services/authService.component';
 
 @Component({
   selector: 'navigation',

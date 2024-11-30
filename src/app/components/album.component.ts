@@ -1,25 +1,24 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, RouterOutlet } from '@angular/router';
-import { DataService } from './data.service';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ChangeDetectorRef } from '@angular/core';
-import { AuthService } from './authService.component';
-import { WebService } from './web.service';
-
+import { DataService } from '../data.service';
+import { WebService } from '../services/web.service';
+import { AuthService } from '../services/authService.component';
 
 @Component({
-  selector: 'business',
+  selector: 'album',
   imports: [RouterOutlet, CommonModule, ReactiveFormsModule],
   providers: [DataService, WebService],
-  templateUrl: './business.component.html'
+  templateUrl: './album.component.html'
 })
 
-export class BusinessComponent {
-  business_list: any;
+export class AlbumComponent {
+  album_list: any;
   loremIpsum: any;
-  business: any;
+  album: any;
   reviewForm: any;
   reviews_list: any;
   averageRating: any;
@@ -55,9 +54,9 @@ export class BusinessComponent {
       this.isAdmin = role === 'admin'; // Set isAdmin to true if role is 'admin'
     });
 
-    this.webService.getBusiness(this.route.snapshot.paramMap.get('id'))
+    this.webService.getAlbum(this.route.snapshot.paramMap.get('id'))
       .subscribe((response) => {
-        this.business_list = [response];
+        this.album_list = [response];
         this.dataService.getLoremIpsum(1)
           .subscribe((response: any) => {
             this.loremIpsum = response.text.slice(0, 400);
@@ -76,8 +75,8 @@ export class BusinessComponent {
       const newReview = this.reviewForm.value;
       console.log('Submitting Review:', newReview);
 
-      const businessId = this.route.snapshot.paramMap.get('id')!;
-      this.webService.postReview(businessId, newReview).subscribe({
+      const albumId = this.route.snapshot.paramMap.get('id')!;
+      this.webService.postReview(albumId, newReview).subscribe({
         next: (reviews) => {
           console.log('Review saved successfully:', reviews);
           this.reviews_list = reviews; // Update the reviews list

@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { LoginComponent } from './login.component';
-import { AuthUserComponent } from './authUser.component';
+import { AuthUserComponent } from '../auth/authUser.component';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import { DataService } from './data.service';
-import { WebService } from './web.service';
+import { LoginComponent } from './login.component';
+import { DataService } from '../data.service';
+import { WebService } from '../services/web.service';
 
 @Component({
     selector: 'ratings',
     imports: [RouterModule, LoginComponent, AuthUserComponent, CommonModule, ReactiveFormsModule],
     providers: [DataService, WebService],
-    templateUrl: './businessRatings.component.html'
+    templateUrl: './albumRatings.component.html'
 })
 
-export class BusinessRatingsComponent {
+export class AlbumRatingsComponent {
     ratings: any;
     averageRating: any;
 

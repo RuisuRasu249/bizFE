@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-12" style="margin: 40px;">
             <input type="text" class="form-control" placeholder="🔍Search Album or Artist Name..."
-                [(ngModel)]="searchQuery" (input)="searchBusinesses()" />
+                [(ngModel)]="searchQuery" (input)="searchAlbums()" />
         </div>
     </div>
 
@@ -50,47 +50,47 @@
     </div>
 
     <div class="row">
-        <div *ngFor="let business of business_list" class="col-md-4 mb-4">
+        <div *ngFor="let album of album_list" class="col-md-4 mb-4">
             <div class="card text-center text-white bg-primary mb-3">
                 <div class="card-header">
-                    <ng-container *ngIf="editingAlbumId === business._id; else displayMode">
-                        <input type="text" class="form-control" [(ngModel)]="business.artist" placeholder="Artist Name">
+                    <ng-container *ngIf="editingAlbumId === album._id; else displayMode">
+                        <input type="text" class="form-control" [(ngModel)]="album.artist" placeholder="Artist Name">
                     </ng-container>
                     <ng-template #displayMode>
-                        {{ business.artist }}
+                        {{ album.artist }}
                     </ng-template>
                 </div>
                 <div class="card-body">
                     Album
                     <br>
-                    <ng-container *ngIf="editingAlbumId === business._id; else displayAlbumTitle">
-                        <input type="text" class="form-control" [(ngModel)]="business.album_title"
+                    <ng-container *ngIf="editingAlbumId === album._id; else displayAlbumTitle">
+                        <input type="text" class="form-control" [(ngModel)]="album.album_title"
                             placeholder="Album Title">
                     </ng-container>
                     <ng-template #displayAlbumTitle>
                         <img src="images/album.png" style="width: 20px; height: 20px;">
-                        {{ business.album_title }}
+                        {{ album.album_title }}
                     </ng-template>
                 </div>
                 <div class="card-footer">
                     Year -
-                    <ng-container *ngIf="editingAlbumId === business._id; else displayYear">
-                        <input type="number" class="form-control" [(ngModel)]="business.year_of_release"
+                    <ng-container *ngIf="editingAlbumId === album._id; else displayYear">
+                        <input type="number" class="form-control" [(ngModel)]="album.year_of_release"
                             placeholder="Year of Release">
                     </ng-container>
                     <ng-template #displayYear>
-                        {{ business.year_of_release }}
+                        {{ album.year_of_release }}
                     </ng-template>
                 </div>
                 <div class="card-actions">
-                    <button [routerLink]="['/businesses', business._id]" class="btn btn-light">View Details</button>
+                    <button [routerLink]="['/albums', album._id]" class="btn btn-light">View Details</button>
                     <br>
                     <div *ngIf="isAdmin">
-                        <button *ngIf="editingAlbumId === business._id" class="btn btn-success"
-                            (click)="updateAlbum(business)">Save</button>
-                        <button *ngIf="editingAlbumId !== business._id" class="btn btn-warning"
-                            (click)="editAlbum(business._id)">Edit</button>
-                        <button class="btn btn-danger" (click)="deleteAlbum(business._id)">Delete</button>
+                        <button *ngIf="editingAlbumId === album._id" class="btn btn-success"
+                            (click)="updateAlbum(album)">Save</button>
+                        <button *ngIf="editingAlbumId !== album._id" class="btn btn-warning"
+                            (click)="editAlbum(album._id)">Edit</button>
+                        <button class="btn btn-danger" (click)="deleteAlbum(album._id)">Delete</button>
                     </div>
                 </div>
             </div>

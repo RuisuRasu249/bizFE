@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home.component';
-import { BusinessesComponent } from './businesses.component';
-import { BusinessComponent } from './business.component';
-import { BusinessRatingsComponent } from './businessRatings.component';
-import { BusinessGenreComponent } from './businessGenre.component';
-import { LoginComponent } from './login.component';
+import { HomeComponent } from './components/home.component';
+import { LoginComponent } from './components/login.component';
+import { AlbumsComponent } from './components/albums.component';
+import { AlbumComponent } from './components/album.component';
+import { AlbumRatingsComponent } from './components/albumRatings.component';
+import { AlbumGenreComponent } from './components/albumGenre.component';
 
 export const routes: Routes = [
     {
@@ -12,20 +12,20 @@ export const routes: Routes = [
         component: HomeComponent
     },
     {
-        path: 'businesses',
-        component: BusinessesComponent
+        path: 'albums',
+        component: AlbumsComponent
     },
     {
-        path: 'businesses/:id',
-        component: BusinessComponent
+        path: 'albums/:id',
+        component: AlbumComponent
     },
     {
         path: 'ratings',
-        component: BusinessRatingsComponent
+        component: AlbumRatingsComponent
     },
     {
         path: 'genre',
-        component: BusinessGenreComponent
+        component: AlbumGenreComponent
     },
     {
         path: 'login',

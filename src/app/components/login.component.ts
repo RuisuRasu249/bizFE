@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from './authService.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms'; // For ngModel
+import { AuthService } from '../services/authService.component';
 
 @Component({
   selector: 'app-login',

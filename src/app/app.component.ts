@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { BusinessesComponent } from './businesses.component';
-import { NavComponent } from './nav.component';
+import { AuthService } from './services/authService.component';
+import { AlbumsComponent } from './components/albums.component';
+import { NavComponent } from './components/nav.component';
 import { DataService } from './data.service';
-import { AuthService } from './authService.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, BusinessesComponent, NavComponent],
+  imports: [RouterOutlet, AlbumsComponent, NavComponent],
   providers: [DataService],
   templateUrl: './app.component.html'
 })

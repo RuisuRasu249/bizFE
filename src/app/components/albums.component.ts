@@ -1,23 +1,24 @@
 import { Component } from '@angular/core';
 import { RouterOutlet, RouterModule } from '@angular/router';
-import { DataService } from './data.service';
-import { WebService } from './web.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms'; // For ngModel
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from './authService.component';
+import { DataService } from '../data.service';
+import { WebService } from '../services/web.service';
+import { AuthService } from '../services/authService.component';
+
 
 @Component({
-  selector: 'businesses',
+  selector: 'albums',
   imports: [RouterOutlet, RouterModule, CommonModule, FormsModule, ReactiveFormsModule],
   providers: [DataService, WebService],
-  templateUrl: './businesses.component.html'
+  templateUrl: './albums.component.html'
 })
 
-export class BusinessesComponent {
+export class AlbumsComponent {
 
-  business_list: any;
+  album_list: any;
   page: number = 1;
   searchQuery: string = '';
   searchResults: any;
@@ -51,8 +52,8 @@ export class BusinessesComponent {
       this.isAdmin = role === 'admin'; // Set isAdmin to true if role is 'admin'
     });
 
-    this.webService.getBusinesses(1).subscribe((response) => {
-      this.business_list = response;
+    this.webService.getAlbums(1).subscribe((response) => {
+      this.album_list = response;
     });
 
   }
@@ -65,7 +66,7 @@ export class BusinessesComponent {
         next: (response) => {
           console.log('Album added successfully:', response);
           alert('Album added successfully!');
-          this.business_list.push(response.data); // Update the local list
+          this.album_list.push(response.data); // Update the local list
           this.addAlbumForm.reset(); // Reset form
           this.ngOnInit(); // Refresh album list
         },
@@ -147,9 +148,9 @@ export class BusinessesComponent {
       this.page = this.page - 1;
       sessionStorage['page'] = this.page;
 
-      this.webService.getBusinesses(this.page)
+      this.webService.getAlbums(this.page)
         .subscribe((response) => {
-          this.business_list = response
+          this.album_list = response
         })
     }
   }
@@ -158,24 +159,24 @@ export class BusinessesComponent {
     if (this.page < this.dataService.getLastPageNumber()) {
       this.page = this.page + 1;
       sessionStorage['page'] = this.page;
-      this.webService.getBusinesses(this.page)
+      this.webService.getAlbums(this.page)
         .subscribe((response) => {
-          this.business_list = response
+          this.album_list = response
         })
     }
   }
 
-  searchBusinesses(): void {
+  searchAlbums(): void {
     if (this.searchQuery.trim()) {
       // Fetch albums based on the search query
-      this.webService.searchBusiness(this.searchQuery).subscribe({
+      this.webService.searchAlbum(this.searchQuery).subscribe({
         next: (data: any[]) => {
-          this.business_list = data;
+          this.album_list = data;
         }
       });
     } else {
       // Fetch all albums if search query is empty
-      this.router.navigate(['/businesses']); // Navigate back to albums page
+      this.router.navigate(['/albums']); // Navigate back to albums page
     }
   }
 }
