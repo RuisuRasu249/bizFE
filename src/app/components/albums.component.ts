@@ -156,15 +156,19 @@ export class AlbumsComponent {
   }
 
   nextPage() {
-    if (this.page < this.dataService.getLastPageNumber()) {
-      this.page = this.page + 1;
-      sessionStorage['page'] = this.page;
-      this.webService.getAlbums(this.page)
-        .subscribe((response) => {
-          this.album_list = response
-        })
-    }
+    this.webService.getAlbums(this.page + 1).subscribe((response) => {
+      if (response && response.length > 0) {
+        this.page += 1; // Increment the page only if there are albums on the next page
+        sessionStorage['page'] = this.page;
+        this.album_list = response;
+      } else {
+        console.log('No more albums on the next page.');
+      }
+    }, (error) => {
+      console.error('Error fetching the next page of albums:', error);
+    });
   }
+
 
   searchAlbums(): void {
     if (this.searchQuery.trim()) {

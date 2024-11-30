@@ -7,12 +7,13 @@ import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [RouterOutlet, AlbumsComponent, NavComponent],
   providers: [DataService],
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'My bizFE';
+  title = 'AlbumsFE';
 
   constructor(private dataService:DataService, private authService: AuthService){}
 

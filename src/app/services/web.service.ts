@@ -13,7 +13,7 @@ export class WebService {
         if (genre) params.genre = genre;
         return this.http.get<any>('http://127.0.0.1:5000/albums', { params });
     }
-
+    
     getAlbum(id: any) {
         return this.http.get<any>('http://127.0.0.1:5000/albums/' + id);
     }
@@ -24,7 +24,6 @@ export class WebService {
         });
     }
 
-    // Add Album
     addAlbum(album: any): Observable<any> {
         const token = localStorage.getItem('token'); // Retrieve the admin token
         const headers = new HttpHeaders().set('x-access-token', token || '');
@@ -50,7 +49,6 @@ export class WebService {
         return this.http.put(`${this.baseUrl}/${albumId}`, formData, { headers });
     }
 
-    // Delete Album
     deleteAlbum(albumId: string): Observable<any> {
         const token = localStorage.getItem('token');
         const headers = new HttpHeaders().set('x-access-token', token || '');
@@ -81,7 +79,6 @@ export class WebService {
 
         return this.http.post<any>(`${this.baseUrl}/${id}/reviews`, postData, { headers });
     }
-
 
     deleteReview(albumId: string, reviewId: string): Observable<any> {
         const token = localStorage.getItem('token');

@@ -5,6 +5,7 @@ import { AlbumsComponent } from './components/albums.component';
 import { AlbumComponent } from './components/album.component';
 import { AlbumRatingsComponent } from './components/albumRatings.component';
 import { AlbumGenreComponent } from './components/albumGenre.component';
+import { TestWSComponent } from './testWS.component';
 
 export const routes: Routes = [
     {
@@ -31,4 +32,8 @@ export const routes: Routes = [
         path: 'login',
         component: LoginComponent
     },
+    {
+        path: 'test',
+        component: TestWSComponent
+    }
 ];

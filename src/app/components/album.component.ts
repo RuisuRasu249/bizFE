@@ -57,10 +57,11 @@ export class AlbumComponent {
     this.webService.getAlbum(this.route.snapshot.paramMap.get('id'))
       .subscribe((response) => {
         this.album_list = [response];
-        this.dataService.getLoremIpsum(1)
-          .subscribe((response: any) => {
-            this.loremIpsum = response.text.slice(0, 400);
-          });
+      });
+
+    this.dataService.getLoremIpsum(1)
+      .subscribe((response: any) => {
+        this.loremIpsum = response.text.slice(0, 400);
       });
 
     this.webService.getReviews(this.route.snapshot.paramMap.get('id'))
