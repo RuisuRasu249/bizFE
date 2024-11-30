@@ -1,0 +1,773 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>biz-fe documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">biz-fe documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  AlbumRatingsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/albumRatings.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>The <code>AlbumRatingsComponent</code> is responsible for displaying a list of high-rated albums and their average ratings.
+It interacts with the <code>WebService</code> to fetch rating data and provides utility methods for processing ratings.</p>
+
+    </p>
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                                <code><a href="../injectables/DataService.html" target="_self" >DataService</a></code>
+                                <code><a href="../injectables/WebService.html" target="_self" >WebService</a></code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>ratings</code></td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">imports</td>
+                <td class="col-md-9">
+                            <code>RouterModule</code>
+                                <code><a href="../components/LoginComponent.html" target="_self" >LoginComponent</a></code>
+                                <code><a href="../components/AuthUserComponent.html" target="_self" >AuthUserComponent</a></code>
+                            <code>CommonModule</code>
+                            <code>ReactiveFormsModule</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./albumRatings.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#averageRating" >averageRating</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dataService" >dataService</a>
+                            </li>
+                            <li>
+                                <a href="#ratings" >ratings</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getRoundedRating" >getRoundedRating</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(dataService: <a href="../injectables/DataService.html" target="_self">DataService</a>, webService: <a href="../injectables/WebService.html" target="_self">WebService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/albumRatings.component.ts:29</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor for <code>AlbumRatingsComponent</code>.
+Injects services for managing data and making API calls.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>dataService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DataService.html" target="_self" >DataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Service for handling application-wide data operations.</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>webService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/WebService.html" target="_self" >WebService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Service for interacting with the album API.</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRoundedRating"></a>
+                    <span class="name">
+                        <span ><b>getRoundedRating</b></span>
+                        <a href="#getRoundedRating"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getRoundedRating(rating: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="58"
+                                    class="link-to-prism">src/app/components/albumRatings.component.ts:58</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Rounds a given rating to the nearest whole number.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>rating</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>The rating value to round.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                <p>The rounded rating.</p>
+
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="44"
+                                    class="link-to-prism">src/app/components/albumRatings.component.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Lifecycle hook that is called after the component is initialized.
+Fetches the list of high-rated albums from the API and assigns it to the <code>ratings</code> property.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="averageRating"></a>
+                    <span class="name">
+                        <span ><b>averageRating</b></span>
+                        <a href="#averageRating"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/components/albumRatings.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Holds the calculated average rating for displayed albums.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dataService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>dataService</b></span>
+                        <a href="#dataService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/DataService.html" target="_self" >DataService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/components/albumRatings.component.ts:38</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description">- Service for handling application-wide data operations.</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ratings"></a>
+                    <span class="name">
+                        <span ><b>ratings</b></span>
+                        <a href="#ratings"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/components/albumRatings.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Holds the list of high-rated albums retrieved from the API.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { RouterModule } from &#x27;@angular/router&#x27;;
+import { AuthUserComponent } from &#x27;../auth/authUser.component&#x27;;
+import { CommonModule } from &#x27;@angular/common&#x27;;
+import { ReactiveFormsModule } from &#x27;@angular/forms&#x27;;
+import { LoginComponent } from &#x27;./login.component&#x27;;
+import { DataService } from &#x27;../data.service&#x27;;
+import { WebService } from &#x27;../services/web.service&#x27;;
+
+/**
+ * The &#x60;AlbumRatingsComponent&#x60; is responsible for displaying a list of high-rated albums and their average ratings.
+ * It interacts with the &#x60;WebService&#x60; to fetch rating data and provides utility methods for processing ratings.
+ */
+@Component({
+    selector: &#x27;ratings&#x27;, // The selector used to include this component in the application.
+    imports: [RouterModule, LoginComponent, AuthUserComponent, CommonModule, ReactiveFormsModule], // Modules and components used in the template.
+    providers: [DataService, WebService], // Services provided specifically for this component.
+    templateUrl: &#x27;./albumRatings.component.html&#x27; // The associated template file for this component.
+})
+
+export class AlbumRatingsComponent {
+    /**
+     * Holds the list of high-rated albums retrieved from the API.
+     */
+    ratings: any;
+    /**
+     * Holds the calculated average rating for displayed albums.
+     */
+    averageRating: any;
+
+    /**
+     * Constructor for &#x60;AlbumRatingsComponent&#x60;.
+     * Injects services for managing data and making API calls.
+     * 
+     * @param dataService - Service for handling application-wide data operations.
+     * @param webService - Service for interacting with the album API.
+     */
+    constructor(public dataService: DataService, private webService: WebService) { }
+
+    /**
+     * Lifecycle hook that is called after the component is initialized.
+     * Fetches the list of high-rated albums from the API and assigns it to the &#x60;ratings&#x60; property.
+     */
+    ngOnInit() {
+        // Fetch high-rated albums
+        this.webService.getHighRated()
+            .subscribe((response) &#x3D;&gt; {
+                this.ratings &#x3D; response;
+            });
+    }
+
+    /**
+     * Rounds a given rating to the nearest whole number.
+     * 
+     * @param rating - The rating value to round.
+     * @returns The rounded rating.
+     */
+    getRoundedRating(rating: number): number {
+        return Math.round(rating);
+    }
+    
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ng-container&gt;
+    &lt;div class&#x3D;&quot;container text-center&quot; style&#x3D;&quot;margin-top: 70px;&quot;&gt;
+        &lt;!-- High-Rated Albums Section --&gt;
+        &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;h2 style&#x3D;&quot;margin-top: 40px;&quot;&gt;High-Rated Albums&lt;/h2&gt;
+            &lt;p style&#x3D;&quot;margin-bottom: 40px;&quot;&gt;Explore the current High-Rated Albums listed today&lt;/p&gt;
+            &lt;br&gt;
+            &lt;div class&#x3D;&quot;col-md-4&quot; *ngFor&#x3D;&quot;let rating of ratings&quot;&gt;
+                &lt;div class&#x3D;&quot;card text-center text-white bg-primary mb-3&quot;&gt;
+                    &lt;div class&#x3D;&quot;card-header&quot;&gt;
+                        &lt;h5&gt;{{ rating.album_title }}&lt;/h5&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                        &lt;p&gt;Average Rating:&lt;/p&gt;
+                        &lt;p&gt;
+                            &lt;span *ngFor&#x3D;&quot;let star of [].constructor(getRoundedRating(rating.average_rating))&quot;&gt;
+                                &lt;img src&#x3D;&quot;images/love_rating.png&quot; alt&#x3D;&quot;rating&quot; style&#x3D;&quot;width: 30px; height: 30px;&quot; /&gt;
+                            &lt;/span&gt;
+                            {{ rating.average_rating | number:&#x27;1.1-1&#x27; }}/5
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;footer&quot;&gt;
+                        &lt;p class&#x3D;&quot;fst-italic&quot;&gt;by {{ rating.artist }}&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ng-container&gt;
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ng-container>    <div class="container text-center" style="margin-top: 70px;">        <!-- High-Rated Albums Section -->        <div class="row">            <h2 style="margin-top: 40px;">High-Rated Albums</h2>            <p style="margin-bottom: 40px;">Explore the current High-Rated Albums listed today</p>            <br>            <div class="col-md-4" *ngFor="let rating of ratings">                <div class="card text-center text-white bg-primary mb-3">                    <div class="card-header">                        <h5>{{ rating.album_title }}</h5>                    </div>                    <div class="card-body">                        <p>Average Rating:</p>                        <p>                            <span *ngFor="let star of [].constructor(getRoundedRating(rating.average_rating))">                                <img src="images/love_rating.png" alt="rating" style="width: 30px; height: 30px;" />                            </span>                            {{ rating.average_rating | number:\'1.1-1\' }}/5                        </p>                    </div>                    <div class="footer">                        <p class="fst-italic">by {{ rating.artist }}</p>                    </div>                </div>            </div>        </div>    </div></ng-container></div>'
+    var COMPONENTS = [{'name': 'AlbumComponent', 'selector': 'album'},{'name': 'AlbumGenreComponent', 'selector': 'genre'},{'name': 'AlbumRatingsComponent', 'selector': 'ratings'},{'name': 'AlbumsComponent', 'selector': 'albums'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthUserComponent', 'selector': 'user-profile'},{'name': 'HomeComponent', 'selector': 'home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavComponent', 'selector': 'navigation'},{'name': 'TestWSComponent', 'selector': 'testWS'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'AlbumRatingsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AlbumRatingsComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

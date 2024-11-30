@@ -1,0 +1,1621 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>biz-fe documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">biz-fe documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  TestWSComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/testWS.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>The <code>TestWSComponent</code> is responsible for testing the functionality of the <code>WebService</code> and <code>AuthService</code>.
+It includes various test cases for verifying CRUD operations, user authentication, and other key features.</p>
+
+    </p>
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                                <code><a href="../injectables/WebService.html" target="_self" >WebService</a></code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>testWS</code></td>
+            </tr>
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./testWS.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#first_album_list" >first_album_list</a>
+                            </li>
+                            <li>
+                                <a href="#second_album_list" >second_album_list</a>
+                            </li>
+                            <li>
+                                <a href="#test_output" >test_output</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#testAddAlbum" >testAddAlbum</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#testAlbumsFetched" >testAlbumsFetched</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#testDeleteAlbum" >testDeleteAlbum</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#testGetAlbum" >testGetAlbum</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#testGetGenreRated" >testGetGenreRated</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#testGetHighRated" >testGetHighRated</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#testGetReviews" >testGetReviews</a>
+                            </li>
+                            <li>
+                                <a href="#testIsAuthenticated" >testIsAuthenticated</a>
+                            </li>
+                            <li>
+                                <a href="#testLogin" >testLogin</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#testPagesOfAlbumsAreDifferent" >testPagesOfAlbumsAreDifferent</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#testPostReview" >testPostReview</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#testSearchAlbum" >testSearchAlbum</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#testUpdateAlbum" >testUpdateAlbum</a>
+                            </li>
+                            <li>
+                                <a href="#testUserRole" >testUserRole</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(webService: <a href="../injectables/WebService.html" target="_self">WebService</a>, authService: <a href="../injectables/AuthService.html" target="_self">AuthService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/testWS.component.ts:29</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor for <code>TestWSComponent</code>.
+Injects the <code>WebService</code> and <code>AuthService</code> for testing purposes.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>webService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/WebService.html" target="_self" >WebService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>The service used for interacting with the API.</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>authService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>The service used for managing authentication.</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="347"
+                                    class="link-to-prism">src/app/testWS.component.ts:347</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Lifecycle hook that initializes the component and runs all test cases.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="testAddAlbum"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>testAddAlbum</b></span>
+                        <a href="#testAddAlbum"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>testAddAlbum()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="166"
+                                    class="link-to-prism">src/app/testWS.component.ts:166</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Tests adding a new album to the database.</p>
+<p>Steps:</p>
+<ul>
+<li>Fetches the initial list of albums to determine the count.</li>
+<li>Sends a request to add a new album.</li>
+<li>Fetches the newly added album by its ID to verify the details match.</li>
+<li>Updates the test output with PASS or FAIL based on the results.</li>
+</ul>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="testAlbumsFetched"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>testAlbumsFetched</b></span>
+                        <a href="#testAlbumsFetched"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>testAlbumsFetched()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="43"
+                                    class="link-to-prism">src/app/testWS.component.ts:43</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Tests if a page of albums can be successfully fetched.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="testDeleteAlbum"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>testDeleteAlbum</b></span>
+                        <a href="#testDeleteAlbum"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>testDeleteAlbum()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="260"
+                                    class="link-to-prism">src/app/testWS.component.ts:260</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Tests deleting an album from the database.</p>
+<p>Steps:</p>
+<ul>
+<li>Adds a fake album to the database for testing purposes.</li>
+<li>Sends a request to delete the newly added fake album.</li>
+<li>Attempts to fetch the deleted album to verify it no longer exists.</li>
+<li>Updates the test output with PASS or FAIL based on the results.</li>
+</ul>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="testGetAlbum"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>testGetAlbum</b></span>
+                        <a href="#testGetAlbum"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>testGetAlbum()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="71"
+                                    class="link-to-prism">src/app/testWS.component.ts:71</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Tests fetching an album by ID.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="testGetGenreRated"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>testGetGenreRated</b></span>
+                        <a href="#testGetGenreRated"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>testGetGenreRated()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="147"
+                                    class="link-to-prism">src/app/testWS.component.ts:147</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Tests fetching a genre summary for albums.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="testGetHighRated"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>testGetHighRated</b></span>
+                        <a href="#testGetHighRated"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>testGetHighRated()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="134"
+                                    class="link-to-prism">src/app/testWS.component.ts:134</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Tests fetching high-rated albums.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="testGetReviews"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>testGetReviews</b></span>
+                        <a href="#testGetReviews"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>testGetReviews()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="83"
+                                    class="link-to-prism">src/app/testWS.component.ts:83</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Tests fetching reviews for a specific album.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="testIsAuthenticated"></a>
+                    <span class="name">
+                        <span ><b>testIsAuthenticated</b></span>
+                        <a href="#testIsAuthenticated"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>testIsAuthenticated()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="315"
+                                    class="link-to-prism">src/app/testWS.component.ts:315</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Tests the <code>isAuthenticated</code> observable in the <code>AuthService</code>.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="testLogin"></a>
+                    <span class="name">
+                        <span ><b>testLogin</b></span>
+                        <a href="#testLogin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>testLogin()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="297"
+                                    class="link-to-prism">src/app/testWS.component.ts:297</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Tests login functionality.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="testPagesOfAlbumsAreDifferent"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>testPagesOfAlbumsAreDifferent</b></span>
+                        <a href="#testPagesOfAlbumsAreDifferent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>testPagesOfAlbumsAreDifferent()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="55"
+                                    class="link-to-prism">src/app/testWS.component.ts:55</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Tests if albums from two different pages are distinct.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="testPostReview"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>testPostReview</b></span>
+                        <a href="#testPostReview"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>testPostReview()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="95"
+                                    class="link-to-prism">src/app/testWS.component.ts:95</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Tests posting a review for a specific album.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="testSearchAlbum"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>testSearchAlbum</b></span>
+                        <a href="#testSearchAlbum"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>testSearchAlbum()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="120"
+                                    class="link-to-prism">src/app/testWS.component.ts:120</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Tests searching for an album by a query string.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="testUpdateAlbum"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>testUpdateAlbum</b></span>
+                        <a href="#testUpdateAlbum"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>testUpdateAlbum()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="210"
+                                    class="link-to-prism">src/app/testWS.component.ts:210</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Tests updating an existing album in the database.</p>
+<p>Steps:</p>
+<ul>
+<li>Fetches the list of albums and selects the first album.</li>
+<li>Sends a request to update the selected album with new details.</li>
+<li>Fetches the updated album to verify the details were correctly updated.</li>
+<li>Updates the test output with PASS or FAIL based on the results.</li>
+</ul>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="testUserRole"></a>
+                    <span class="name">
+                        <span ><b>testUserRole</b></span>
+                        <a href="#testUserRole"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>testUserRole()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="330"
+                                    class="link-to-prism">src/app/testWS.component.ts:330</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Tests the <code>userRole</code> observable in the <code>AuthService</code>.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="first_album_list"></a>
+                    <span class="name">
+                        <span ><b>first_album_list</b></span>
+                        <a href="#first_album_list"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/testWS.component.ts:24</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Stores the list of albums from the first page.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="second_album_list"></a>
+                    <span class="name">
+                        <span ><b>second_album_list</b></span>
+                        <a href="#second_album_list"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/testWS.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Stores the list of albums from the second page.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="test_output"></a>
+                    <span class="name">
+                        <span ><b>test_output</b></span>
+                        <a href="#test_output"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/testWS.component.ts:19</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Stores the output messages for each test case.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &quot;@angular/core&quot;;
+import { WebService } from &quot;./services/web.service&quot;;
+import { AuthService } from &quot;./services/authService.component&quot;;
+
+/**
+ * The &#x60;TestWSComponent&#x60; is responsible for testing the functionality of the &#x60;WebService&#x60; and &#x60;AuthService&#x60;.
+ * It includes various test cases for verifying CRUD operations, user authentication, and other key features.
+ */
+@Component({
+    selector: &#x27;testWS&#x27;, // The selector used to include this component in the application.
+    providers: [WebService], // Provides the &#x60;WebService&#x60; specifically for this component.
+    templateUrl: &#x27;./testWS.component.html&#x27; // The associated template file for this component.
+})
+
+export class TestWSComponent {
+    /**
+     * Stores the output messages for each test case.
+     */
+    test_output: string[] &#x3D; [];
+
+    /**
+     * Stores the list of albums from the first page.
+     */
+    first_album_list: any[] &#x3D; [];
+
+    /**
+     * Stores the list of albums from the second page.
+     */
+    second_album_list: any[] &#x3D; [];
+
+    /**
+     * Constructor for &#x60;TestWSComponent&#x60;.
+     * Injects the &#x60;WebService&#x60; and &#x60;AuthService&#x60; for testing purposes.
+     * 
+     * @param webService - The service used for interacting with the API.
+     * @param authService - The service used for managing authentication.
+     */
+    constructor(private webService: WebService, private authService: AuthService) { }
+
+    /**
+     * Tests if a page of albums can be successfully fetched.
+     */
+    private testAlbumsFetched() {
+        this.webService.getAlbums(1).subscribe((response) &#x3D;&gt; {
+            if (Array.isArray(response) &amp;&amp; response.length &#x3D;&#x3D;&#x3D; 9)
+                this.test_output.push(&quot;Page of Albums fetched... PASS&quot;)
+            else
+                this.test_output.push(&quot;Page of Albums fetched... FAIL&quot;)
+        })
+    }
+
+    /**
+     * Tests if albums from two different pages are distinct.
+     */
+    private testPagesOfAlbumsAreDifferent() {
+        this.webService.getAlbums(1).subscribe((response) &#x3D;&gt; {
+            this.first_album_list &#x3D; response;
+            this.webService.getAlbums(2).subscribe((response) &#x3D;&gt; {
+                this.second_album_list &#x3D; response;
+                if (this.first_album_list[0][&#x27;_id&#x27;] !&#x3D; this.second_album_list[0][&#x27;_id&#x27;])
+                    this.test_output.push(&quot;Albums Pages 1 and 2 are different... PASS&quot;);
+                else
+                    this.test_output.push(&quot;Albums 1 and 2 are different... FAIL&quot;);
+            })
+        })
+    }
+
+    /**
+     * Tests fetching an album by ID.
+     */
+    private testGetAlbum() {
+        this.webService.getAlbum(&#x27;674a22f2c95979aa6b4510d7&#x27;).subscribe((response) &#x3D;&gt; {
+            if (response.artist &#x3D;&#x3D;&#x3D; &#x27;Pink Floyd&#x27;)
+                this.test_output.push(&quot;Fetch Album 0 by ID... PASS&quot;)
+            else
+                this.test_output.push(&quot;Fetch Album 0 by ID... FAIL&quot;)
+        })
+    }
+
+    /**
+     * Tests fetching reviews for a specific album.
+     */
+    private testGetReviews() {
+        this.webService.getReviews(&#x27;674a22f2c95979aa6b4510d7&#x27;).subscribe((response) &#x3D;&gt; {
+            if (Array.isArray(response))
+                this.test_output.push(&quot;Fetch Reviews of Album 0... PASS&quot;)
+            else
+                this.test_output.push(&quot;Fetch Reviews Album 0... FAIL&quot;)
+        })
+    }
+
+    /**
+     * Tests posting a review for a specific album.
+     */
+    private testPostReview() {
+        let test_review &#x3D; {
+            &quot;username&quot;: &quot;Test User&quot;,
+            &quot;comment&quot;: &quot;Test Comment&quot;,
+            &quot;rating&quot;: 5
+        };
+
+        this.webService.getReviews(&#x27;674a22f2c95979aa6b4510d7&#x27;).subscribe((response) &#x3D;&gt; {
+            let num_reviews &#x3D; response.length;
+            this.webService.postReview(&#x27;674a22f2c95979aa6b4510d7&#x27;, test_review)
+                .subscribe((response) &#x3D;&gt; {
+                    this.webService.getReviews(&#x27;674a22f2c95979aa6b4510d7&#x27;)
+                        .subscribe((response) &#x3D;&gt; {
+                            if (response.length &#x3D;&#x3D; num_reviews + 1)
+                                this.test_output.push(&quot;Post review... PASS (Logged in as User Or Admin)&quot;)
+                            else
+                                this.test_output.push(&quot;Post review... FAIL&quot;)
+                        })
+                })
+        })
+    }
+
+    /**
+     * Tests searching for an album by a query string.
+     */
+    private testSearchAlbum() {
+        const query &#x3D; &quot;Nirvana&quot;; // Example search query
+        this.webService.searchAlbum(query).subscribe((response) &#x3D;&gt; {
+            if (Array.isArray(response) &amp;&amp; response.length &gt; 0 &amp;&amp; response.some(album &#x3D;&gt; album.artist &#x3D;&#x3D;&#x3D; &quot;Nirvana&quot;)) {
+                this.test_output.push(&quot;Search Album... PASS&quot;);
+            } else {
+                this.test_output.push(&quot;Search Album... FAIL&quot;);
+            }
+        });
+    }
+
+    /**
+     * Tests fetching high-rated albums.
+     */
+    private testGetHighRated() {
+        this.webService.getHighRated().subscribe((response) &#x3D;&gt; {
+            if (Array.isArray(response) &amp;&amp; response.length &gt; 0) {
+                this.test_output.push(&quot;Get High Rated Albums... PASS&quot;);
+            } else {
+                this.test_output.push(&quot;Get High Rated Albums... FAIL&quot;);
+            }
+        });
+    }
+
+    /**
+     * Tests fetching a genre summary for albums.
+     */
+    private testGetGenreRated() {
+        this.webService.getGenreSummary().subscribe((response) &#x3D;&gt; {
+            if (Array.isArray(response) &amp;&amp; response.length &gt; 0) {
+                this.test_output.push(&quot;Get Genre Albums... PASS&quot;);
+            } else {
+                this.test_output.push(&quot;Get Genre Albums... FAIL&quot;);
+            }
+        });
+    }
+
+    /**
+    * Tests adding a new album to the database.
+    * 
+    * Steps:
+    * - Fetches the initial list of albums to determine the count.
+    * - Sends a request to add a new album.
+    * - Fetches the newly added album by its ID to verify the details match.
+    * - Updates the test output with PASS or FAIL based on the results.
+    */
+    private testAddAlbum() {
+        const test_album &#x3D; {
+            artist: &quot;Test Artist&quot;,
+            album_title: &quot;Test Album&quot;,
+            year_of_release: 2024,
+            genre: &quot;Test Genre&quot;
+        };
+
+        this.webService.getAlbums(1).subscribe((initialResponse) &#x3D;&gt; {
+            let initialCount &#x3D; initialResponse.length;
+
+            this.webService.addAlbum(test_album).subscribe((addResponse) &#x3D;&gt; {
+                console.log(&#x27;Add Album Response:&#x27;, addResponse);
+
+                this.webService.getAlbum(addResponse.album_id).subscribe((newAlbum) &#x3D;&gt; {
+                    if (newAlbum.artist &#x3D;&#x3D;&#x3D; test_album.artist &amp;&amp;
+                        newAlbum.album_title &#x3D;&#x3D;&#x3D; test_album.album_title) {
+                        this.test_output.push(&quot;Add Album... PASS (Logged in as Admin)&quot;);
+                    } else {
+                        this.test_output.push(&quot;Add Album... FAIL (Album details mismatch)&quot;);
+                    }
+                }, (error) &#x3D;&gt; {
+                    console.error(&#x27;Fetch Newly Added Album Error:&#x27;, error);
+                    this.test_output.push(&quot;Add Album... FAIL (Unable to fetch newly added album)&quot;);
+                });
+            }, (error) &#x3D;&gt; {
+                console.error(&quot;Add Album Error:&quot;, error);
+                this.test_output.push(&quot;Add Album... FAIL (Permission or validation error)&quot;);
+            });
+        }, (error) &#x3D;&gt; {
+            console.error(&quot;Initial Album Fetch Error:&quot;, error);
+            this.test_output.push(&quot;Add Album... FAIL (Failed to fetch initial albums)&quot;);
+        });
+    }
+
+    /**
+    * Tests updating an existing album in the database.
+    * 
+    * Steps:
+    * - Fetches the list of albums and selects the first album.
+    * - Sends a request to update the selected album with new details.
+    * - Fetches the updated album to verify the details were correctly updated.
+    * - Updates the test output with PASS or FAIL based on the results.
+    */
+    private testUpdateAlbum() {
+        const updatedAlbum &#x3D; {
+            artist: &quot;Updated Artist&quot;,
+            album_title: &quot;Updated Album&quot;,
+            year_of_release: 2025
+        };
+
+        this.webService.getAlbums(1).subscribe((albums) &#x3D;&gt; {
+            if (albums &amp;&amp; albums.length &gt; 0) {
+                const albumToUpdate &#x3D; albums[0];
+                this.webService.updateAlbum(albumToUpdate._id, updatedAlbum).subscribe({
+                    next: (response) &#x3D;&gt; {
+                        console.log(&#x27;Update Album Response:&#x27;, response);
+                        this.webService.getAlbum(albumToUpdate._id).subscribe((updatedAlbumDetails) &#x3D;&gt; {
+                            if (updatedAlbumDetails.artist &#x3D;&#x3D;&#x3D; updatedAlbum.artist &amp;&amp;
+                                updatedAlbumDetails.album_title &#x3D;&#x3D;&#x3D; updatedAlbum.album_title &amp;&amp;
+                                updatedAlbumDetails.year_of_release &#x3D;&#x3D;&#x3D; updatedAlbum.year_of_release
+                            ) {
+                                this.test_output.push(&quot;Update Album... PASS&quot;);
+                            } else {
+                                this.test_output.push(&quot;Update Album... FAIL (Data mismatch)&quot;);
+                            }
+                        }, (error) &#x3D;&gt; {
+                            console.error(&#x27;Fetch Updated Album Error:&#x27;, error);
+                            this.test_output.push(&quot;Update Album... FAIL (Unable to fetch updated album)&quot;);
+                        });
+                    },
+                    error: (error) &#x3D;&gt; {
+                        console.error(&#x27;Update Album Error:&#x27;, error);
+                        this.test_output.push(&quot;Update Album... FAIL (Permission or validation error)&quot;);
+                    }
+                });
+            } else {
+                this.test_output.push(&quot;Update Album... FAIL (No albums available to update)&quot;);
+            }
+        }, (error) &#x3D;&gt; {
+            console.error(&#x27;Fetch Initial Albums Error:&#x27;, error);
+            this.test_output.push(&quot;Update Album... FAIL (Unable to fetch initial albums)&quot;);
+        });
+    }
+
+    /**
+    * Tests deleting an album from the database.
+    * 
+    * Steps:
+    *  - Adds a fake album to the database for testing purposes.
+    * - Sends a request to delete the newly added fake album.
+    *  - Attempts to fetch the deleted album to verify it no longer exists.
+    * - Updates the test output with PASS or FAIL based on the results.
+    */
+    private testDeleteAlbum() {
+        const fakeAlbum &#x3D; {
+            artist: &quot;Fake Artist&quot;,
+            album_title: &quot;Fake Album&quot;,
+            year_of_release: 2024,
+            genre: &quot;Fake Genre&quot;
+        };
+
+        this.webService.addAlbum(fakeAlbum).subscribe((addResponse) &#x3D;&gt; {
+            console.log(&#x27;Fake Album Added:&#x27;, addResponse);
+
+            this.webService.deleteAlbum(addResponse.album_id).subscribe({
+                next: () &#x3D;&gt; {
+                    console.log(&#x27;Fake Album Deleted Successfully&#x27;);
+                    this.webService.getAlbum(addResponse.album_id).subscribe({
+                        next: () &#x3D;&gt; {
+                            this.test_output.push(&quot;Delete Album... FAIL (Fake album still exists)&quot;);
+                        },
+                        error: () &#x3D;&gt; {
+                            this.test_output.push(&quot;Delete Album... PASS (Fake album successfully deleted)&quot;);
+                        }
+                    });
+                },
+                error: (error) &#x3D;&gt; {
+                    console.error(&#x27;Delete Album Error:&#x27;, error);
+                    this.test_output.push(&quot;Delete Album... FAIL (Error deleting fake album)&quot;);
+                }
+            });
+        }, (error) &#x3D;&gt; {
+            console.error(&#x27;Add Fake Album Error:&#x27;, error);
+            this.test_output.push(&quot;Delete Album... FAIL (Unable to add fake album for testing)&quot;);
+        });
+    }
+
+    /**
+     * Tests login functionality.
+     */
+    testLogin() {
+        const fakeCredentials &#x3D; { username: &quot;kyrie10101&quot;, password: &quot;user123&quot; };
+
+        this.authService.login(fakeCredentials.username, fakeCredentials.password).subscribe({
+            next: (response) &#x3D;&gt; {
+                if (localStorage.getItem(&#x27;token&#x27;) &amp;&amp; localStorage.getItem(&#x27;role&#x27;) &#x3D;&#x3D;&#x3D; response.role) {
+                    this.test_output.push(&quot;Login... PASS&quot;);
+                } else {
+                    this.test_output.push(&quot;Login... FAIL (Token or role not set properly)&quot;);
+                }
+            }
+        });
+    }
+    
+
+    /**
+     * Tests the &#x60;isAuthenticated&#x60; observable in the &#x60;AuthService&#x60;.
+     */
+    testIsAuthenticated() {
+        this.authService.isAuthenticated$.next(true);
+    
+        this.authService.isAuthenticated().subscribe((isAuthenticated) &#x3D;&gt; {
+            if (isAuthenticated) {
+                this.test_output.push(&quot;IsAuthenticated User... PASS&quot;);
+            } 
+        });
+        this.authService.isAuthenticated$.next(false);
+    }
+    
+
+    /**
+     * Tests the &#x60;userRole&#x60; observable in the &#x60;AuthService&#x60;.
+     */
+    testUserRole() {
+        // Simulate a user role
+        this.authService.userRole$.next(&#x27;admin&#x27;);
+    
+        this.authService.getUserRole().subscribe((role) &#x3D;&gt; {
+            if (role &#x3D;&#x3D;&#x3D; &#x27;admin&#x27;) {
+                this.test_output.push(&quot;UserRole Observable... PASS&quot;);
+            } 
+        });
+    
+        // Reset state
+        this.authService.userRole$.next(&#x27;&#x27;);
+    }
+    
+    /**
+     * Lifecycle hook that initializes the component and runs all test cases.
+     */
+    ngOnInit() {
+        this.testLogin();
+        this.testIsAuthenticated();
+        this.testUserRole();
+        this.testAlbumsFetched();
+        this.testPagesOfAlbumsAreDifferent();
+        this.testGetAlbum();
+        this.testGetReviews();
+        this.testPostReview();
+        this.testSearchAlbum();
+        this.testAddAlbum();
+        this.testUpdateAlbum();
+        this.testGetHighRated();
+        this.testGetGenreRated();
+        this.testDeleteAlbum();
+    }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container card&quot; style&#x3D;&quot;margin-top: 400px;&quot;&gt;
+    &lt;h1&gt;
+        Test Report
+    &lt;/h1&gt;
+
+    &lt;ul&gt;
+        @for(report of test_output; track report){
+            &lt;li&gt;
+                {{report}}
+            &lt;/li&gt;
+        }
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container card" style="margin-top: 400px;">    <h1>        Test Report    </h1>    <ul>        @for(report of test_output; track report){            <li>                {{report}}            </li>        }    </ul></div></div>'
+    var COMPONENTS = [{'name': 'AlbumComponent', 'selector': 'album'},{'name': 'AlbumGenreComponent', 'selector': 'genre'},{'name': 'AlbumRatingsComponent', 'selector': 'ratings'},{'name': 'AlbumsComponent', 'selector': 'albums'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthUserComponent', 'selector': 'user-profile'},{'name': 'HomeComponent', 'selector': 'home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavComponent', 'selector': 'navigation'},{'name': 'TestWSComponent', 'selector': 'testWS'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'TestWSComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'TestWSComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

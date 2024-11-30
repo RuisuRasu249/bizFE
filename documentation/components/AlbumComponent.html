@@ -1,0 +1,2001 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>biz-fe documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">biz-fe documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  AlbumComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/album.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>The <code>AlbumComponent</code> manages the display of a specific album, its reviews, and user interactions,
+including adding, deleting, and paginating reviews. It also handles user authentication and authorization checks.</p>
+
+    </p>
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                                <code><a href="../injectables/DataService.html" target="_self" >DataService</a></code>
+                                <code><a href="../injectables/WebService.html" target="_self" >WebService</a></code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>album</code></td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">imports</td>
+                <td class="col-md-9">
+                            <code>RouterOutlet</code>
+                            <code>CommonModule</code>
+                            <code>ReactiveFormsModule</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./album.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#album" >album</a>
+                            </li>
+                            <li>
+                                <a href="#album_list" >album_list</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#authService" >authService</a>
+                            </li>
+                            <li>
+                                <a href="#averageRating" >averageRating</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dataService" >dataService</a>
+                            </li>
+                            <li>
+                                <a href="#isAdmin" >isAdmin</a>
+                            </li>
+                            <li>
+                                <a href="#isLoggedIn" >isLoggedIn</a>
+                            </li>
+                            <li>
+                                <a href="#loremIpsum" >loremIpsum</a>
+                            </li>
+                            <li>
+                                <a href="#paginatedReviews" >paginatedReviews</a>
+                            </li>
+                            <li>
+                                <a href="#reviewForm" >reviewForm</a>
+                            </li>
+                            <li>
+                                <a href="#reviewPage" >reviewPage</a>
+                            </li>
+                            <li>
+                                <a href="#reviews_list" >reviews_list</a>
+                            </li>
+                            <li>
+                                <a href="#reviewsPerPage" >reviewsPerPage</a>
+                            </li>
+                            <li>
+                                <a href="#totalReviewPages" >totalReviewPages</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#deleteReview" >deleteReview</a>
+                            </li>
+                            <li>
+                                <a href="#getAverageRating" >getAverageRating</a>
+                            </li>
+                            <li>
+                                <a href="#isIncomplete" >isIncomplete</a>
+                            </li>
+                            <li>
+                                <a href="#isInvalid" >isInvalid</a>
+                            </li>
+                            <li>
+                                <a href="#isUntouched" >isUntouched</a>
+                            </li>
+                            <li>
+                                <a href="#nextReviewPage" >nextReviewPage</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onSubmit" >onSubmit</a>
+                            </li>
+                            <li>
+                                <a href="#paginateReviews" >paginateReviews</a>
+                            </li>
+                            <li>
+                                <a href="#previousReviewPage" >previousReviewPage</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(dataService: <a href="../injectables/DataService.html" target="_self">DataService</a>, route: ActivatedRoute, formBuilder: FormBuilder, cdr: ChangeDetectorRef, authService: <a href="../injectables/AuthService.html" target="_self">AuthService</a>, webService: <a href="../injectables/WebService.html" target="_self">WebService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/app/components/album.component.ts:84</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor for <code>AlbumComponent</code>.
+Injects necessary services and utilities for managing album data, reviews, and user authentication.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>dataService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DataService.html" target="_self" >DataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Service for retrieving data like lorem ipsum content.</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                    <code>ActivatedRoute</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Service for accessing the active route and its parameters.</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>formBuilder</td>
+                                                  
+                                                        <td>
+                                                                    <code>FormBuilder</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Service for building reactive forms.</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>cdr</td>
+                                                  
+                                                        <td>
+                                                                    <code>ChangeDetectorRef</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Service for manually triggering change detection.</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>authService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Service for managing user authentication and roles.</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>webService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/WebService.html" target="_self" >WebService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Service for making API calls related to albums and reviews.</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteReview"></a>
+                    <span class="name">
+                        <span ><b>deleteReview</b></span>
+                        <a href="#deleteReview"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteReview(reviewId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="176"
+                                    class="link-to-prism">src/app/components/album.component.ts:176</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Deletes a review by its ID for the current album.
+Prompts the user for confirmation before performing the deletion.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>reviewId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>The ID of the review to delete.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAverageRating"></a>
+                    <span class="name">
+                        <span ><b>getAverageRating</b></span>
+                        <a href="#getAverageRating"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAverageRating(reviews: any[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="207"
+                                    class="link-to-prism">src/app/components/album.component.ts:207</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Calculates the average rating based on the current reviews list.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>reviews</td>
+                                            <td>
+                                                        <code>any[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>Array of reviews to calculate the average rating from.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isIncomplete"></a>
+                    <span class="name">
+                        <span ><b>isIncomplete</b></span>
+                        <a href="#isIncomplete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isIncomplete()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="286"
+                                    class="link-to-prism">src/app/components/album.component.ts:286</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Checks if the review form is incomplete.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                <p>True if the form is invalid, untouched, or incomplete, false otherwise.</p>
+
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isInvalid"></a>
+                    <span class="name">
+                        <span ><b>isInvalid</b></span>
+                        <a href="#isInvalid"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isInvalid(control: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="266"
+                                    class="link-to-prism">src/app/components/album.component.ts:266</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Checks if a specific form control is invalid and touched.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>control</td>
+                                            <td>
+                                                            <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>The name of the control to check.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                <p>True if the control is invalid and touched, false otherwise.</p>
+
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isUntouched"></a>
+                    <span class="name">
+                        <span ><b>isUntouched</b></span>
+                        <a href="#isUntouched"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isUntouched()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="276"
+                                    class="link-to-prism">src/app/components/album.component.ts:276</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Checks if the review form is untouched.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                <p>True if any control in the form is pristine, false otherwise.</p>
+
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="nextReviewPage"></a>
+                    <span class="name">
+                        <span ><b>nextReviewPage</b></span>
+                        <a href="#nextReviewPage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>nextReviewPage()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="253"
+                                    class="link-to-prism">src/app/components/album.component.ts:253</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Navigates to the next page of reviews, if available.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="109"
+                                    class="link-to-prism">src/app/components/album.component.ts:109</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Lifecycle hook called after the component is initialized.
+Sets up the review form, fetches album details, retrieves reviews, and populates lorem ipsum text.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSubmit"></a>
+                    <span class="name">
+                        <span ><b>onSubmit</b></span>
+                        <a href="#onSubmit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSubmit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="145"
+                                    class="link-to-prism">src/app/components/album.component.ts:145</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Submits a new review for the current album.
+Validates the form before submission and updates the reviews list and average rating upon success.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="paginateReviews"></a>
+                    <span class="name">
+                        <span ><b>paginateReviews</b></span>
+                        <a href="#paginateReviews"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>paginateReviews()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="228"
+                                    class="link-to-prism">src/app/components/album.component.ts:228</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Paginates the reviews list for the current page.
+Updates the <code>paginatedReviews</code> array and calculates the total number of pages.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="previousReviewPage"></a>
+                    <span class="name">
+                        <span ><b>previousReviewPage</b></span>
+                        <a href="#previousReviewPage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>previousReviewPage()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="243"
+                                    class="link-to-prism">src/app/components/album.component.ts:243</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Navigates to the previous page of reviews, if available.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="album"></a>
+                    <span class="name">
+                        <span ><b>album</b></span>
+                        <a href="#album"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/components/album.component.ts:35</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Current album details.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="album_list"></a>
+                    <span class="name">
+                        <span ><b>album_list</b></span>
+                        <a href="#album_list"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/components/album.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>List of albums retrieved from the API.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="authService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>authService</b></span>
+                        <a href="#authService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="101" class="link-to-prism">src/app/components/album.component.ts:101</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description">- Service for managing user authentication and roles.</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="averageRating"></a>
+                    <span class="name">
+                        <span ><b>averageRating</b></span>
+                        <a href="#averageRating"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/components/album.component.ts:50</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Average rating for the current album.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dataService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>dataService</b></span>
+                        <a href="#dataService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/DataService.html" target="_self" >DataService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="97" class="link-to-prism">src/app/components/album.component.ts:97</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description">- Service for retrieving data like lorem ipsum content.</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isAdmin"></a>
+                    <span class="name">
+                        <span ><b>isAdmin</b></span>
+                        <a href="#isAdmin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">src/app/components/album.component.ts:78</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Indicates if the current user is an admin.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isLoggedIn"></a>
+                    <span class="name">
+                        <span ><b>isLoggedIn</b></span>
+                        <a href="#isLoggedIn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/app/components/album.component.ts:84</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Indicates if the current user is logged in.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loremIpsum"></a>
+                    <span class="name">
+                        <span ><b>loremIpsum</b></span>
+                        <a href="#loremIpsum"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/components/album.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Placeholder text for lorem ipsum content.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="paginatedReviews"></a>
+                    <span class="name">
+                        <span ><b>paginatedReviews</b></span>
+                        <a href="#paginatedReviews"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/app/components/album.component.ts:72</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Paginated reviews to display on the current page.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="reviewForm"></a>
+                    <span class="name">
+                        <span ><b>reviewForm</b></span>
+                        <a href="#reviewForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/components/album.component.ts:40</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Reactive form group for submitting reviews.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="reviewPage"></a>
+                    <span class="name">
+                        <span ><b>reviewPage</b></span>
+                        <a href="#reviewPage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>1</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/components/album.component.ts:56</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Current page of reviews being displayed.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="reviews_list"></a>
+                    <span class="name">
+                        <span ><b>reviews_list</b></span>
+                        <a href="#reviews_list"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/components/album.component.ts:45</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>List of reviews for the current album.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="reviewsPerPage"></a>
+                    <span class="name">
+                        <span ><b>reviewsPerPage</b></span>
+                        <a href="#reviewsPerPage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>4</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/app/components/album.component.ts:62</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Number of reviews displayed per page.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="totalReviewPages"></a>
+                    <span class="name">
+                        <span ><b>totalReviewPages</b></span>
+                        <a href="#totalReviewPages"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/components/album.component.ts:67</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Total number of review pages.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { ActivatedRoute, RouterOutlet } from &#x27;@angular/router&#x27;;
+import { CommonModule } from &#x27;@angular/common&#x27;;
+import { ReactiveFormsModule } from &#x27;@angular/forms&#x27;;
+import { FormBuilder, Validators } from &#x27;@angular/forms&#x27;;
+import { ChangeDetectorRef } from &#x27;@angular/core&#x27;;
+import { DataService } from &#x27;../data.service&#x27;;
+import { WebService } from &#x27;../services/web.service&#x27;;
+import { AuthService } from &#x27;../services/authService.component&#x27;;
+/**
+ * The &#x60;AlbumComponent&#x60; manages the display of a specific album, its reviews, and user interactions,
+ * including adding, deleting, and paginating reviews. It also handles user authentication and authorization checks.
+ */
+@Component({
+  selector: &#x27;album&#x27;, // The selector used to include this component in templates.
+  imports: [RouterOutlet, CommonModule, ReactiveFormsModule], // Modules used in this component&#x27;s template.
+  providers: [DataService, WebService], // Services provided specifically for this component.
+  templateUrl: &#x27;./album.component.html&#x27; // The associated template for this component.
+})
+
+export class AlbumComponent {
+  /**
+   * List of albums retrieved from the API.
+   */
+  album_list: any;
+
+  /**
+   * Placeholder text for lorem ipsum content.
+   */
+  loremIpsum: any;
+
+  /**
+   * Current album details.
+   */
+  album: any;
+
+  /**
+   * Reactive form group for submitting reviews.
+   */
+  reviewForm: any;
+
+  /**
+   * List of reviews for the current album.
+   */
+  reviews_list: any;
+
+  /**
+   * Average rating for the current album.
+   */
+  averageRating: any;
+
+  /**
+   * Current page of reviews being displayed.
+   * @default 1
+   */
+  reviewPage: number &#x3D; 1;
+
+  /**
+   * Number of reviews displayed per page.
+   * @default 4
+   */
+  reviewsPerPage: number &#x3D; 4;
+
+  /**
+   * Total number of review pages.
+   */
+  totalReviewPages: number &#x3D; 0;
+
+  /**
+   * Paginated reviews to display on the current page.
+   */
+  paginatedReviews: any[] &#x3D; [];
+
+  /**
+   * Indicates if the current user is an admin.
+   * @default false
+   */
+  isAdmin: boolean &#x3D; false;
+
+  /**
+   * Indicates if the current user is logged in.
+   * @default false
+   */
+  isLoggedIn: boolean &#x3D; false;
+
+  /**
+   * Constructor for &#x60;AlbumComponent&#x60;.
+   * Injects necessary services and utilities for managing album data, reviews, and user authentication.
+   * 
+   * @param dataService - Service for retrieving data like lorem ipsum content.
+   * @param route - Service for accessing the active route and its parameters.
+   * @param formBuilder - Service for building reactive forms.
+   * @param cdr - Service for manually triggering change detection.
+   * @param authService - Service for managing user authentication and roles.
+   * @param webService - Service for making API calls related to albums and reviews.
+   */
+  constructor(public dataService: DataService,
+    private route: ActivatedRoute,
+    private formBuilder: FormBuilder,
+    private cdr: ChangeDetectorRef,
+    public authService: AuthService,
+    private webService: WebService,
+  ) { }
+
+  /**
+   * Lifecycle hook called after the component is initialized.
+   * Sets up the review form, fetches album details, retrieves reviews, and populates lorem ipsum text.
+   */
+  ngOnInit() {
+    this.reviewForm &#x3D; this.formBuilder.group({
+      username: [&quot;&quot;, Validators.required],
+      review_text: [&quot;&quot;, Validators.required],
+      rating: 0,
+    });
+
+    this.authService.isLoggedIn$.subscribe((loggedIn) &#x3D;&gt; {
+      this.isLoggedIn &#x3D; loggedIn;
+    });
+
+    this.authService.userRole$.subscribe((role) &#x3D;&gt; {
+      this.isAdmin &#x3D; role &#x3D;&#x3D;&#x3D; &#x27;admin&#x27;; // Set isAdmin to true if role is &#x27;admin&#x27;
+    });
+
+    this.webService.getAlbum(this.route.snapshot.paramMap.get(&#x27;id&#x27;))
+      .subscribe((response) &#x3D;&gt; {
+        this.album_list &#x3D; [response];
+      });
+
+    this.dataService.getLoremIpsum(1)
+      .subscribe((response: any) &#x3D;&gt; {
+        this.loremIpsum &#x3D; response.text.slice(0, 400);
+      });
+
+    this.webService.getReviews(this.route.snapshot.paramMap.get(&#x27;id&#x27;))
+      .subscribe((response) &#x3D;&gt; {
+        this.reviews_list &#x3D; response;
+        this.paginateReviews();
+      });
+  }
+
+  /**
+   * Submits a new review for the current album.
+   * Validates the form before submission and updates the reviews list and average rating upon success.
+   */
+  onSubmit() {
+    if (this.reviewForm.valid) {
+      const newReview &#x3D; this.reviewForm.value;
+      console.log(&#x27;Submitting Review:&#x27;, newReview);
+
+      const albumId &#x3D; this.route.snapshot.paramMap.get(&#x27;id&#x27;)!;
+      this.webService.postReview(albumId, newReview).subscribe({
+        next: (reviews) &#x3D;&gt; {
+          console.log(&#x27;Review saved successfully:&#x27;, reviews);
+          this.reviews_list &#x3D; reviews; // Update the reviews list
+          this.getAverageRating(this.reviews_list); // Update the average rating
+          this.paginateReviews(); // Recalculate pagination
+        },
+        error: (error) &#x3D;&gt; {
+          console.error(&#x27;Error adding review:&#x27;, error);
+          alert(&#x27;There was an error submitting your review. Please try again.&#x27;);
+        },
+      });
+
+
+      this.reviewForm.reset();
+      this.reviewForm.patchValue({ rating: 5 }); // Default rating
+    }
+  }
+
+  /**
+   * Deletes a review by its ID for the current album.
+   * Prompts the user for confirmation before performing the deletion.
+   * 
+   * @param reviewId - The ID of the review to delete.
+   */
+  deleteReview(reviewId: string) {
+    const albumId &#x3D; this.route.snapshot.paramMap.get(&#x27;id&#x27;); // Get the current album ID
+
+    if (!albumId || !reviewId) {
+      alert(&#x27;Invalid album or review ID&#x27;);
+      return;
+    }
+
+    if (confirm(&#x27;Are you sure you want to delete this review?&#x27;)) {
+      this.webService.deleteReview(albumId, reviewId).subscribe({
+        next: (response) &#x3D;&gt; {
+          alert(&#x27;Review deleted successfully!&#x27;);
+          this.reviews_list &#x3D; this.reviews_list.filter(
+            (review: any) &#x3D;&gt; review.review_id !&#x3D;&#x3D; reviewId
+          ); // Remove the deleted review from the list
+          this.paginateReviews(); // Recalculate pagination
+          this.getAverageRating(this.reviews_list); // Update the average rating
+        },
+        error: (error) &#x3D;&gt; {
+          console.error(&#x27;Error deleting review:&#x27;, error);
+          alert(&#x27;Failed to delete review. Please try again.&#x27;);
+        },
+      });
+    }
+  }
+
+  /**
+   * Calculates the average rating based on the current reviews list.
+   * 
+   * @param reviews - Array of reviews to calculate the average rating from.
+   */
+  getAverageRating(reviews: any[]) {
+    console.log(&#x27;Calculating average rating. Reviews:&#x27;, reviews);
+
+    if (!reviews || reviews.length &#x3D;&#x3D;&#x3D; 0) {
+      this.averageRating &#x3D; 0;
+      return;
+    }
+
+    // Convert rating to a number before summing
+    const totalRating &#x3D; reviews.reduce((sum, review) &#x3D;&gt; sum + Number(review.rating), 0);
+
+    console.log(&#x27;Total rating:&#x27;, totalRating);
+
+    this.averageRating &#x3D; Math.floor(totalRating / reviews.length); // Round down to nearest whole number
+    console.log(&#x27;Updated average rating:&#x27;, this.averageRating);
+  }
+
+  /**
+   * Paginates the reviews list for the current page.
+   * Updates the &#x60;paginatedReviews&#x60; array and calculates the total number of pages.
+   */
+  paginateReviews() {
+    if (this.reviews_list &amp;&amp; this.reviews_list.length &gt; 0) {
+      this.totalReviewPages &#x3D; Math.ceil(this.reviews_list.length / this.reviewsPerPage);
+      const startIndex &#x3D; (this.reviewPage - 1) * this.reviewsPerPage;
+      const endIndex &#x3D; startIndex + this.reviewsPerPage;
+      this.paginatedReviews &#x3D; this.reviews_list.slice(startIndex, endIndex);
+    } else {
+      this.paginatedReviews &#x3D; [];
+      this.totalReviewPages &#x3D; 0;
+    }
+  }
+
+  /**
+   * Navigates to the previous page of reviews, if available.
+   */
+  previousReviewPage() {
+    if (this.reviewPage &gt; 1) {
+      this.reviewPage--;
+      this.paginateReviews();
+    }
+  }
+
+  /**
+   * Navigates to the next page of reviews, if available.
+   */
+  nextReviewPage() {
+    if (this.reviewPage &lt; this.totalReviewPages) {
+      this.reviewPage++;
+      this.paginateReviews();
+    }
+  }
+
+  /**
+   * Checks if a specific form control is invalid and touched.
+   * 
+   * @param control - The name of the control to check.
+   * @returns True if the control is invalid and touched, false otherwise.
+   */
+  isInvalid(control: any) {
+    return this.reviewForm.controls[control].invalid &amp;&amp;
+      this.reviewForm.controls[control].touched;
+  }
+
+  /**
+   * Checks if the review form is untouched.
+   * 
+   * @returns True if any control in the form is pristine, false otherwise.
+   */
+  isUntouched() {
+    return this.reviewForm.controls.username.pristine ||
+      this.reviewForm.controls.review_text.pristine;
+  }
+
+  /**
+   * Checks if the review form is incomplete.
+   * 
+   * @returns True if the form is invalid, untouched, or incomplete, false otherwise.
+   */
+  isIncomplete() {
+    return this.isInvalid(&#x27;username&#x27;) ||
+      this.isInvalid(&#x27;review_text&#x27;) ||
+      this.isUntouched();
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container&quot; style&#x3D;&quot;margin-top: 70px;&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-sm-12&quot;&gt;
+            @for (album of album_list; track album.name){
+
+            &lt;h1 class&#x3D;&quot;display-1&quot;&gt;
+                {{album.artist}}
+                &lt;img src&#x3D;&quot;images/music.png&quot; style&#x3D;&quot;width: 40; height: 40px;&quot;&gt;
+            &lt;/h1&gt;
+            &lt;div class&#x3D;&quot;mt-3&quot;&gt;
+                &lt;h5&gt;Album - &lt;em&gt;{{ album.album_title }}&lt;/em&gt;&lt;/h5&gt;
+                &lt;hr&gt;
+                &lt;p&gt;&lt;strong&gt;Year:&lt;/strong&gt; {{ album.year_of_release }}&lt;/p&gt;
+                &lt;p&gt;&lt;strong&gt;Genre:&lt;/strong&gt; {{ album.genre }}&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-sm-12 mb-3&quot;&gt;
+                &lt;h5&gt;Description&lt;/h5&gt;
+                {{loremIpsum}}
+            &lt;/div&gt;
+            &lt;p&gt;
+                &lt;strong&gt;Average Rating:&lt;/strong&gt;
+                &lt;span *ngFor&#x3D;&quot;let index of [].constructor(averageRating)&quot;&gt;
+                    &lt;img src&#x3D;&quot;images/love_rating.png&quot; alt&#x3D;&quot;rating&quot;
+                        style&#x3D;&quot;width: 30px; height: 30px; margin-left: 10px; margin-bottom: 10px;&quot; /&gt;
+                &lt;/span&gt;
+                {{ averageRating }}/5
+            &lt;/p&gt;
+            &lt;hr&gt;
+            &lt;p&gt;
+                &lt;span class&#x3D;&quot;review-counter&quot;&gt;{{ reviews_list?.length || 0 }}&lt;/span&gt;
+                &lt;strong&gt; Reviews:&lt;/strong&gt;
+            &lt;/p&gt;
+
+            &lt;div id&#x3D;&quot;reviews&quot; class&#x3D;&quot;col-sm-12&quot;&gt;
+                &lt;div *ngIf&#x3D;&quot;paginatedReviews &amp;&amp; paginatedReviews.length &gt; 0; else noReviews&quot;&gt;
+                    &lt;div *ngFor&#x3D;&quot;let review of paginatedReviews&quot; class&#x3D;&quot;card bg-success text-light mb-3&quot;&gt;
+                        &lt;div class&#x3D;&quot;card-header&quot;&gt;
+                            &lt;img src&#x3D;&quot;images/user_icon.png&quot; style&#x3D;&quot;width: 30; height: 30px;&quot;&gt;
+                            {{ review.username }}
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                            {{ review.review_text }}
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;card-footer&quot;&gt;
+                            &lt;p&gt;&lt;strong&gt;Rating: {{ review.rating }}&lt;/strong&gt;/5&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;button *ngIf&#x3D;&quot;isAdmin&quot; class&#x3D;&quot;btn btn-danger btn-sm float-end&quot; (click)&#x3D;&quot;deleteReview(review.review_id)&quot;&gt;
+                            Delete
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- Pagination Controls --&gt;
+                    &lt;div class&#x3D;&quot;row&quot;&gt;
+                        &lt;div class&#x3D;&quot;col-sm-4 text-start&quot;&gt;
+                            &lt;button class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&quot;previousReviewPage()&quot;
+                                [disabled]&#x3D;&quot;reviewPage &#x3D;&#x3D;&#x3D; 1&quot;&gt;
+                                Previous
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;col-sm-4 text-center align-self-center&quot;&gt;
+                            Page {{ reviewPage }} of {{ totalReviewPages }}
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;col-sm-4 text-end&quot;&gt;
+                            &lt;button class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&quot;nextReviewPage()&quot;
+                                [disabled]&#x3D;&quot;reviewPage &#x3D;&#x3D;&#x3D; totalReviewPages&quot;&gt;
+                                Next
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- Fallback if no reviews are available --&gt;
+                &lt;ng-template #noReviews&gt;
+                    &lt;p&gt;No reviews yet. Be the first to review!&lt;/p&gt;
+                &lt;/ng-template&gt;
+            &lt;/div&gt;
+            }
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;div class&#x3D;&quot;container&quot; &gt;
+    &lt;ng-container&gt;
+        &lt;h2&gt;Leave a Review&lt;/h2&gt;
+        &lt;p *ngIf&#x3D;&quot;!isLoggedIn&quot; class&#x3D;&quot;text-danger&quot;&gt;
+            Please log in to Review Album.
+          &lt;/p&gt;
+        &lt;form *ngIf&#x3D;&quot;isLoggedIn&quot; [formGroup]&#x3D;&quot;reviewForm&quot; (ngSubmit)&#x3D;&quot;onSubmit()&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                &lt;label for&#x3D;&quot;username&quot;&gt;Username&lt;/label&gt;
+                &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;username&quot; id&#x3D;&quot;username&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;username&quot;
+                    [ngClass]&#x3D;&quot;{&#x27;border border-danger&#x27;: isInvalid(&#x27;username&#x27;)}&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                &lt;label for&#x3D;&quot;review_text&quot;&gt;Please leave a review below:&lt;/label&gt;
+                &lt;textarea name&#x3D;&quot;review_text&quot; id&#x3D;&quot;review_text&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;review_text&quot;
+                    [ngClass]&#x3D;&quot;{&#x27;border border-danger&#x27;: isInvalid(&#x27;review_text&#x27;)}&quot;&gt;
+            &lt;/textarea&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                &lt;label for&#x3D;&quot;rating&quot;&gt;
+                    Rate the album (5 Hearts &#x3D; best)
+                &lt;/label&gt;
+                &lt;select name&#x3D;&quot;rating&quot; id&#x3D;&quot;rating&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;rating&quot;&gt;
+                    &lt;option value&#x3D;&quot;1&quot;&gt;1 Hearts&lt;/option&gt;
+                    &lt;option value&#x3D;&quot;2&quot;&gt;2 Hearts&lt;/option&gt;
+                    &lt;option value&#x3D;&quot;3&quot;&gt;3 Hearts&lt;/option&gt;
+                    &lt;option value&#x3D;&quot;4&quot;&gt;4 Hearts&lt;/option&gt;
+                    &lt;option value&#x3D;&quot;5&quot;&gt;5 Hearts&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;
+            &lt;span class&#x3D;&quot;text-danger&quot; *ngIf&#x3D;&quot;isIncomplete()&quot;&gt;
+                Please complete all fields
+            &lt;/span&gt;
+            &lt;button *ngIf&#x3D;&quot;!isIncomplete()&quot; class&#x3D;&quot;btn btn-primary&quot; type&#x3D;&quot;submit&quot; style&#x3D;&quot;margin-top: 20px;&quot;&gt;
+                Submit
+            &lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/ng-container&gt;
+    
+&lt;/div&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container" style="margin-top: 70px;">    <div class="row">        <div class="col-sm-12">            @for (album of album_list; track album.name){            <h1 class="display-1">                {{album.artist}}                <img src="images/music.png" style="width: 40; height: 40px;">            </h1>            <div class="mt-3">                <h5>Album - <em>{{ album.album_title }}</em></h5>                <hr>                <p><strong>Year:</strong> {{ album.year_of_release }}</p>                <p><strong>Genre:</strong> {{ album.genre }}</p>            </div>            <div class="col-sm-12 mb-3">                <h5>Description</h5>                {{loremIpsum}}            </div>            <p>                <strong>Average Rating:</strong>                <span *ngFor="let index of [].constructor(averageRating)">                    <img src="images/love_rating.png" alt="rating"                        style="width: 30px; height: 30px; margin-left: 10px; margin-bottom: 10px;" />                </span>                {{ averageRating }}/5            </p>            <hr>            <p>                <span class="review-counter">{{ reviews_list?.length || 0 }}</span>                <strong> Reviews:</strong>            </p>            <div id="reviews" class="col-sm-12">                <div *ngIf="paginatedReviews && paginatedReviews.length > 0; else noReviews">                    <div *ngFor="let review of paginatedReviews" class="card bg-success text-light mb-3">                        <div class="card-header">                            <img src="images/user_icon.png" style="width: 30; height: 30px;">                            {{ review.username }}                        </div>                        <div class="card-body">                            {{ review.review_text }}                        </div>                        <div class="card-footer">                            <p><strong>Rating: {{ review.rating }}</strong>/5</p>                        </div>                        <button *ngIf="isAdmin" class="btn btn-danger btn-sm float-end" (click)="deleteReview(review.review_id)">                            Delete                        </button>                    </div>                    <!-- Pagination Controls -->                    <div class="row">                        <div class="col-sm-4 text-start">                            <button class="btn btn-primary" (click)="previousReviewPage()"                                [disabled]="reviewPage === 1">                                Previous                            </button>                        </div>                        <div class="col-sm-4 text-center align-self-center">                            Page {{ reviewPage }} of {{ totalReviewPages }}                        </div>                        <div class="col-sm-4 text-end">                            <button class="btn btn-primary" (click)="nextReviewPage()"                                [disabled]="reviewPage === totalReviewPages">                                Next                            </button>                        </div>                    </div>                </div>                <!-- Fallback if no reviews are available -->                <ng-template #noReviews>                    <p>No reviews yet. Be the first to review!</p>                </ng-template>            </div>            }        </div>    </div></div><hr><div class="container" >    <ng-container>        <h2>Leave a Review</h2>        <p *ngIf="!isLoggedIn" class="text-danger">            Please log in to Review Album.          </p>        <form *ngIf="isLoggedIn" [formGroup]="reviewForm" (ngSubmit)="onSubmit()">            <div class="form-group">                <label for="username">Username</label>                <input type="text" name="username" id="username" class="form-control" formControlName="username"                    [ngClass]="{\'border border-danger\': isInvalid(\'username\')}">            </div>            <div class="form-group">                <label for="review_text">Please leave a review below:</label>                <textarea name="review_text" id="review_text" class="form-control" formControlName="review_text"                    [ngClass]="{\'border border-danger\': isInvalid(\'review_text\')}">            </textarea>            </div>            <div class="form-group">                <label for="rating">                    Rate the album (5 Hearts = best)                </label>                <select name="rating" id="rating" class="form-control" formControlName="rating">                    <option value="1">1 Hearts</option>                    <option value="2">2 Hearts</option>                    <option value="3">3 Hearts</option>                    <option value="4">4 Hearts</option>                    <option value="5">5 Hearts</option>                </select>            </div>            <span class="text-danger" *ngIf="isIncomplete()">                Please complete all fields            </span>            <button *ngIf="!isIncomplete()" class="btn btn-primary" type="submit" style="margin-top: 20px;">                Submit            </button>        </form>    </ng-container>    </div></div>'
+    var COMPONENTS = [{'name': 'AlbumComponent', 'selector': 'album'},{'name': 'AlbumGenreComponent', 'selector': 'genre'},{'name': 'AlbumRatingsComponent', 'selector': 'ratings'},{'name': 'AlbumsComponent', 'selector': 'albums'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthUserComponent', 'selector': 'user-profile'},{'name': 'HomeComponent', 'selector': 'home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavComponent', 'selector': 'navigation'},{'name': 'TestWSComponent', 'selector': 'testWS'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'AlbumComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AlbumComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -2,19 +2,44 @@ import { Component } from "@angular/core";
 import { WebService } from "./services/web.service";
 import { AuthService } from "./services/authService.component";
 
+/**
+ * The `TestWSComponent` is responsible for testing the functionality of the `WebService` and `AuthService`.
+ * It includes various test cases for verifying CRUD operations, user authentication, and other key features.
+ */
 @Component({
-    selector: 'testWS',
-    providers: [WebService],
-    templateUrl: './testWS.component.html'
+    selector: 'testWS', // The selector used to include this component in the application.
+    providers: [WebService], // Provides the `WebService` specifically for this component.
+    templateUrl: './testWS.component.html' // The associated template file for this component.
 })
 
 export class TestWSComponent {
-    test_output: string[] = []
-    first_album_list: any[] = []
-    second_album_list: any[] = []
+    /**
+     * Stores the output messages for each test case.
+     */
+    test_output: string[] = [];
 
+    /**
+     * Stores the list of albums from the first page.
+     */
+    first_album_list: any[] = [];
+
+    /**
+     * Stores the list of albums from the second page.
+     */
+    second_album_list: any[] = [];
+
+    /**
+     * Constructor for `TestWSComponent`.
+     * Injects the `WebService` and `AuthService` for testing purposes.
+     * 
+     * @param webService - The service used for interacting with the API.
+     * @param authService - The service used for managing authentication.
+     */
     constructor(private webService: WebService, private authService: AuthService) { }
 
+    /**
+     * Tests if a page of albums can be successfully fetched.
+     */
     private testAlbumsFetched() {
         this.webService.getAlbums(1).subscribe((response) => {
             if (Array.isArray(response) && response.length === 9)
@@ -24,6 +49,9 @@ export class TestWSComponent {
         })
     }
 
+    /**
+     * Tests if albums from two different pages are distinct.
+     */
     private testPagesOfAlbumsAreDifferent() {
         this.webService.getAlbums(1).subscribe((response) => {
             this.first_album_list = response;
@@ -37,6 +65,9 @@ export class TestWSComponent {
         })
     }
 
+    /**
+     * Tests fetching an album by ID.
+     */
     private testGetAlbum() {
         this.webService.getAlbum('674a22f2c95979aa6b4510d7').subscribe((response) => {
             if (response.artist === 'Pink Floyd')
@@ -46,6 +77,9 @@ export class TestWSComponent {
         })
     }
 
+    /**
+     * Tests fetching reviews for a specific album.
+     */
     private testGetReviews() {
         this.webService.getReviews('674a22f2c95979aa6b4510d7').subscribe((response) => {
             if (Array.isArray(response))
@@ -55,6 +89,9 @@ export class TestWSComponent {
         })
     }
 
+    /**
+     * Tests posting a review for a specific album.
+     */
     private testPostReview() {
         let test_review = {
             "username": "Test User",
@@ -77,6 +114,9 @@ export class TestWSComponent {
         })
     }
 
+    /**
+     * Tests searching for an album by a query string.
+     */
     private testSearchAlbum() {
         const query = "Nirvana"; // Example search query
         this.webService.searchAlbum(query).subscribe((response) => {
@@ -88,6 +128,9 @@ export class TestWSComponent {
         });
     }
 
+    /**
+     * Tests fetching high-rated albums.
+     */
     private testGetHighRated() {
         this.webService.getHighRated().subscribe((response) => {
             if (Array.isArray(response) && response.length > 0) {
@@ -98,6 +141,9 @@ export class TestWSComponent {
         });
     }
 
+    /**
+     * Tests fetching a genre summary for albums.
+     */
     private testGetGenreRated() {
         this.webService.getGenreSummary().subscribe((response) => {
             if (Array.isArray(response) && response.length > 0) {
@@ -108,6 +154,15 @@ export class TestWSComponent {
         });
     }
 
+    /**
+    * Tests adding a new album to the database.
+    * 
+    * Steps:
+    * - Fetches the initial list of albums to determine the count.
+    * - Sends a request to add a new album.
+    * - Fetches the newly added album by its ID to verify the details match.
+    * - Updates the test output with PASS or FAIL based on the results.
+    */
     private testAddAlbum() {
         const test_album = {
             artist: "Test Artist",
@@ -143,6 +198,15 @@ export class TestWSComponent {
         });
     }
 
+    /**
+    * Tests updating an existing album in the database.
+    * 
+    * Steps:
+    * - Fetches the list of albums and selects the first album.
+    * - Sends a request to update the selected album with new details.
+    * - Fetches the updated album to verify the details were correctly updated.
+    * - Updates the test output with PASS or FAIL based on the results.
+    */
     private testUpdateAlbum() {
         const updatedAlbum = {
             artist: "Updated Artist",
@@ -184,6 +248,15 @@ export class TestWSComponent {
         });
     }
 
+    /**
+    * Tests deleting an album from the database.
+    * 
+    * Steps:
+    *  - Adds a fake album to the database for testing purposes.
+    * - Sends a request to delete the newly added fake album.
+    *  - Attempts to fetch the deleted album to verify it no longer exists.
+    * - Updates the test output with PASS or FAIL based on the results.
+    */
     private testDeleteAlbum() {
         const fakeAlbum = {
             artist: "Fake Artist",
@@ -218,6 +291,9 @@ export class TestWSComponent {
         });
     }
 
+    /**
+     * Tests login functionality.
+     */
     testLogin() {
         const fakeCredentials = { username: "kyrie10101", password: "user123" };
 
@@ -233,6 +309,9 @@ export class TestWSComponent {
     }
     
 
+    /**
+     * Tests the `isAuthenticated` observable in the `AuthService`.
+     */
     testIsAuthenticated() {
         this.authService.isAuthenticated$.next(true);
     
@@ -245,6 +324,9 @@ export class TestWSComponent {
     }
     
 
+    /**
+     * Tests the `userRole` observable in the `AuthService`.
+     */
     testUserRole() {
         // Simulate a user role
         this.authService.userRole$.next('admin');
@@ -259,7 +341,9 @@ export class TestWSComponent {
         this.authService.userRole$.next('');
     }
     
-
+    /**
+     * Lifecycle hook that initializes the component and runs all test cases.
+     */
     ngOnInit() {
         this.testLogin();
         this.testIsAuthenticated();

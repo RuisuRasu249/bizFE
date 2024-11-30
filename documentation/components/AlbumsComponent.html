@@ -1,0 +1,1908 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>biz-fe documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">biz-fe documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  AlbumsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/albums.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>The <code>AlbumsComponent</code> is responsible for managing the list of albums.
+It supports CRUD operations (create, read, update, delete) and provides features such as pagination and search.
+It also integrates with user authentication and role management.</p>
+
+    </p>
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                                <code><a href="../injectables/DataService.html" target="_self" >DataService</a></code>
+                                <code><a href="../injectables/WebService.html" target="_self" >WebService</a></code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>albums</code></td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">imports</td>
+                <td class="col-md-9">
+                            <code>RouterOutlet</code>
+                            <code>RouterModule</code>
+                            <code>CommonModule</code>
+                            <code>FormsModule</code>
+                            <code>ReactiveFormsModule</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./albums.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addAlbumForm" >addAlbumForm</a>
+                            </li>
+                            <li>
+                                <a href="#album_list" >album_list</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dataService" >dataService</a>
+                            </li>
+                            <li>
+                                <a href="#editingAlbumId" >editingAlbumId</a>
+                            </li>
+                            <li>
+                                <a href="#isAdmin" >isAdmin</a>
+                            </li>
+                            <li>
+                                <a href="#page" >page</a>
+                            </li>
+                            <li>
+                                <a href="#searchQuery" >searchQuery</a>
+                            </li>
+                            <li>
+                                <a href="#searchResults" >searchResults</a>
+                            </li>
+                            <li>
+                                <a href="#showAddAlbumForm" >showAddAlbumForm</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#deleteAlbum" >deleteAlbum</a>
+                            </li>
+                            <li>
+                                <a href="#editAlbum" >editAlbum</a>
+                            </li>
+                            <li>
+                                <a href="#isIncomplete" >isIncomplete</a>
+                            </li>
+                            <li>
+                                <a href="#isInvalid" >isInvalid</a>
+                            </li>
+                            <li>
+                                <a href="#nextPage" >nextPage</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onAddAlbum" >onAddAlbum</a>
+                            </li>
+                            <li>
+                                <a href="#onCancelForm" >onCancelForm</a>
+                            </li>
+                            <li>
+                                <a href="#previousPage" >previousPage</a>
+                            </li>
+                            <li>
+                                <a href="#searchAlbums" >searchAlbums</a>
+                            </li>
+                            <li>
+                                <a href="#toggleAddAlbumForm" >toggleAddAlbumForm</a>
+                            </li>
+                            <li>
+                                <a href="#updateAlbum" >updateAlbum</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(dataService: <a href="../injectables/DataService.html" target="_self">DataService</a>, webService: <a href="../injectables/WebService.html" target="_self">WebService</a>, formBuilder: FormBuilder, authService: <a href="../injectables/AuthService.html" target="_self">AuthService</a>, router: Router)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/app/components/albums.component.ts:65</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor for <code>AlbumsComponent</code>.
+Initializes the <code>addAlbumForm</code> and injects required services.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>dataService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DataService.html" target="_self" >DataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Service for application-wide data operations.</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>webService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/WebService.html" target="_self" >WebService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Service for interacting with the album API.</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>formBuilder</td>
+                                                  
+                                                        <td>
+                                                                    <code>FormBuilder</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Service for building reactive forms.</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>authService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Service for managing user authentication and roles.</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code>Router</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Angular Router for navigation.</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteAlbum"></a>
+                    <span class="name">
+                        <span ><b>deleteAlbum</b></span>
+                        <a href="#deleteAlbum"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteAlbum(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="218"
+                                    class="link-to-prism">src/app/components/albums.component.ts:218</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Deletes an album by its ID after user confirmation.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>id</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>The ID of the album to delete.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editAlbum"></a>
+                    <span class="name">
+                        <span ><b>editAlbum</b></span>
+                        <a href="#editAlbum"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>editAlbum(albumId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="184"
+                                    class="link-to-prism">src/app/components/albums.component.ts:184</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Enables edit mode for a specific album by its ID.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>albumId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>The ID of the album to edit.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isIncomplete"></a>
+                    <span class="name">
+                        <span ><b>isIncomplete</b></span>
+                        <a href="#isIncomplete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isIncomplete()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="170"
+                                    class="link-to-prism">src/app/components/albums.component.ts:170</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Checks if the add album form is incomplete.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                <p>True if any required form field is invalid, false otherwise.</p>
+
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isInvalid"></a>
+                    <span class="name">
+                        <span ><b>isInvalid</b></span>
+                        <a href="#isInvalid"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isInvalid(control: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="158"
+                                    class="link-to-prism">src/app/components/albums.component.ts:158</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Checks if a specific form control is invalid and touched.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>control</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>The name of the form control to check.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                <p>True if the control is invalid and touched, false otherwise.</p>
+
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="nextPage"></a>
+                    <span class="name">
+                        <span ><b>nextPage</b></span>
+                        <a href="#nextPage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>nextPage()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="251"
+                                    class="link-to-prism">src/app/components/albums.component.ts:251</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Navigates to the next page of albums if available.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="98"
+                                    class="link-to-prism">src/app/components/albums.component.ts:98</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Lifecycle hook that is called after the component is initialized.
+Loads the album list and checks the user&#39;s admin role.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onAddAlbum"></a>
+                    <span class="name">
+                        <span ><b>onAddAlbum</b></span>
+                        <a href="#onAddAlbum"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onAddAlbum()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="117"
+                                    class="link-to-prism">src/app/components/albums.component.ts:117</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Submits the form to add a new album.
+If the form is valid, the album is sent to the API, and the list is refreshed.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onCancelForm"></a>
+                    <span class="name">
+                        <span ><b>onCancelForm</b></span>
+                        <a href="#onCancelForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onCancelForm()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="147"
+                                    class="link-to-prism">src/app/components/albums.component.ts:147</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Cancels the add album form and resets its state.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="previousPage"></a>
+                    <span class="name">
+                        <span ><b>previousPage</b></span>
+                        <a href="#previousPage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>previousPage()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="236"
+                                    class="link-to-prism">src/app/components/albums.component.ts:236</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Navigates to the previous page of albums if available.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searchAlbums"></a>
+                    <span class="name">
+                        <span ><b>searchAlbums</b></span>
+                        <a href="#searchAlbums"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>searchAlbums()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="269"
+                                    class="link-to-prism">src/app/components/albums.component.ts:269</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Searches for albums based on the user&#39;s query.
+If the query is empty, reloads the full album list.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleAddAlbumForm"></a>
+                    <span class="name">
+                        <span ><b>toggleAddAlbumForm</b></span>
+                        <a href="#toggleAddAlbumForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toggleAddAlbumForm()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="140"
+                                    class="link-to-prism">src/app/components/albums.component.ts:140</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Toggles the visibility of the add album form.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateAlbum"></a>
+                    <span class="name">
+                        <span ><b>updateAlbum</b></span>
+                        <a href="#updateAlbum"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateAlbum(album: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="194"
+                                    class="link-to-prism">src/app/components/albums.component.ts:194</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Updates an album&#39;s details.
+Sends the updated album data to the API and refreshes the album list.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>album</td>
+                                            <td>
+                                                            <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <ul>
+<li>The album data to update.</li>
+</ul>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addAlbumForm"></a>
+                    <span class="name">
+                        <span ><b>addAlbumForm</b></span>
+                        <a href="#addAlbumForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/components/albums.component.ts:48</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The reactive form group for adding a new album.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="album_list"></a>
+                    <span class="name">
+                        <span ><b>album_list</b></span>
+                        <a href="#album_list"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/components/albums.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The list of albums retrieved from the API.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dataService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>dataService</b></span>
+                        <a href="#dataService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/DataService.html" target="_self" >DataService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/app/components/albums.component.ts:77</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description">- Service for application-wide data operations.</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editingAlbumId"></a>
+                    <span class="name">
+                        <span ><b>editingAlbumId</b></span>
+                        <a href="#editingAlbumId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string | null</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/components/albums.component.ts:53</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The ID of the album currently being edited.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isAdmin"></a>
+                    <span class="name">
+                        <span ><b>isAdmin</b></span>
+                        <a href="#isAdmin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/app/components/albums.component.ts:65</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>A flag to indicate if the current user has admin privileges.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="page"></a>
+                    <span class="name">
+                        <span ><b>page</b></span>
+                        <a href="#page"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>1</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/components/albums.component.ts:33</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The current page of albums being displayed.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searchQuery"></a>
+                    <span class="name">
+                        <span ><b>searchQuery</b></span>
+                        <a href="#searchQuery"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/components/albums.component.ts:38</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The user&#39;s search query for filtering albums.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searchResults"></a>
+                    <span class="name">
+                        <span ><b>searchResults</b></span>
+                        <a href="#searchResults"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/components/albums.component.ts:43</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The results of the search query.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showAddAlbumForm"></a>
+                    <span class="name">
+                        <span ><b>showAddAlbumForm</b></span>
+                        <a href="#showAddAlbumForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/components/albums.component.ts:59</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>A flag to track whether the add album form is visible.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { RouterOutlet, RouterModule } from &#x27;@angular/router&#x27;;
+import { CommonModule } from &#x27;@angular/common&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { ReactiveFormsModule, FormsModule } from &#x27;@angular/forms&#x27;; // For ngModel
+import { FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
+import { DataService } from &#x27;../data.service&#x27;;
+import { WebService } from &#x27;../services/web.service&#x27;;
+import { AuthService } from &#x27;../services/authService.component&#x27;;
+
+/**
+ * The &#x60;AlbumsComponent&#x60; is responsible for managing the list of albums.
+ * It supports CRUD operations (create, read, update, delete) and provides features such as pagination and search.
+ * It also integrates with user authentication and role management.
+ */
+@Component({
+  selector: &#x27;albums&#x27;, // The selector used to include this component in the application.
+  imports: [RouterOutlet, RouterModule, CommonModule, FormsModule, ReactiveFormsModule], // Modules and components used in the template.
+  providers: [DataService, WebService], // Services provided specifically for this component.
+  templateUrl: &#x27;./albums.component.html&#x27; // The associated template file for this component.
+})
+
+export class AlbumsComponent {
+  /**
+   * The list of albums retrieved from the API.
+   */
+  album_list: any;
+
+  /**
+   * The current page of albums being displayed.
+   * @default 1
+   */
+  page: number &#x3D; 1;
+
+  /**
+   * The user&#x27;s search query for filtering albums.
+   */
+  searchQuery: string &#x3D; &#x27;&#x27;;
+
+  /**
+   * The results of the search query.
+   */
+  searchResults: any;
+
+  /**
+   * The reactive form group for adding a new album.
+   */
+  addAlbumForm: any;
+
+  /**
+   * The ID of the album currently being edited.
+   */
+  editingAlbumId: string | null &#x3D; null;
+
+  /**
+   * A flag to track whether the add album form is visible.
+   * @default false
+   */
+  showAddAlbumForm: boolean &#x3D; false;
+
+  /**
+   * A flag to indicate if the current user has admin privileges.
+   * @default false
+   */
+  isAdmin: boolean &#x3D; false;
+
+  /**
+   * Constructor for &#x60;AlbumsComponent&#x60;.
+   * Initializes the &#x60;addAlbumForm&#x60; and injects required services.
+   * 
+   * @param dataService - Service for application-wide data operations.
+   * @param webService - Service for interacting with the album API.
+   * @param formBuilder - Service for building reactive forms.
+   * @param authService - Service for managing user authentication and roles.
+   * @param router - Angular Router for navigation.
+   */
+  constructor(public dataService: DataService,
+    private webService: WebService,
+    private formBuilder: FormBuilder,
+    private authService: AuthService,
+    private router: Router,) {
+    // Initialize the form group for adding a new album
+    this.addAlbumForm &#x3D; this.formBuilder.group({
+      artist: [&#x27;&#x27;, Validators.required],
+      album_title: [&#x27;&#x27;, Validators.required],
+      year_of_release: [
+        &#x27;&#x27;,
+        [Validators.required, Validators.min(1900), Validators.max(new Date().getFullYear())],
+      ],
+      genre: [&#x27;&#x27;, Validators.required],
+    });
+  }
+
+  /**
+   * Lifecycle hook that is called after the component is initialized.
+   * Loads the album list and checks the user&#x27;s admin role.
+   */
+  ngOnInit() {
+    if (sessionStorage[&#x27;page&#x27;]) {
+      this.page &#x3D; Number(sessionStorage[&#x27;page&#x27;]);
+    }
+
+    this.authService.userRole$.subscribe((role) &#x3D;&gt; {
+      this.isAdmin &#x3D; role &#x3D;&#x3D;&#x3D; &#x27;admin&#x27;; // Set isAdmin to true if role is &#x27;admin&#x27;
+    });
+
+    this.webService.getAlbums(1).subscribe((response) &#x3D;&gt; {
+      this.album_list &#x3D; response;
+    });
+
+  }
+
+  /**
+   * Submits the form to add a new album.
+   * If the form is valid, the album is sent to the API, and the list is refreshed.
+   */
+  onAddAlbum() {
+    if (this.addAlbumForm.valid) {
+      const newAlbum &#x3D; this.addAlbumForm.value;
+      console.log(&#x27;Adding Album:&#x27;, newAlbum); // Debug log
+      this.webService.addAlbum(newAlbum).subscribe({
+        next: (response) &#x3D;&gt; {
+          console.log(&#x27;Album added successfully:&#x27;, response);
+          alert(&#x27;Album added successfully!&#x27;);
+          this.album_list.push(response.data); // Update the local list
+          this.addAlbumForm.reset(); // Reset form
+          this.ngOnInit(); // Refresh album list
+        },
+        error: (error) &#x3D;&gt; {
+          console.error(&#x27;Error adding album:&#x27;, error); // Debug log
+          alert(&#x27;Failed to add album. Please try again.&#x27;);
+        },
+      });
+    }
+  }
+
+  /**
+   * Toggles the visibility of the add album form.
+   */
+  toggleAddAlbumForm() {
+    this.showAddAlbumForm &#x3D; !this.showAddAlbumForm;
+  }
+
+  /**
+   * Cancels the add album form and resets its state.
+   */
+  onCancelForm() {
+    this.addAlbumForm.reset(); // Clear all input fields
+    this.showAddAlbumForm &#x3D; false; // Collapse the form
+  }
+
+  /**
+   * Checks if a specific form control is invalid and touched.
+   * 
+   * @param control - The name of the form control to check.
+   * @returns True if the control is invalid and touched, false otherwise.
+   */
+  isInvalid(control: string): boolean {
+    return (
+      this.addAlbumForm.controls[control].invalid &amp;&amp;
+      this.addAlbumForm.controls[control].touched
+    );
+  }
+
+  /**
+   * Checks if the add album form is incomplete.
+   * 
+   * @returns True if any required form field is invalid, false otherwise.
+   */
+  isIncomplete(): boolean {
+    return (
+      this.isInvalid(&#x27;artist&#x27;) ||
+      this.isInvalid(&#x27;album_title&#x27;) ||
+      this.isInvalid(&#x27;year_of_release&#x27;) ||
+      this.isInvalid(&#x27;genre&#x27;)
+    );
+  }
+
+  /**
+   * Enables edit mode for a specific album by its ID.
+   * 
+   * @param albumId - The ID of the album to edit.
+   */
+  editAlbum(albumId: string) {
+    this.editingAlbumId &#x3D; albumId; // Enable edit mode
+  }
+
+  /**
+   * Updates an album&#x27;s details.
+   * Sends the updated album data to the API and refreshes the album list.
+   * 
+   * @param album - The album data to update.
+   */
+  updateAlbum(album: any) {
+    this.webService.updateAlbum(album._id, {
+      artist: album.artist,
+      album_title: album.album_title,
+      year_of_release: album.year_of_release,
+      genre: album.genre,
+    }).subscribe({
+      next: (response) &#x3D;&gt; {
+        alert(&#x27;Album updated successfully!&#x27;);
+        this.editingAlbumId &#x3D; null; // Exit edit mode
+        this.ngOnInit(); // Refresh album list
+      },
+      error: (error) &#x3D;&gt; {
+        console.error(&#x27;Error updating album:&#x27;, error);
+        alert(&#x27;Failed to update album.&#x27;);
+      },
+    });
+  }
+
+  /**
+   * Deletes an album by its ID after user confirmation.
+   * 
+   * @param id - The ID of the album to delete.
+   */
+  deleteAlbum(id: string) {
+    if (confirm(&#x27;Are you sure you want to delete this album?&#x27;)) {
+      this.webService.deleteAlbum(id).subscribe({
+        next: (response) &#x3D;&gt; {
+          alert(&#x27;Album deleted successfully!&#x27;);
+          this.ngOnInit(); // Refresh album list
+        },
+        error: (error) &#x3D;&gt; {
+          console.error(&#x27;Error deleting album:&#x27;, error);
+          alert(&#x27;Failed to delete album. Please try again.&#x27;);
+        },
+      });
+    }
+  }
+
+  /**
+   * Navigates to the previous page of albums if available.
+   */
+  previousPage() {
+    if (this.page &gt; 1) {
+      this.page &#x3D; this.page - 1;
+      sessionStorage[&#x27;page&#x27;] &#x3D; this.page;
+
+      this.webService.getAlbums(this.page)
+        .subscribe((response) &#x3D;&gt; {
+          this.album_list &#x3D; response
+        })
+    }
+  }
+
+  /**
+   * Navigates to the next page of albums if available.
+   */
+  nextPage() {
+    this.webService.getAlbums(this.page + 1).subscribe((response) &#x3D;&gt; {
+      if (response &amp;&amp; response.length &gt; 0) {
+        this.page +&#x3D; 1; // Increment the page only if there are albums on the next page
+        sessionStorage[&#x27;page&#x27;] &#x3D; this.page;
+        this.album_list &#x3D; response;
+      } else {
+        console.log(&#x27;No more albums on the next page.&#x27;);
+      }
+    }, (error) &#x3D;&gt; {
+      console.error(&#x27;Error fetching the next page of albums:&#x27;, error);
+    });
+  }
+
+  /**
+   * Searches for albums based on the user&#x27;s query.
+   * If the query is empty, reloads the full album list.
+   */
+  searchAlbums(): void {
+    if (this.searchQuery.trim()) {
+      // Fetch albums based on the search query
+      this.webService.searchAlbum(this.searchQuery).subscribe({
+        next: (data: any[]) &#x3D;&gt; {
+          this.album_list &#x3D; data;
+        }
+      });
+    } else {
+      // Fetch all albums if search query is empty
+      this.router.navigate([&#x27;/albums&#x27;]); // Navigate back to albums page
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container text-center&quot; style&#x3D;&quot;margin-top: 70px;&quot;&gt;
+    &lt;h1&gt;The Greatest Albums Of All Time&lt;/h1&gt;
+
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-md-12&quot; style&#x3D;&quot;margin: 40px;&quot;&gt;
+            &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;🔍Search Album or Artist Name...&quot;
+                [(ngModel)]&#x3D;&quot;searchQuery&quot; (input)&#x3D;&quot;searchAlbums()&quot; /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;container&quot; style&#x3D;&quot;margin-bottom: 20px;&quot;&gt;
+        &lt;!-- Button to toggle the form --&gt;
+        &lt;button *ngIf&#x3D;&quot;isAdmin&quot; class&#x3D;&quot;btn btn-primary mb-3&quot; (click)&#x3D;&quot;toggleAddAlbumForm()&quot;&gt;
+            {{ showAddAlbumForm ? &#x27;Close&#x27; : &#x27;Add Album&#x27; }}
+        &lt;/button&gt;
+
+        &lt;!-- Collapsible form --&gt;
+        &lt;div *ngIf&#x3D;&quot;showAddAlbumForm&quot; class&#x3D;&quot;card p-3&quot;&gt;
+            &lt;h2&gt;Add a New Album&lt;/h2&gt;
+            &lt;form [formGroup]&#x3D;&quot;addAlbumForm&quot; (ngSubmit)&#x3D;&quot;onAddAlbum()&quot;&gt;
+                &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                    &lt;label for&#x3D;&quot;artist&quot;&gt;Artist&lt;/label&gt;
+                    &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;artist&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;artist&quot;
+                        [ngClass]&#x3D;&quot;{&#x27;border border-danger&#x27;: isInvalid(&#x27;artist&#x27;)}&quot; /&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                    &lt;label for&#x3D;&quot;album_title&quot;&gt;Album Title&lt;/label&gt;
+                    &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;album_title&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;album_title&quot;
+                        [ngClass]&#x3D;&quot;{&#x27;border border-danger&#x27;: isInvalid(&#x27;album_title&#x27;)}&quot; /&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                    &lt;label for&#x3D;&quot;year_of_release&quot;&gt;Year of Release&lt;/label&gt;
+                    &lt;input type&#x3D;&quot;number&quot; id&#x3D;&quot;year_of_release&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;year_of_release&quot;
+                        [ngClass]&#x3D;&quot;{&#x27;border border-danger&#x27;: isInvalid(&#x27;year_of_release&#x27;)}&quot; /&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                    &lt;label for&#x3D;&quot;genre&quot;&gt;Genre&lt;/label&gt;
+                    &lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;genre&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;genre&quot;
+                        [ngClass]&#x3D;&quot;{&#x27;border border-danger&#x27;: isInvalid(&#x27;genre&#x27;)}&quot; /&gt;
+                &lt;/div&gt;
+                &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-success mt-3&quot; [disabled]&#x3D;&quot;isIncomplete()&quot;&gt;
+                    Submit Album
+                &lt;/button&gt;
+                &lt;br&gt;
+                &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-secondary ms-2&quot; (click)&#x3D;&quot;onCancelForm()&quot;&gt;
+                    Cancel
+                &lt;/button&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div *ngFor&#x3D;&quot;let album of album_list&quot; class&#x3D;&quot;col-md-4 mb-4&quot;&gt;
+            &lt;div class&#x3D;&quot;card text-center text-white bg-primary mb-3&quot;&gt;
+                &lt;div class&#x3D;&quot;card-header&quot;&gt;
+                    &lt;ng-container *ngIf&#x3D;&quot;editingAlbumId &#x3D;&#x3D;&#x3D; album._id; else displayMode&quot;&gt;
+                        &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;album.artist&quot; placeholder&#x3D;&quot;Artist Name&quot;&gt;
+                    &lt;/ng-container&gt;
+                    &lt;ng-template #displayMode&gt;
+                        {{ album.artist }}
+                    &lt;/ng-template&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                    Album
+                    &lt;br&gt;
+                    &lt;ng-container *ngIf&#x3D;&quot;editingAlbumId &#x3D;&#x3D;&#x3D; album._id; else displayAlbumTitle&quot;&gt;
+                        &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;album.album_title&quot;
+                            placeholder&#x3D;&quot;Album Title&quot;&gt;
+                    &lt;/ng-container&gt;
+                    &lt;ng-template #displayAlbumTitle&gt;
+                        &lt;img src&#x3D;&quot;images/album.png&quot; style&#x3D;&quot;width: 20px; height: 20px;&quot;&gt;
+                        {{ album.album_title }}
+                    &lt;/ng-template&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;card-footer&quot;&gt;
+                    Year -
+                    &lt;ng-container *ngIf&#x3D;&quot;editingAlbumId &#x3D;&#x3D;&#x3D; album._id; else displayYear&quot;&gt;
+                        &lt;input type&#x3D;&quot;number&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;album.year_of_release&quot;
+                            placeholder&#x3D;&quot;Year of Release&quot;&gt;
+                    &lt;/ng-container&gt;
+                    &lt;ng-template #displayYear&gt;
+                        {{ album.year_of_release }}
+                    &lt;/ng-template&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;card-actions&quot;&gt;
+                    &lt;button [routerLink]&#x3D;&quot;[&#x27;/albums&#x27;, album._id]&quot; class&#x3D;&quot;btn btn-light&quot;&gt;View Details&lt;/button&gt;
+                    &lt;br&gt;
+                    &lt;div *ngIf&#x3D;&quot;isAdmin&quot;&gt;
+                        &lt;button *ngIf&#x3D;&quot;editingAlbumId &#x3D;&#x3D;&#x3D; album._id&quot; class&#x3D;&quot;btn btn-success&quot;
+                            (click)&#x3D;&quot;updateAlbum(album)&quot;&gt;Save&lt;/button&gt;
+                        &lt;button *ngIf&#x3D;&quot;editingAlbumId !&#x3D;&#x3D; album._id&quot; class&#x3D;&quot;btn btn-warning&quot;
+                            (click)&#x3D;&quot;editAlbum(album._id)&quot;&gt;Edit&lt;/button&gt;
+                        &lt;button class&#x3D;&quot;btn btn-danger&quot; (click)&#x3D;&quot;deleteAlbum(album._id)&quot;&gt;Delete&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-sm-4 text-start&quot;&gt;
+            &lt;button class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&quot;previousPage()&quot;&gt;
+                Previous
+            &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-sm-4 text-center align-self-center&quot;&gt;
+            Showing Page {{this.page}}
+            of {{this.dataService.getLastPageNumber()}}
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-sm-4 text-end&quot;&gt;
+            &lt;button class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&quot;nextPage()&quot;&gt;
+                Next
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container text-center" style="margin-top: 70px;">    <h1>The Greatest Albums Of All Time</h1>    <div class="row">        <div class="col-md-12" style="margin: 40px;">            <input type="text" class="form-control" placeholder="🔍Search Album or Artist Name..."                [(ngModel)]="searchQuery" (input)="searchAlbums()" />        </div>    </div>    <div class="container" style="margin-bottom: 20px;">        <!-- Button to toggle the form -->        <button *ngIf="isAdmin" class="btn btn-primary mb-3" (click)="toggleAddAlbumForm()">            {{ showAddAlbumForm ? \'Close\' : \'Add Album\' }}        </button>        <!-- Collapsible form -->        <div *ngIf="showAddAlbumForm" class="card p-3">            <h2>Add a New Album</h2>            <form [formGroup]="addAlbumForm" (ngSubmit)="onAddAlbum()">                <div class="form-group">                    <label for="artist">Artist</label>                    <input type="text" id="artist" class="form-control" formControlName="artist"                        [ngClass]="{\'border border-danger\': isInvalid(\'artist\')}" />                </div>                <div class="form-group">                    <label for="album_title">Album Title</label>                    <input type="text" id="album_title" class="form-control" formControlName="album_title"                        [ngClass]="{\'border border-danger\': isInvalid(\'album_title\')}" />                </div>                <div class="form-group">                    <label for="year_of_release">Year of Release</label>                    <input type="number" id="year_of_release" class="form-control" formControlName="year_of_release"                        [ngClass]="{\'border border-danger\': isInvalid(\'year_of_release\')}" />                </div>                <div class="form-group">                    <label for="genre">Genre</label>                    <input type="text" id="genre" class="form-control" formControlName="genre"                        [ngClass]="{\'border border-danger\': isInvalid(\'genre\')}" />                </div>                <button type="submit" class="btn btn-success mt-3" [disabled]="isIncomplete()">                    Submit Album                </button>                <br>                <button type="button" class="btn btn-secondary ms-2" (click)="onCancelForm()">                    Cancel                </button>            </form>        </div>    </div>    <div class="row">        <div *ngFor="let album of album_list" class="col-md-4 mb-4">            <div class="card text-center text-white bg-primary mb-3">                <div class="card-header">                    <ng-container *ngIf="editingAlbumId === album._id; else displayMode">                        <input type="text" class="form-control" [(ngModel)]="album.artist" placeholder="Artist Name">                    </ng-container>                    <ng-template #displayMode>                        {{ album.artist }}                    </ng-template>                </div>                <div class="card-body">                    Album                    <br>                    <ng-container *ngIf="editingAlbumId === album._id; else displayAlbumTitle">                        <input type="text" class="form-control" [(ngModel)]="album.album_title"                            placeholder="Album Title">                    </ng-container>                    <ng-template #displayAlbumTitle>                        <img src="images/album.png" style="width: 20px; height: 20px;">                        {{ album.album_title }}                    </ng-template>                </div>                <div class="card-footer">                    Year -                    <ng-container *ngIf="editingAlbumId === album._id; else displayYear">                        <input type="number" class="form-control" [(ngModel)]="album.year_of_release"                            placeholder="Year of Release">                    </ng-container>                    <ng-template #displayYear>                        {{ album.year_of_release }}                    </ng-template>                </div>                <div class="card-actions">                    <button [routerLink]="[\'/albums\', album._id]" class="btn btn-light">View Details</button>                    <br>                    <div *ngIf="isAdmin">                        <button *ngIf="editingAlbumId === album._id" class="btn btn-success"                            (click)="updateAlbum(album)">Save</button>                        <button *ngIf="editingAlbumId !== album._id" class="btn btn-warning"                            (click)="editAlbum(album._id)">Edit</button>                        <button class="btn btn-danger" (click)="deleteAlbum(album._id)">Delete</button>                    </div>                </div>            </div>        </div>    </div>    <div class="row">        <div class="col-sm-4 text-start">            <button class="btn btn-primary" (click)="previousPage()">                Previous            </button>        </div>        <div class="col-sm-4 text-center align-self-center">            Showing Page {{this.page}}            of {{this.dataService.getLastPageNumber()}}        </div>        <div class="col-sm-4 text-end">            <button class="btn btn-primary" (click)="nextPage()">                Next            </button>        </div>    </div></div><hr></div>'
+    var COMPONENTS = [{'name': 'AlbumComponent', 'selector': 'album'},{'name': 'AlbumGenreComponent', 'selector': 'genre'},{'name': 'AlbumRatingsComponent', 'selector': 'ratings'},{'name': 'AlbumsComponent', 'selector': 'albums'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthUserComponent', 'selector': 'user-profile'},{'name': 'HomeComponent', 'selector': 'home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavComponent', 'selector': 'navigation'},{'name': 'TestWSComponent', 'selector': 'testWS'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'AlbumsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AlbumsComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

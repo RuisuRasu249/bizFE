@@ -7,30 +7,93 @@ import { ChangeDetectorRef } from '@angular/core';
 import { DataService } from '../data.service';
 import { WebService } from '../services/web.service';
 import { AuthService } from '../services/authService.component';
-
+/**
+ * The `AlbumComponent` manages the display of a specific album, its reviews, and user interactions,
+ * including adding, deleting, and paginating reviews. It also handles user authentication and authorization checks.
+ */
 @Component({
-  selector: 'album',
-  imports: [RouterOutlet, CommonModule, ReactiveFormsModule],
-  providers: [DataService, WebService],
-  templateUrl: './album.component.html'
+  selector: 'album', // The selector used to include this component in templates.
+  imports: [RouterOutlet, CommonModule, ReactiveFormsModule], // Modules used in this component's template.
+  providers: [DataService, WebService], // Services provided specifically for this component.
+  templateUrl: './album.component.html' // The associated template for this component.
 })
 
 export class AlbumComponent {
+  /**
+   * List of albums retrieved from the API.
+   */
   album_list: any;
+
+  /**
+   * Placeholder text for lorem ipsum content.
+   */
   loremIpsum: any;
+
+  /**
+   * Current album details.
+   */
   album: any;
+
+  /**
+   * Reactive form group for submitting reviews.
+   */
   reviewForm: any;
+
+  /**
+   * List of reviews for the current album.
+   */
   reviews_list: any;
+
+  /**
+   * Average rating for the current album.
+   */
   averageRating: any;
 
-  reviewPage: number = 1; // Current review page
-  reviewsPerPage: number = 4; // Number of reviews per page
-  totalReviewPages: number = 0; // Total number of pages for reviews
-  paginatedReviews: any[] = []; // Reviews to display on the current page
-  isAdmin: boolean = false; // Default to false
-  isLoggedIn: boolean = false; // Track login status
+  /**
+   * Current page of reviews being displayed.
+   * @default 1
+   */
+  reviewPage: number = 1;
 
+  /**
+   * Number of reviews displayed per page.
+   * @default 4
+   */
+  reviewsPerPage: number = 4;
 
+  /**
+   * Total number of review pages.
+   */
+  totalReviewPages: number = 0;
+
+  /**
+   * Paginated reviews to display on the current page.
+   */
+  paginatedReviews: any[] = [];
+
+  /**
+   * Indicates if the current user is an admin.
+   * @default false
+   */
+  isAdmin: boolean = false;
+
+  /**
+   * Indicates if the current user is logged in.
+   * @default false
+   */
+  isLoggedIn: boolean = false;
+
+  /**
+   * Constructor for `AlbumComponent`.
+   * Injects necessary services and utilities for managing album data, reviews, and user authentication.
+   * 
+   * @param dataService - Service for retrieving data like lorem ipsum content.
+   * @param route - Service for accessing the active route and its parameters.
+   * @param formBuilder - Service for building reactive forms.
+   * @param cdr - Service for manually triggering change detection.
+   * @param authService - Service for managing user authentication and roles.
+   * @param webService - Service for making API calls related to albums and reviews.
+   */
   constructor(public dataService: DataService,
     private route: ActivatedRoute,
     private formBuilder: FormBuilder,
@@ -39,6 +102,10 @@ export class AlbumComponent {
     private webService: WebService,
   ) { }
 
+  /**
+   * Lifecycle hook called after the component is initialized.
+   * Sets up the review form, fetches album details, retrieves reviews, and populates lorem ipsum text.
+   */
   ngOnInit() {
     this.reviewForm = this.formBuilder.group({
       username: ["", Validators.required],
@@ -71,6 +138,10 @@ export class AlbumComponent {
       });
   }
 
+  /**
+   * Submits a new review for the current album.
+   * Validates the form before submission and updates the reviews list and average rating upon success.
+   */
   onSubmit() {
     if (this.reviewForm.valid) {
       const newReview = this.reviewForm.value;
@@ -96,6 +167,12 @@ export class AlbumComponent {
     }
   }
 
+  /**
+   * Deletes a review by its ID for the current album.
+   * Prompts the user for confirmation before performing the deletion.
+   * 
+   * @param reviewId - The ID of the review to delete.
+   */
   deleteReview(reviewId: string) {
     const albumId = this.route.snapshot.paramMap.get('id'); // Get the current album ID
 
@@ -122,7 +199,11 @@ export class AlbumComponent {
     }
   }
 
-
+  /**
+   * Calculates the average rating based on the current reviews list.
+   * 
+   * @param reviews - Array of reviews to calculate the average rating from.
+   */
   getAverageRating(reviews: any[]) {
     console.log('Calculating average rating. Reviews:', reviews);
 
@@ -140,6 +221,10 @@ export class AlbumComponent {
     console.log('Updated average rating:', this.averageRating);
   }
 
+  /**
+   * Paginates the reviews list for the current page.
+   * Updates the `paginatedReviews` array and calculates the total number of pages.
+   */
   paginateReviews() {
     if (this.reviews_list && this.reviews_list.length > 0) {
       this.totalReviewPages = Math.ceil(this.reviews_list.length / this.reviewsPerPage);
@@ -152,6 +237,9 @@ export class AlbumComponent {
     }
   }
 
+  /**
+   * Navigates to the previous page of reviews, if available.
+   */
   previousReviewPage() {
     if (this.reviewPage > 1) {
       this.reviewPage--;
@@ -159,6 +247,9 @@ export class AlbumComponent {
     }
   }
 
+  /**
+   * Navigates to the next page of reviews, if available.
+   */
   nextReviewPage() {
     if (this.reviewPage < this.totalReviewPages) {
       this.reviewPage++;
@@ -166,16 +257,32 @@ export class AlbumComponent {
     }
   }
 
+  /**
+   * Checks if a specific form control is invalid and touched.
+   * 
+   * @param control - The name of the control to check.
+   * @returns True if the control is invalid and touched, false otherwise.
+   */
   isInvalid(control: any) {
     return this.reviewForm.controls[control].invalid &&
       this.reviewForm.controls[control].touched;
   }
 
+  /**
+   * Checks if the review form is untouched.
+   * 
+   * @returns True if any control in the form is pristine, false otherwise.
+   */
   isUntouched() {
     return this.reviewForm.controls.username.pristine ||
       this.reviewForm.controls.review_text.pristine;
   }
 
+  /**
+   * Checks if the review form is incomplete.
+   * 
+   * @returns True if the form is invalid, untouched, or incomplete, false otherwise.
+   */
   isIncomplete() {
     return this.isInvalid('username') ||
       this.isInvalid('review_text') ||
